@@ -22,9 +22,12 @@
   - [Model Selection](#model-selection)
   - [Context Management Strategy](#context-management-strategy)
 - [Citation Protocol](#citation-protocol)
+- [Citation Response Protocol](#citation-response-protocol)
 - [Citation Verification System](#citation-verification-system)
-  - [Pass 1 — Automated Verifier](#pass-1--automated-verifier)
-  - [Pass 2 — Human Audit Worksheet](#pass-2--human-audit-worksheet)
+  - [Pass 1 — Training Knowledge Triage](#pass-1--training-knowledge-triage)
+  - [Pass 2 — Bibliographic Search (All Citations)](#pass-2--bibliographic-search-all-citations)
+  - [Pass 3 — Deep Investigation (Suspicious Only)](#pass-3--deep-investigation-suspicious-only)
+  - [Pass 4 — Human Audit Worksheet](#pass-4--human-audit-worksheet)
   - [Verification Verdict Types](#verification-verdict-types)
 - [Repository Structure](#repository-structure)
 - [Known Limitations and Risks](#known-limitations-and-risks)
@@ -110,6 +113,14 @@ This has two effects: (1) it disciplines the agent against overreach — the Bib
 
 LLMs generate plausible-sounding citations at a rate that makes any unchecked debate record unreliable. The citation protocol (`[CLAIM]`, `[SOURCE]`, `[ARGUMENT]`, `[CONFIDENCE]`) serves two purposes: it makes the model's confidence explicit at the point of generation, and it creates a structured format that can be parsed by an automated verification pipeline. A LOW confidence tag with no page number is more honest and more useful than a HIGH confidence tag with a fabricated page number — the system prompt makes this explicit.
 
+### Why Citation Accountability Loops Back to the Advocate
+
+When the verification pipeline flags a citation as fabricated or problematic, that finding must reach the advocate who made the claim — not just the moderator. Starting in Round 2, each advocate receives a `[CITATION_CORRECTIONS]` block in their prompt listing any verified problems with their prior citations. They must respond with a structured `[CITATION_RESPONSE]` block before their substantive content, taking one of three positions: `WITHDRAW` (claim removed from the record), `QUALIFY` (claim narrowed), or `DEFEND` (claim maintained, optionally with new sourcing). This creates a feedback loop: citation quality in one round has direct consequences in the next. Withdrawn and retracted claims are tracked in a persistent registry and excluded from Round 4 context summaries.
+
+### Why the Synthesis Must Name Irreconcilable Tensions
+
+A synthesis that maps convergence and divergence toward a coherent narrative is almost as misleading as no synthesis at all — it creates the impression that the disciplines have a unified answer when they may not. The moderator synthesis is structured to require a section on *irreconcilable tensions*: positions the disciplines hold that cannot both be true, with an explicit statement of the extra-disciplinary commitment that would be required to resolve the tension. If there are no genuinely irreconcilable tensions, the moderator must say so explicitly. The synthesis also identifies *arguments past each other* — cases where disciplines appeared to engage but were actually answering different questions — which are distinct from genuine disagreements.
+
 ### Why the Debate Does Not Produce a Verdict
 
 The moderator synthesizes but does not adjudicate. The Round 4 closing arguments ask each advocate to address what "faithful practice" requires — not who wins. This is deliberate. The goal is a high-quality canonical record of how the disciplines engage the question, not a machine-generated verdict on a contested theological question.
@@ -173,11 +184,13 @@ Each advocate reads their Statement of Limits at the start of Round 1. These are
 |-------|---------|------------|
 | Pre-debate | Position papers + source registers | Up to 1,500 words per advocate |
 | Round 1 | Opening statements: disciplinary findings on the anchor text | 600–800 words per advocate (incl. 150-word Statement of Limits) |
-| Round 2 | Cross-disciplinary examination — directed challenges | 400 words/question, 250 words/response |
+| Round 2 | Cross-disciplinary examination — directed challenges | 400 words/question, 300 words/response |
 | Round 3 | Seven required texts — all advocates engage each one | 1,750 words total per advocate (min 150 per text) |
-| [Synthesis] | Moderator synthesis — map of convergence and divergence | 300–400 words |
+| [Synthesis] | Moderator synthesis — structured map with four required sections | 300–400 words |
 | [Synthesis Response] | Each advocate responds to the moderator synthesis | 100 words max per advocate |
-| Round 4 | Closing arguments: what does faithful practice require? | 500–650 words per advocate |
+| Round 4 | Closing arguments: what does faithful practice require? | 600–750 words per advocate |
+
+**Note on word counts:** `[CITATION_RESPONSE]` blocks (see below) are exempt from all word limits. They are procedural overhead, not substantive argument.
 
 ### The Seven Required Texts
 
@@ -229,7 +242,9 @@ The reversed order in Round 4 gives the disciplines that were asked to lead with
 
 **Persistent canonical record.** Every round output and moderation report is compiled into a canonical debate record that grows across the debate. This record — not raw conversation history — is what each agent receives as context for subsequent rounds. The record is rebuilt from disk after each round via `document_compiler.py`.
 
-**Context compression for Round 4.** By Round 4, the full canonical record exceeds 40,000 words. Rather than injecting the full record, each advocate receives: their own prior outputs in full, a moderator-generated summary of the other five advocates' key arguments (200–300 words each), the moderator synthesis and synthesis responses, and the Round 4 prompt. This cuts context by ~60% while preserving the advocate's own voice and a clear picture of where the debate stands.
+**Context compression for Round 4.** By Round 4, the full canonical record exceeds 40,000 words. Rather than injecting the full record, each advocate receives a four-section compressed context: (1) their own prior outputs in full, (2) Sonnet-generated structured summaries of the other five advocates (200–300 words each, structured as CORE CLAIMS / KEY DISAGREEMENT / UNRESOLVED TENSION / POSITION SHIFTS), (3) the moderator synthesis and synthesis responses, and (4) the claim ledger — a structured cross-round tracker of the most contested arguments, their citation status, and how each discipline engaged them. This cuts context by ~60% while preserving the advocate's own voice and a precise picture of where unresolved tensions sit.
+
+**Disciplinary boundary enforcement.** The moderator fact-check report includes a DISCIPLINARY BOUNDARY REPORT after each round. The moderator checks each advocate's outputs against their Statement of Limits and flags explicit overreach — a Biblical Scholar drawing a doctrine of ministry from lexical findings alone, a Pastoral Theologian treating harm evidence as decisive without acknowledging limits. Disciplinary sharpness is not flagged; only conclusions that cross into another discipline's territory without acknowledgment.
 
 **Explicit uncertainty.** Both advocates and the moderator are required to express uncertainty. "I cannot verify this citation" and "my discipline cannot establish this" are required outputs, not failures.
 
@@ -313,11 +328,17 @@ For Round 4, the canonical record section is replaced with the compressed contex
 
 ===
 
-[other advocates — Sonnet-generated 200–300 word summaries of each]
+[other advocates — structured 200–300 word summaries of each:
+ CORE CLAIMS / KEY DISAGREEMENT / UNRESOLVED TENSION / POSITION SHIFTS]
 
 ===
 
 [moderator synthesis + all synthesis responses]
+
+===
+
+[claim ledger — contested arguments across rounds 1–3,
+ with citation status, per-discipline responses, and load-bearing flags]
 ```
 
 Template variable injection uses two mechanisms:
@@ -356,34 +377,78 @@ negative or domineering sense is better attested in the relevant period than the
 
 ---
 
+## Citation Response Protocol
+
+Starting in Round 2, advocates receive a `[CITATION_CORRECTIONS]` block in their prompt listing any verified problems with their prior citations. Before writing substantive content, they must respond to each flagged citation using this structured format:
+
+```
+[CITATION_RESPONSE: {claim_id}]
+[CORRECTION_RECEIVED: FABRICATION_RISK / HARD_CORRECTION / SOFT_FLAG]
+[ADVOCATE_POSITION: WITHDRAW / QUALIFY / DEFEND]
+[REVISED_CLAIM: ...]          ← required if QUALIFY or DEFEND
+[REVISED_SOURCE: ...]         ← required if DEFEND with new sourcing
+[REVISED_CONFIDENCE: ...]     ← required if QUALIFY or DEFEND
+[RESPONSE_NOTE: one sentence]
+[DOWNSTREAM_STATUS: ACTIVE / RESTRICTED / RETRACTED]
+```
+
+**Rules enforced at parse time:**
+- `WITHDRAW` → `DOWNSTREAM_STATUS: RETRACTED`. The claim is removed from the debate record and excluded from all future context.
+- `QUALIFY` → `DOWNSTREAM_STATUS: RESTRICTED`. Revised claim must be narrower than the original.
+- `DEFEND` without new source → `REVISED_CONFIDENCE` forced to `LOW`, `DOWNSTREAM_STATUS: RESTRICTED`.
+- `DEFEND` with new source → subject to immediate re-verification. `DOWNSTREAM_STATUS: ACTIVE` pending result.
+
+Only `FABRICATION_RISK` and high-impact `NEEDS_HUMAN_REVIEW` corrections require a response. Low-impact partial verifications do not.
+
+**Retracted claims** are tracked in `retracted_claims.json` and excluded from the Round 4 context summaries generated for each advocate. An advocate cannot use a retracted claim in their closing argument — it will not appear in the summary of their position that other advocates receive.
+
+`[CITATION_RESPONSE]` blocks do not count toward word limits.
+
+---
+
 ## Citation Verification System
 
-A two-pass architecture separates automated verification from human judgment. The goal is not to eliminate hallucination — that is not achievable — but to make it visible and route it to human resolution.
+A four-pass architecture separates automated verification from human judgment. The goal is not to eliminate hallucination — that is not achievable — but to make it visible, route it to human resolution, and feed findings back to the advocates who made the claims.
 
-### Pass 1 — Automated Verifier
+Every citation gets at least two automated checks. Suspicious citations get a third. Unresolved citations reach a human auditor.
 
-A dedicated LLM call (Sonnet 4.6) with Anthropic's web search tool enabled. For each citation, the verifier:
-1. Confirms the book exists (bibliographic check)
-2. Confirms the author addresses the topic (topical check)
-3. Confirms the author's known position aligns with the attributed argument (argument direction check)
-4. Checks for significant dissenting voices if consensus is claimed
+### Pass 1 — Training Knowledge Triage
 
-Limited to a bounded number of web searches per citation to control cost. Produces structured verdicts using this taxonomy:
+A dedicated Sonnet 4.6 call with no web search. All citations are processed in batches of 5. For each citation, the verifier assesses from training knowledge:
+- Is this author a real scholar working in this field?
+- Does this title plausibly exist with this publisher and year?
+- Does the attributed argument direction align with what is known about this scholar's position?
+
+Produces a `suspicion_level` (LOW / MEDIUM / HIGH) and flags obvious fabrications cheaply, without web search. Honest about the limits of training knowledge — a citation can pass this check and still be wrong in its specifics.
+
+### Pass 2 — Bibliographic Search (All Citations)
+
+Every citation — regardless of Pass 1 outcome — receives one targeted web search. The verifier searches for the author name + title + publisher and looks for a publisher page, library catalog entry, Amazon listing, or academic review confirming the work exists.
+
+One citation per API call, `max_turns=3`. Produces `CONFIRMED / UNCONFIRMED / CONFLICTING` for each citation. A secondhand corroboration (review, publisher description) is reported as corroborating evidence, not verification of the specific argument.
+
+### Pass 3 — Deep Investigation (Suspicious Only)
+
+Citations flagged `HIGH` suspicion in Pass 1, or `UNCONFIRMED / CONFLICTING` bibliographically in Pass 2, receive deep investigation. One citation per API call, up to 3 searches, `max_turns=8`. Checks:
+1. Bibliographic existence (with different search terms if Pass 2 failed)
+2. Author's known position on the specific claim (blog posts, interviews, secondary citations)
+3. Whether other scholars dispute or confirm the argument direction
 
 ### Verification Verdict Types
 
 | Verdict | Meaning |
 |---------|---------|
-| `VERIFIED` | Book confirmed to exist; author confirmed to address the topic; argument direction consistent with author's known position |
-| `LIKELY_ACCURATE` | Strong indicators of accuracy; minor uncertainties don't affect the core claim |
-| `LIKELY_ACCURATE_BUT_CONTESTED` | The claim as attributed is likely accurate, but the position is significantly contested by other serious scholars |
-| `PARTIALLY_VERIFIED` | Some elements confirmed; others could not be verified (e.g., book confirmed but specific page claim unverifiable) |
-| `NEEDS_HUMAN_REVIEW` | Insufficient evidence to verify or rule out; requires primary source access |
-| `FABRICATION_RISK` | Significant evidence the claim is inaccurate, misattributed, or fabricated |
+| `LIKELY_ACCURATE` | Bibliographic confirmed (Pass 2) + Pass 1 direction consistent |
+| `LIKELY_ACCURATE_BUT_CONTESTED` | Confirmed but the scholarly position is genuinely disputed |
+| `PARTIALLY_VERIFIED` | Book/author confirmed; argument attribution unclear |
+| `NEEDS_HUMAN_REVIEW` | Could not resolve after all automated passes |
+| `FABRICATION_RISK` | Pass 1 HIGH suspicion, or Pass 3 found contradicting evidence |
 
-### Pass 2 — Human Audit Worksheet
+Page numbers are never verified by automated means — all page numbers are treated as unverifiable unless found in a freely accessible online source.
 
-Claims the verifier flagged as `NEEDS_HUMAN_REVIEW` or `FABRICATION_RISK` are compiled into a structured Markdown worksheet. The worksheet pre-sorts claims by priority (fabrication risks first) and attaches the automated findings and search suggestions. A human auditor assigns one of five verdicts per claim:
+### Pass 4 — Human Audit Worksheet
+
+Claims the automated pipeline could not resolve (`NEEDS_HUMAN_REVIEW` or `FABRICATION_RISK`) are compiled into a structured Markdown worksheet. The worksheet pre-sorts claims by priority (fabrication risks first) and attaches the automated findings from all three passes. A human auditor assigns one of five verdicts per claim:
 
 | Verdict | Meaning |
 |---------|---------|
@@ -421,16 +486,22 @@ The final debate summary (generated after Round 4) includes an aggregated citati
 ├── outputs/                           # Generated content (real runs)
 │   ├── predebate/                     # Position papers — one .md per advocate
 │   ├── round_1/                       # One .md per advocate + moderation_report.md
+│   │                                  # + round_digest.md
 │   ├── round_2/                       # {advocate}_question.md + {advocate}_response.md
-│   │                                  # + moderation_report.md
+│   │                                  # + moderation_report.md + round_digest.md
 │   ├── round_3/                       # One .md per advocate + moderation_report.md
+│   │                                  # + round_digest.md
 │   ├── synthesis/                     # moderator_synthesis.md + {advocate}_response.md
-│   │                                  # + final_summary.md
+│   │                                  # + claim_ledger_r2.md (after Round 2)
+│   │                                  # + claim_ledger.md (after Round 3 — canonical for Round 4)
+│   │                                  # + final_summary.md (after Round 4)
 │   ├── round_4/                       # One .md per advocate + moderation_report.md
-│   └── canonical_record.md            # Full compiled debate — rebuilt after each round
+│   ├── canonical_record.md            # Full compiled debate — rebuilt after each round
+│   ├── audit_log.jsonl                # Every API call: label, model, messages, response, tokens
+│   └── retracted_claims.json          # Persistent registry of RETRACTED citation claims
 ├── verification/
 │   ├── citations/                     # round_{N}_citations.json — extracted citation blocks
-│   ├── verifications/                 # round_{N}_verifications.json — verifier verdicts
+│   ├── verifications/                 # round_{N}_verifications.json — merged 3-pass verdicts
 │   ├── audit/                         # round_{N}_worksheet.md — human audit worksheets
 │   └── moderator_input/               # round_{N}.md — verification summary for moderator
 ├── alderwood_text.txt                 # Extracted anchor text (generated from PDF)
@@ -452,7 +523,7 @@ The citation confidence tags are a partial mitigation. The system is explicit th
 
 ### Disciplinary Drift
 
-Even with strong system prompts, advocates may drift from their disciplinary identity across long runs — the Biblical Scholar may start arguing like the Pastoral Theologian by Round 4. Mitigations built into the architecture: fresh API calls each round (no accumulated conversation context), re-anchoring instructions in every round prompt, and each advocate's own prior outputs given more prominence than the compiled record of other advocates. How well this works in practice is an open empirical question.
+Even with strong system prompts, advocates may drift from their disciplinary identity across long runs — the Biblical Scholar may start arguing like the Pastoral Theologian by Round 4. Mitigations built into the architecture: fresh API calls each round (no accumulated conversation context), re-anchoring instructions in every round prompt, and each advocate's own prior outputs given more prominence than the compiled record of other advocates. The moderator's DISCIPLINARY BOUNDARY REPORT (generated after each round) flags explicit overreach — claims that step into another discipline's territory without acknowledgment. How well this combination of constraints works in practice is an open empirical question.
 
 ### Harmonization Pressure
 
@@ -464,7 +535,7 @@ LLMs express more confidence about citations than is warranted, especially for p
 
 ### Context Window and Round 4 Compression
 
-The canonical debate record grows to approximately 40,000–60,000 words by Round 4. The context compression strategy (own outputs in full + Sonnet-generated summaries of other advocates) is a practical necessity. The quality of the Round 4 arguments depends significantly on the quality of those summaries. The summary prompt asks for the advocate's two or three most significant disciplinary claims, any concessions or genuine position shifts across rounds, and direct tensions or disagreements with other advocates — but how faithfully that instruction is followed is something the summaries themselves should be checked against.
+The canonical debate record grows to approximately 40,000–60,000 words by Round 4. The context compression strategy (own outputs in full + structured summaries of other advocates + claim ledger) is a practical necessity. The quality of the Round 4 arguments depends significantly on the quality of those summaries. Each summary is structured into four required sections — CORE CLAIMS, KEY DISAGREEMENT, UNRESOLVED TENSION ENTERING ROUND 4, POSITION SHIFTS — to prevent the common failure mode of thematic compression that loses argument structure. The claim ledger provides a cross-round tracker of the most contested specific claims. How faithfully these represent the actual debate is something the compressed context itself should be checked against when reviewing a run.
 
 ### What It Cannot Produce
 
@@ -598,13 +669,17 @@ outputs/
                       + moderation_report.md + round_digest.md
   round_3/            {advocate_id}.md per advocate + moderation_report.md + round_digest.md
   synthesis/          moderator_synthesis.md + {advocate_id}_response.md per advocate
-                      + final_summary.md (generated after Round 4)
+                      + claim_ledger_r2.md  (claim ledger after Round 2)
+                      + claim_ledger.md     (updated claim ledger after Round 3 — used in Round 4)
+                      + final_summary.md    (generated after Round 4)
   round_4/            {advocate_id}.md per advocate + moderation_report.md + round_digest.md
   canonical_record.md Full compiled debate record — rebuilt after each round
+  audit_log.jsonl     Every API call logged: label, model, temperature, full messages, response, tokens
+  retracted_claims.json Persistent registry of RETRACTED citation claim IDs
 
 verification/
   citations/          round_{N}_citations.json — extracted citation blocks per round
-  verifications/      round_{N}_verifications.json — automated verifier verdicts per round
+  verifications/      round_{N}_verifications.json — merged 3-pass verifier verdicts per round
   audit/              round_{N}_worksheet.md — human audit worksheets
   moderator_input/    round_{N}.md — verification summary injected into moderator prompt
 ```
@@ -672,4 +747,4 @@ A web application wrapping the conductor. Users select from curated topics, the 
 
 ---
 
-*Project initialized: 2026 | Framework version: 4.0 | Status: Fully implemented — ready for first full run*
+*Project initialized: 2026 | Framework version: 4.1 | Status: Fully implemented — ready for first full run*

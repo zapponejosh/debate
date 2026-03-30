@@ -15,6 +15,7 @@ import datetime
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -62,6 +63,28 @@ ROUND_TITLES = {
 }
 
 console = Console()
+
+
+# ---------------------------------------------------------------------------
+# Audit logger — records every API call to {output_dir}/audit_log.jsonl
+# ---------------------------------------------------------------------------
+
+_audit_log_path: Path | None = None
+
+
+def init_audit_log(output_dir: Path):
+    """Call once at startup with the resolved output_dir."""
+    global _audit_log_path
+    _audit_log_path = output_dir / "audit_log.jsonl"
+    _audit_log_path.parent.mkdir(parents=True, exist_ok=True)
+
+
+def _audit(entry: dict):
+    """Append one JSON line to the audit log. No-ops if log is not initialised."""
+    if _audit_log_path is None:
+        return
+    with open(_audit_log_path, "a", encoding="utf-8") as fh:
+        fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
 # ---------------------------------------------------------------------------
@@ -188,8 +211,20 @@ def call_api(
         messages=[{"role": "user", "content": human_message}],
     )
     tokens_used = response.usage.input_tokens + response.usage.output_tokens
+    response_text = response.content[0].text
     console.print(f"  [dim]← {tokens_used:,} tokens total[/dim]")
-    return response.content[0].text
+    _audit({
+        "timestamp": datetime.datetime.now().isoformat(),
+        "label": label,
+        "model": model,
+        "temperature": temperature,
+        "input_tokens": response.usage.input_tokens,
+        "output_tokens": response.usage.output_tokens,
+        "system_prompt": system_prompt,
+        "human_message": human_message,
+        "response": response_text,
+    })
+    return response_text
 
 
 def call_api_with_web_search(
@@ -200,20 +235,23 @@ def call_api_with_web_search(
     temperature: float,
     max_tokens: int = 4096,
     label: str = "",
-    max_turns: int = 10,
+    max_turns: int = 8,
 ) -> str:
     """
     API call with Anthropic's built-in web search tool enabled.
     Handles the multi-turn tool_use loop until end_turn.
-    Used exclusively by the citation verifier.
+
+    For web_search_20250305 (Anthropic's native server-side tool), no client-side
+    tool results are needed — Anthropic executes the search and appends results to
+    the context automatically. We just resend the conversation on each tool_use turn.
     """
-    import anthropic
     console.print(f"  [dim]→ {model} | temp={temperature} | web_search | {label}[/dim]")
 
     messages = [{"role": "user", "content": human_message}]
     tools = [{"type": "web_search_20250305", "name": "web_search"}]
     total_input = 0
     total_output = 0
+    result_text = ""
 
     for turn in range(max_turns):
         response = client.messages.create(
@@ -231,29 +269,70 @@ def call_api_with_web_search(
             console.print(f"  [dim]← {total_input + total_output:,} tokens total ({turn + 1} turn(s))[/dim]")
             for block in response.content:
                 if hasattr(block, "text"):
-                    return block.text
-            return ""
+                    result_text = block.text
+            _audit({
+                "timestamp": datetime.datetime.now().isoformat(),
+                "label": label,
+                "model": model,
+                "temperature": temperature,
+                "turns": turn + 1,
+                "input_tokens": total_input,
+                "output_tokens": total_output,
+                "system_prompt": system_prompt,
+                "conversation": [
+                    {"role": m["role"], "content": str(m["content"])[:2000]}
+                    for m in messages
+                ],
+                "response": result_text,
+            })
+            return result_text
 
         if response.stop_reason == "tool_use":
-            # Append assistant turn, then provide empty tool results to continue
+            # For Anthropic's native web_search tool, the API executes the search
+            # server-side. Simply append the assistant turn and call again — no
+            # client-side tool_result injection needed (and providing empty results
+            # would cause the model to believe its searches returned nothing).
             messages.append({"role": "assistant", "content": response.content})
-            tool_results = [
-                {"type": "tool_result", "tool_use_id": b.id, "content": ""}
-                for b in response.content
-                if hasattr(b, "type") and b.type == "tool_use"
-            ]
-            if tool_results:
-                messages.append({"role": "user", "content": tool_results})
             continue
 
         # Unexpected stop reason — return whatever text exists
         break
 
+    # Exhausted turns without end_turn — nudge model to emit JSON now
+    console.print(f"  [dim]← {total_input + total_output:,} tokens total (turn limit reached, forcing JSON)[/dim]")
+    messages.append({"role": "assistant", "content": response.content})
+    messages.append({"role": "user", "content": "You have reached the search limit. Now produce ONLY the JSON array with your findings so far. No preamble."})
+    final = client.messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        temperature=0.0,
+        system=system_prompt,
+        tools=tools,
+        messages=messages,
+    )
+    total_input += final.usage.input_tokens
+    total_output += final.usage.output_tokens
     console.print(f"  [dim]← {total_input + total_output:,} tokens total[/dim]")
-    for block in response.content:
+    for block in final.content:
         if hasattr(block, "text"):
-            return block.text
-    return ""
+            result_text = block.text
+    _audit({
+        "timestamp": datetime.datetime.now().isoformat(),
+        "label": label,
+        "model": model,
+        "temperature": temperature,
+        "turns": max_turns + 1,
+        "input_tokens": total_input,
+        "output_tokens": total_output,
+        "system_prompt": system_prompt,
+        "conversation": [
+            {"role": m["role"], "content": str(m["content"])[:2000]}
+            for m in messages
+        ],
+        "response": result_text,
+        "note": "turn_limit_reached_forced_json",
+    })
+    return result_text
 
 
 # ---------------------------------------------------------------------------
@@ -682,9 +761,14 @@ def run_verification_pipeline(
     Returns the moderator input string (empty string if no citations).
     """
     sys.path.insert(0, str(ROOT / "scripts"))
-    from citation_verifier import VERIFIER_SYSTEM_PROMPT, build_verification_prompt, parse_verification_response
+    from citation_verifier import (
+        PASS1_SYSTEM_PROMPT, PASS2_SYSTEM_PROMPT, PASS3_SYSTEM_PROMPT,
+        build_pass1_prompts, build_pass2_prompt, build_pass3_prompt,
+        merge_pass_results, parse_json_response,
+    )
     from citation_extractor import load_citations
     from audit_worksheet import generate_audit_worksheet, generate_moderator_input
+    import anthropic as _anthropic
 
     if citations_path is None or not citations_path.exists():
         console.print("  [dim]No citations to verify.[/dim]")
@@ -695,39 +779,122 @@ def run_verification_pipeline(
     worksheet_path = dirs["audit"] / f"round_{round_number}{_recheck_suffix}_worksheet.md"
     mod_input_path = dirs["moderator_input"] / f"round_{round_number}{_recheck_suffix}.md"
 
-    # --- Step 1: Automated verification ---
     citations = load_citations(str(citations_path))
     citation_dicts = [c.to_dict() for c in citations]
 
     if not should_skip(ver_path, force):
-        console.print(f"\n[bold]Citation Verifier — Round {round_number}[/bold]")
-        prompts = build_verification_prompt(citation_dicts, batch_size=5)
-        all_verifications = []
+        console.print(f"\n[bold]Citation Verifier — Round {round_number} (3-pass)[/bold]")
+        import json as _json
+        from tenacity import retry as _retry, stop_after_attempt as _stop, wait_exponential as _wait
 
-        for i, prompt in enumerate(prompts):
-            batch_end = min((i + 1) * 5, len(citation_dicts))
-            batch_start = i * 5
-            console.print(f"  Batch {i + 1}/{len(prompts)} (citations {batch_start + 1}–{batch_end})")
-            response_text = call_api_with_web_search(
-                client, SONNET,
-                system_prompt=VERIFIER_SYSTEM_PROMPT,
-                human_message=prompt,
-                temperature=0.25,
-                max_tokens=4096,
-                label=f"verifier/round_{round_number}/batch_{i + 1}",
+        def _with_retry(fn, label):
+            """Run fn() with exponential backoff on rate limit errors."""
+            @_retry(stop=_stop(4), wait=_wait(multiplier=2, min=30, max=180), reraise=True)
+            def _inner():
+                return fn()
+            try:
+                return _inner()
+            except _anthropic.RateLimitError as exc:
+                console.print(f"  [red]Rate limit exhausted for {label}: {exc}[/red]")
+                return None
+
+        # ── Pass 1: training knowledge, batched ──────────────────────────────
+        console.print("  [bold]Pass 1[/bold] — training knowledge triage")
+        pass1_results: dict[str, dict] = {}
+        for i, prompt in enumerate(build_pass1_prompts(citation_dicts, batch_size=5)):
+            response = _with_retry(
+                lambda p=prompt: call_api(
+                    client, SONNET,
+                    system_prompt=PASS1_SYSTEM_PROMPT,
+                    human_message=p,
+                    temperature=0.2,
+                    label=f"verifier/round_{round_number}/pass1/batch_{i+1}",
+                ),
+                label=f"pass1/batch_{i+1}",
             )
-            results = parse_verification_response(response_text)
-            if not results:
-                console.print(f"  [yellow]Warning: batch {i + 1} returned no parseable results[/yellow]")
-            all_verifications.extend(results)
+            if response:
+                results = parse_json_response(response, expect_array=True)
+                if isinstance(results, list):
+                    for r in results:
+                        if isinstance(r, dict) and "claim_id" in r:
+                            pass1_results[r["claim_id"]] = r
+        console.print(f"  [dim]Pass 1 complete: {len(pass1_results)}/{len(citation_dicts)} citations triaged[/dim]")
 
-        import json
-        ver_path.write_text(json.dumps(all_verifications, indent=2), encoding="utf-8")
+        # ── Pass 2: one bibliographic search per citation, all citations ─────
+        console.print("  [bold]Pass 2[/bold] — bibliographic search (all citations)")
+        pass2_results: dict[str, dict] = {}
+        for idx, c in enumerate(citation_dicts):
+            cid = c["claim_id"]
+            if idx > 0:
+                time.sleep(15)  # small gap; each call is ~1 search turn, low token count
+            response = _with_retry(
+                lambda c=c: call_api_with_web_search(
+                    client, SONNET,
+                    system_prompt=PASS2_SYSTEM_PROMPT,
+                    human_message=build_pass2_prompt(c),
+                    temperature=0.2,
+                    max_tokens=1024,
+                    max_turns=3,
+                    label=f"verifier/round_{round_number}/pass2/{cid}",
+                ),
+                label=f"pass2/{cid}",
+            )
+            if response:
+                result = parse_json_response(response, expect_array=False)
+                if isinstance(result, dict) and result:
+                    result["claim_id"] = result.get("claim_id", cid)
+                    pass2_results[cid] = result
+        console.print(f"  [dim]Pass 2 complete: {len(pass2_results)}/{len(citation_dicts)} citations searched[/dim]")
+
+        # ── Pass 3: deep investigation, suspicious only ───────────────────────
+        suspicious = [
+            c for c in citation_dicts
+            if (pass1_results.get(c["claim_id"], {}).get("suspicion_level") == "HIGH")
+            or (pass2_results.get(c["claim_id"], {}).get("bibliographic_status") in ("UNCONFIRMED", "CONFLICTING"))
+        ]
+        console.print(f"  [bold]Pass 3[/bold] — deep investigation ({len(suspicious)} suspicious citations)")
+        pass3_results: dict[str, dict] = {}
+        for idx, c in enumerate(suspicious):
+            cid = c["claim_id"]
+            if idx > 0:
+                time.sleep(30)
+            response = _with_retry(
+                lambda c=c: call_api_with_web_search(
+                    client, SONNET,
+                    system_prompt=PASS3_SYSTEM_PROMPT,
+                    human_message=build_pass3_prompt(c),
+                    temperature=0.2,
+                    max_tokens=2048,
+                    max_turns=8,
+                    label=f"verifier/round_{round_number}/pass3/{cid}",
+                ),
+                label=f"pass3/{cid}",
+            )
+            if response:
+                result = parse_json_response(response, expect_array=False)
+                if isinstance(result, dict) and result:
+                    result["claim_id"] = result.get("claim_id", cid)
+                    pass3_results[cid] = result
+        console.print(f"  [dim]Pass 3 complete: {len(pass3_results)} citations investigated[/dim]")
+
+        # ── Merge passes into final verdicts ──────────────────────────────────
+        all_verifications = []
+        for c in citation_dicts:
+            cid = c["claim_id"]
+            merged = merge_pass_results(
+                citation=c,
+                pass1=pass1_results.get(cid),
+                pass2=pass2_results.get(cid),
+                pass3=pass3_results.get(cid),
+            )
+            all_verifications.append(merged)
+
+        ver_path.write_text(_json.dumps(all_verifications, indent=2), encoding="utf-8")
         console.print(f"  [green]✓[/green] {len(all_verifications)} verifications → {ver_path.relative_to(ROOT)}")
     else:
-        import json
+        import json as _json
         console.print(f"  [dim]skip verification (exists)[/dim]")
-        all_verifications = json.loads(ver_path.read_text())
+        all_verifications = _json.loads(ver_path.read_text())
 
     # --- Step 2: Audit worksheet ---
     if not should_skip(worksheet_path, force):
@@ -1092,6 +1259,7 @@ def run_round_2(
     # Moderation
     warn_incomplete_round("round_2", output_dir)
     _run_moderation(client, config, output_dir, round_number=2, round_outputs=all_r2_outputs, force=force, verification_input=verification_input)
+    generate_claim_ledger(client, config, all_r2_outputs, output_dir, round_number=2, force=force)
     generate_round_digest(client, config, round_number=2, round_outputs=all_r2_outputs, output_dir=output_dir, force=force)
 
     return question_outputs, response_outputs
@@ -1186,6 +1354,7 @@ def run_round_3(
     if not advocate_filter:
         warn_incomplete_round("round_3", output_dir)
         _run_moderation(client, config, output_dir, round_number=3, round_outputs=outputs, force=force, verification_input=verification_input)
+        generate_claim_ledger(client, config, outputs, output_dir, round_number=3, force=force)
         generate_round_digest(client, config, round_number=3, round_outputs=outputs, output_dir=output_dir, force=force)
 
     return outputs
@@ -1456,6 +1625,58 @@ def generate_round_digest(
     return text
 
 
+def generate_claim_ledger(
+    client,
+    config: dict,
+    round_outputs: dict[str, str],
+    output_dir: Path,
+    round_number: int,
+    force: bool = False,
+) -> str:
+    """
+    Generate or update the claim ledger after Round 2 or Round 3.
+
+    Round 2: creates synthesis/claim_ledger_r2.md (initial ledger).
+    Round 3: creates synthesis/claim_ledger.md (canonical version for Round 4),
+             using the Round 2 ledger as a base if it exists.
+    """
+    if round_number == 2:
+        out_path = output_dir / "synthesis" / "claim_ledger_r2.md"
+        prompt_key = "claim_ledger_initial"
+    else:
+        out_path = output_dir / "synthesis" / "claim_ledger.md"
+        prompt_key = "claim_ledger_update"
+
+    if should_skip(out_path, force):
+        console.print(f"  [dim]skip claim ledger (exists)[/dim]")
+        return read_output(out_path) or ""
+
+    console.print(f"\n[bold]Claim Ledger — Round {round_number}[/bold]")
+
+    prompt_template = config["round_prompts"][prompt_key]["prompt"]
+    outputs_block = build_advocate_outputs_block(round_outputs, config)
+
+    # For Round 3 update, inject the existing Round 2 ledger
+    bracket_vars = {"ROUND_OUTPUTS": outputs_block}
+    if round_number == 3:
+        r2_ledger_path = output_dir / "synthesis" / "claim_ledger_r2.md"
+        existing_ledger = read_output(r2_ledger_path) or "[No Round 2 ledger found]"
+        bracket_vars["EXISTING_LEDGER"] = existing_ledger
+
+    human_message = fill_template(prompt_template, curly_vars={}, bracket_vars=bracket_vars)
+
+    text = call_api(
+        client, SONNET,
+        system_prompt="You are a neutral summarizer for a structured academic debate. Extract and track contested claims faithfully.",
+        human_message=human_message,
+        temperature=0.25,
+        max_tokens=2048,
+        label=f"synthesis/claim_ledger_r{round_number}",
+    )
+    write_output(text, out_path)
+    return text
+
+
 def _aggregate_verification_stats(output_dir: Path) -> str:
     """Load all verification JSON files and produce a plain-text audit summary."""
     import json
@@ -1591,6 +1812,8 @@ def main():
 
     config = load_config()
     output_dir = resolve_output_dir(args.test)
+    if not args.dry_run:
+        init_audit_log(output_dir)
     client = None if args.dry_run else make_api_client()
 
     round_map = {

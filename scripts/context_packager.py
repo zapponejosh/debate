@@ -116,6 +116,14 @@ def _generate_advocate_summary(client, advocate_id: str, output_dir: Path, confi
     return _call()
 
 
+def _collect_claim_ledger(output_dir: Path) -> str:
+    """Load the final claim ledger (after Round 3) if it exists."""
+    path = output_dir / "synthesis" / "claim_ledger.md"
+    if path.exists() and path.stat().st_size > 0:
+        return "# Claim Ledger — Contested Arguments Across Rounds 1–3\n\n" + path.read_text(encoding="utf-8").strip()
+    return ""
+
+
 def _collect_synthesis_section(output_dir: Path, config: dict) -> str:
     """Build the synthesis section: moderator synthesis + all advocate responses."""
     parts = []
@@ -195,5 +203,10 @@ def build_r4_context(
     synthesis_section = _collect_synthesis_section(output_dir, config)
     if synthesis_section:
         sections.append(synthesis_section)
+
+    # 4. Claim ledger
+    ledger = _collect_claim_ledger(output_dir)
+    if ledger:
+        sections.append(ledger)
 
     return "\n\n===\n\n".join(sections)
