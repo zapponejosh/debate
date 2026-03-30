@@ -198,11 +198,12 @@ def call_api(
     temperature: float,
     max_tokens: int = 4096,
     label: str = "",
+    bypass_fast: bool = False,
 ) -> str:
-    if FAST_MODE:
+    if FAST_MODE and not bypass_fast:
         max_tokens = FAST_MAX_TOKENS
         human_message = human_message + FAST_NOTE
-    console.print(f"  [dim]→ {model} | temp={temperature}{' | FAST' if FAST_MODE else ''} | {label}[/dim]")
+    console.print(f"  [dim]→ {model} | temp={temperature}{' | FAST' if (FAST_MODE and not bypass_fast) else ''} | {label}[/dim]")
     response = client.messages.create(
         model=model,
         max_tokens=max_tokens,
@@ -808,7 +809,9 @@ def run_verification_pipeline(
                     system_prompt=PASS1_SYSTEM_PROMPT,
                     human_message=p,
                     temperature=0.2,
+                    max_tokens=2048,
                     label=f"verifier/round_{round_number}/pass1/batch_{i+1}",
+                    bypass_fast=True,
                 ),
                 label=f"pass1/batch_{i+1}",
             )
