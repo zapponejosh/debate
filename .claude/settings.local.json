@@ -3,7 +3,16 @@
     "allow": [
       "Bash(python3 -c \"import anthropic; print\\(anthropic.__version__\\)\")",
       "Bash(pip3 show:*)",
-      "Bash(pip show:*)"
+      "Bash(pip show:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(.venv/bin/python -m py_compile scripts/conductor.py scripts/document_compiler.py scripts/context_packager.py)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f''''{len\\(d\\)} citations extracted''''\\)\")",
+      "Bash(.venv/bin/python -m py_compile scripts/conductor.py)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\(''/Users/joshzappone/Documents/PERSONAL/debate/system_prompts.json''\\)\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(.venv/bin/python -c \":*)"
     ]
   }
 }

@@ -1,20 +1,74 @@
 # Women, Authority, and the Church: A Six-Discipline Debate System
-## Project README
 
 ---
 
-## What This Is
+## Table of Contents
 
-A structured multi-party debate system that uses LLM agents to model rigorous scholarly inquiry into the question of women in church leadership. Six disciplinary advocates — each powered by a separate LLM agent with a distinct identity, methodology, and source base — engage a shared anchor text (the Alderwood Community Church position document), cross-examine each other across four rounds, and arrive at ecclesial conclusions grounded in their disciplinary findings.
+- [Overview](#overview)
+- [The Research Question](#the-research-question)
+- [Anchor Text](#anchor-text)
+- [Design Philosophy](#design-philosophy)
+- [The Six Advocates](#the-six-advocates)
+  - [Agent Identities and Disciplinary Boundaries](#agent-identities-and-disciplinary-boundaries)
+  - [The Statements of Limits](#the-statements-of-limits)
+- [Debate Structure](#debate-structure)
+  - [Rounds and Word Counts](#rounds-and-word-counts)
+  - [The Seven Required Texts](#the-seven-required-texts)
+  - [Round 2 Cross-Examination Pairings](#round-2-cross-examination-pairings)
+  - [Speaking Order](#speaking-order)
+- [System Architecture](#system-architecture)
+  - [Core Design Decisions](#core-design-decisions)
+  - [Technical Architecture](#technical-architecture)
+  - [Model Selection](#model-selection)
+  - [Context Management Strategy](#context-management-strategy)
+- [Citation Protocol](#citation-protocol)
+- [Citation Verification System](#citation-verification-system)
+  - [Pass 1 — Automated Verifier](#pass-1--automated-verifier)
+  - [Pass 2 — Human Audit Worksheet](#pass-2--human-audit-worksheet)
+  - [Verification Verdict Types](#verification-verdict-types)
+- [Repository Structure](#repository-structure)
+- [Known Limitations and Risks](#known-limitations-and-risks)
+- [What This System Can and Cannot Produce](#what-this-system-can-and-cannot-produce)
+- [Usage Guide](#usage-guide)
+  - [Setup](#setup)
+  - [Running the Debate](#running-the-debate)
+  - [Flags](#flags)
+  - [Advocate IDs](#advocate-ids)
+  - [Output Structure](#output-structure)
+  - [Human Audit Workflow](#human-audit-workflow)
+  - [Recommended Run Order](#recommended-run-order)
+- [Project Phases](#project-phases)
+
+---
+
+## Overview
+
+A structured multi-party debate system that uses separate LLM agents to model rigorous scholarly inquiry into the question of women in church leadership. Six disciplinary advocates — each powered by an independent agent with a distinct identity, methodology, and explicit statement of limits — engage a shared anchor text, cross-examine each other across four rounds, and arrive at conclusions grounded in their disciplinary findings rather than pre-formed positions.
 
 A seventh agent serves as moderator and fact-checker, independent from all advocates.
 
 This is simultaneously:
-- A **theological inquiry tool** — producing a genuine multi-disciplinary engagement with a contested question
-- A **learning project** — exploring multi-agent LLM architecture, citation verification, persistent state management, and argument tracking
-- A **template** — for applying the same architecture to other contested theological or ethical questions
+- A **theological inquiry tool** — producing genuine multi-disciplinary engagement with a historically contested question
+- An **architecture experiment** — exploring multi-agent LLM design for structured argument, citation verification, and persistent state management across long runs
+- A **template** — for applying the same architecture to other contested theological or ethical questions where disciplinary method matters
 
-The debate is not designed to produce a winner. It is designed to model what honest, disciplined, cross-disciplinary inquiry looks like.
+**The debate is not designed to produce a winner. It is designed to model what honest, disciplined, cross-disciplinary inquiry looks like.**
+
+---
+
+## The Research Question
+
+**Motion:** *"Women should be permitted to hold all offices and exercise all forms of authority in the church, including ordination as pastors and elders, on equal terms with men."*
+
+This question was selected because:
+
+1. **It is genuinely contested among serious scholars.** Unlike many theological debates that are effectively settled by broad consensus, this one has careful scholars on both sides working the same evidence and reaching different conclusions. It is a genuine hard case.
+
+2. **It involves multiple disciplines that speak to different aspects of the question.** Exegesis, hermeneutics, systematic theology, reception history, pastoral theology, and social/cultural analysis each have legitimate and distinct contributions — and they do not always point in the same direction. A single-discipline answer to this question is structurally incomplete.
+
+3. **The anchor text (the Alderwood document) is an unusually careful complementarian position paper.** It does not rely solely on proof-texting; it engages hermeneutical questions. This makes it a more interesting target for cross-disciplinary engagement than a less careful document would be.
+
+4. **It tests the architecture.** A question where all disciplines converge trivially would not reveal whether the multi-agent design actually produces disciplinary diversity.
 
 ---
 
@@ -24,39 +78,41 @@ The debate is not designed to produce a winner. It is designed to model what hon
 *What Alderwood Teaches about Women in Church Leadership*
 Available: https://alderwood.cc/wp-content/uploads/What-Alderwood-Teaches-about-Women-in-Church-Leadership-Finalized.pdf
 
-Every advocate uses this document as a launching pad — not a target to defeat but a serious position to engage, affirm where their discipline affirms it, and push beyond where their discipline opens new ground.
+Every advocate uses this document as a launching pad — not a target to defeat but a serious position to engage, affirm where their discipline affirms it, and push beyond where their discipline opens new ground. The document is injected as full text into every agent's context at the start of each round.
+
+The choice to use an actual church document (rather than a generic "complementarian position") grounds the debate in a real ecclesial artifact and tests whether the system can engage a real document on its own terms rather than a caricature.
 
 ---
 
-## Repository Structure
+## Design Philosophy
 
-```
-/
-├── README.md                          # This file
-├── debate_framework.md                # Full debate design (V4 — the canonical plan)
-├── system_prompts.json                # All agent system prompts + round prompt templates
-├── scripts/
-│   ├── conductor.py                   # Main orchestration — runs rounds sequentially
-│   ├── document_compiler.py           # Compiles round outputs into canonical record
-│   ├── context_packager.py            # Builds per-advocate input for each round
-│   ├── citation_extractor.py          # Parses citation blocks from advocate outputs
-│   ├── citation_verifier.py           # Automated verification agent (web search)
-│   └── audit_worksheet.py             # Generates human audit worksheets
-├── outputs/                           # All generated content (one run)
-│   ├── predebate/                     # Position papers + source registers
-│   ├── round_1/                       # One file per advocate + moderation report
-│   ├── round_2/                       # Questions, responses + moderation report
-│   ├── round_3/                       # Text responses + moderation report
-│   ├── round_4/                       # Closing arguments + final moderation report
-│   ├── synthesis/                     # Moderator synthesis + advocate responses
-│   └── canonical_record.md            # Full compiled debate — the final artifact
-├── verification/
-│   ├── citations/                     # Extracted citation JSON per round
-│   ├── verifications/                 # Automated verification results per round
-│   ├── audit/                         # Human audit worksheets (generated + completed)
-│   └── moderator_input/               # Compiled verification results for moderator
-└── verification-system.md             # Citation verification system design spec
-```
+### Why Multiple Agents, Not Multiple Personas from One Agent
+
+The most natural approach to a "multi-perspective" debate is to use a single LLM with prompts like "now respond as a feminist theologian." This has a structural problem: all the perspectives are generated by the same model in the same context window, with the accumulated weight of each previous response present. Genuine disagreement is epistemically difficult when you are also the person you are disagreeing with.
+
+Separate agents with separate contexts and separate system prompts resist this in several ways:
+- Each agent's round input is constructed independently — it does not know what the other agents said before they said it
+- Each agent has a disciplinary identity that constrains what counts as a good argument from its position
+- The agents share the same underlying model but receive fundamentally different framing that activates different patterns of reasoning
+
+The architecture does not claim to eliminate the harmonization problem — it cannot — but it is structured to resist it.
+
+### Why Explicit Statements of Limits
+
+Each advocate is required to read a "Statement of Limits" at the start of Round 1. This is a methodological constraint, not a rhetorical device. The Statement of Limits forces each advocate to articulate:
+- What their discipline can genuinely establish
+- What their discipline cannot establish on its own
+- Where they depend on other disciplines
+
+This has two effects: (1) it disciplines the agent against overreach — the Biblical Scholar should not be building ecclesiology from exegetical findings alone — and (2) it creates the conditions for genuine cross-disciplinary engagement, since each advocate knows what they need from the others.
+
+### Why Structured Citations
+
+LLMs generate plausible-sounding citations at a rate that makes any unchecked debate record unreliable. The citation protocol (`[CLAIM]`, `[SOURCE]`, `[ARGUMENT]`, `[CONFIDENCE]`) serves two purposes: it makes the model's confidence explicit at the point of generation, and it creates a structured format that can be parsed by an automated verification pipeline. A LOW confidence tag with no page number is more honest and more useful than a HIGH confidence tag with a fabricated page number — the system prompt makes this explicit.
+
+### Why the Debate Does Not Produce a Verdict
+
+The moderator synthesizes but does not adjudicate. The Round 4 closing arguments ask each advocate to address what "faithful practice" requires — not who wins. This is deliberate. The goal is a high-quality canonical record of how the disciplines engage the question, not a machine-generated verdict on a contested theological question.
 
 ---
 
@@ -64,69 +120,120 @@ Every advocate uses this document as a launching pad — not a target to defeat 
 
 | # | Advocate | Disciplinary Lead | Tagline |
 |---|----------|------------------|---------|
-| 1 | Biblical Scholar | Exegesis and canonical theology | *"The texts say more than the debate has heard — and less than both sides claim."* |
-| 2 | Reception Historian | Reception history and history of interpretation | *"What the church has done with these texts is itself a form of evidence."* |
-| 3 | Hermeneutician | Philosophy of interpretation | *"Everyone in this debate has a hermeneutic. Most of them haven't examined it."* |
-| 4 | Systematic Theologian | Ecclesiology, ministry, and authority | *"The debate about who can lead assumes we know what the church is."* |
-| 5 | Pastoral Theologian | Pastoral and practical theology | *"Doctrine is not tested in the library. It is tested in the lives of people."* |
-| 6 | Social/Cultural Analyst | Social anthropology and sociology of religion | *"Every reading happens inside a social world. The question is whether you know which one."* |
+| 1 | The Biblical Scholar | Exegesis and canonical theology | *"The texts say more than the debate has heard — and less than both sides claim."* |
+| 2 | The Reception Historian | Reception history and history of interpretation | *"What the church has done with these texts is itself a form of evidence."* |
+| 3 | The Hermeneutician | Philosophy of interpretation | *"Everyone in this debate has a hermeneutic. Most of them haven't examined it."* |
+| 4 | The Systematic Theologian | Ecclesiology, ministry, and authority | *"The debate about who can lead assumes we know what the church is."* |
+| 5 | The Pastoral Theologian | Pastoral and practical theology | *"Doctrine is not tested in the library. It is tested in the lives of people."* |
+| 6 | The Social and Cultural Analyst | Social anthropology and sociology of religion | *"Every reading happens inside a social world. The question is whether you know which one."* |
 
 Plus:
 
 | # | Role | Function |
 |---|------|----------|
-| 7 | Moderator/Fact-Checker | Verification, synthesis, procedural management — no advocacy |
+| 7 | The Moderator/Fact-Checker | Verification, synthesis, procedural management — no advocacy |
+
+### Agent Identities and Disciplinary Boundaries
+
+**The Biblical Scholar** works the full canon in the original languages. The agent is trained to resist the gravitational pull of the "Pauline problem texts" and insist on giving the Old Testament its full canonical weight — Deborah, Huldah, and the women named in Romans 16 are not treated as marginal. The agent engages disputed terms (*authentein*, *kephale*, *ezer*, *diakonos*, *prostatis*, *apostolos*) as genuine lexical problems requiring lexical evidence. It is not assigned an egalitarian or complementarian position; it is assigned an obligation to say what the texts actually establish, including where the finding is inconclusive.
+
+**The Reception Historian** does not ask what texts mean — it asks what they have been made to mean. What have the restriction texts authorized and prohibited across the history of the church? How have interpretive traditions been shaped by forces other than pure exegesis — political interests, social pressures, doctrinal priorities, power arrangements? The agent brings specific examples: the patristic period, the medieval church, Reformation debates, twentieth-century evangelical shifts. It is specifically prompted to resist both the move that treats reception history as definitive evidence of correct reading, and the move that dismisses it as irrelevant.
+
+**The Hermeneutician** asks the methodological questions that every other advocate assumes but rarely defends. What hermeneutical principle governs the move from first-century instruction to twenty-first century application? Is the creation-order argument in 1 Timothy 2:13 applied consistently elsewhere, or selectively? The agent is assigned the role of identifying inconsistency, interrogating method, and asking what hermeneutical principle is being used — not to adjudicate between readings but to expose where the principle itself requires defense.
+
+**The Systematic Theologian** asks what doctrines are actually at stake beneath the surface of the debate. The question of who holds authority in the church requires a doctrine of the church, of ministry, and of authority. Both sides of the debate imply ecclesiologies — and those ecclesiologies can be interrogated. The agent brings new creation ecclesiology to bear and asks what the church's nature as an eschatological community implies for its governance structures.
+
+**The Pastoral Theologian** brings fieldwork: what actually happens in communities formed by restriction versus permission? The agent draws on case studies, narrative accounts, and empirical research on the effects of women's exclusion from church leadership — on women, on congregations, and on mission. It is specifically prompted to resist two failure modes: ignoring human cost entirely, and treating human cost as the only thing that matters. Pastoral evidence is real data; it is not the final criterion.
+
+**The Social and Cultural Analyst** brings two lenses: (1) ancient cultural anthropology applied to the first-century Mediterranean world — honor/shame dynamics, *haustafeln*, patronage networks, the social significance of public speech by women in Greco-Roman contexts; and (2) contemporary sociology of religion — how institutional interests, organizational dynamics, and cultural context shape church practice today. The agent is prompted to resist its own most common failure mode: explaining everything sociologically and thereby adjudicating nothing.
+
+### The Statements of Limits
+
+Each advocate reads their Statement of Limits at the start of Round 1. These are core to the design and are reproduced in `system_prompts.json`.
+
+**Biblical Scholar:** Exegesis can establish what texts mean within their canonical context. It cannot determine how much weight a first-century cultural situation should carry in a twenty-first century church; build an ecclesiology from its findings without assistance from systematic theology; or adjudicate between two exegetically defensible readings without a hermeneutical principle that itself requires defense.
+
+**Reception Historian:** Reception history can show that a reading has a history, has served certain interests, and has changed over time. It cannot show that a reading is therefore wrong. It cannot establish what the texts mean or what doctrine the church should build from them.
+
+**Hermeneutician:** Hermeneutics can expose inconsistency and interrogate method. It cannot determine which hermeneutical approach is ultimately correct — that requires theological and philosophical commitments that go beyond hermeneutics itself.
+
+**Systematic Theologian:** Systematics can clarify what is at stake and expose hidden assumptions. It cannot determine the meaning of specific texts or the weight of historical evidence without the biblical scholar and reception historian.
+
+**Pastoral Theologian:** Pastoral theology can show that a position has harmful effects or good fruit, but fruitfulness is not the final criterion for theological truth. It cannot establish what Scripture requires or what the doctrine actually is.
+
+**Social and Cultural Analyst:** Social analysis can show that a reading emerged in a particular social context and serves particular social interests. It cannot show that the reading is therefore wrong. If all readings are socially conditioned, that fact alone cannot adjudicate between them.
 
 ---
 
 ## Debate Structure
 
-### Rounds
+### Rounds and Word Counts
 
 | Round | Purpose | Word Count |
 |-------|---------|------------|
 | Pre-debate | Position papers + source registers | Up to 1,500 words per advocate |
-| Round 1 | Opening statements: disciplinary findings | 600–800 words per advocate |
-| Round 2 | Cross-disciplinary examination | 400 words/question, 250 words/response |
-| Round 3 | Seven required texts — all advocates respond to each | 1,750 words total per advocate (min 150 per text) |
+| Round 1 | Opening statements: disciplinary findings on the anchor text | 600–800 words per advocate (incl. 150-word Statement of Limits) |
+| Round 2 | Cross-disciplinary examination — directed challenges | 400 words/question, 250 words/response |
+| Round 3 | Seven required texts — all advocates engage each one | 1,750 words total per advocate (min 150 per text) |
 | [Synthesis] | Moderator synthesis — map of convergence and divergence | 300–400 words |
-| [Synthesis Response] | Each advocate responds to the synthesis | 100 words max per advocate |
+| [Synthesis Response] | Each advocate responds to the moderator synthesis | 100 words max per advocate |
 | Round 4 | Closing arguments: what does faithful practice require? | 500–650 words per advocate |
 
-### Speaking Order
-- **Rounds 1, 2, 3:** Advocates 1 → 6
-- **Round 4:** Advocates 6 → 1 (reversed)
+### The Seven Required Texts
 
-### The Seven Required Texts (Round 3)
-1. Genesis 2:18–23 — the *ezer* and creation sequence
-2. 1 Timothy 2:11–14 — the central prohibition
-3. 1 Corinthians 11:2–16 — women praying and prophesying
-4. 1 Corinthians 14:33–35 — women keeping silent
-5. Galatians 3:28 — neither male nor female
-6. Romans 16 (selected) — the women Paul names
-7. Judges 4–5 and 2 Kings 22 — Deborah and Huldah
+Round 3 is structured around seven texts that both sides of this debate must engage. Every advocate addresses all seven in a single response (not one text at a time) — the advocate needs to see all seven to plan their allocation. Minimum 150 words per text.
+
+| Text | Passage | Core Dispute |
+|------|---------|-------------|
+| **1. Genesis 2:18–23** | The *ezer* and creation sequence | Does the ordering of creation establish a hierarchy of authority? What does *ezer* actually establish — and what does it not? How does the ANE context affect the creation-sequence-implies-hierarchy argument? |
+| **2. 1 Timothy 2:11–14** | The central prohibition | What does *authentein* mean and why does the decision matter? Does Paul's appeal to creation in v.13 make the prohibition transcultural? Is that hermeneutical principle applied consistently elsewhere? |
+| **3. 1 Corinthians 11:2–16** | Women praying and prophesying | Paul assumes women pray and prophesy in the gathered assembly. What does this establish? What is the head-covering argument actually doing? Does *kephale* mean source or authority? |
+| **4. 1 Corinthians 14:33–35** | Women commanded to be silent | Is this a Corinthian slogan that Paul refutes in v.36 (Peppiatt), a restriction on disruptive questioning, or a universal Pauline command? How do we hold this text alongside 1 Corinthians 11:5? |
+| **5. Galatians 3:28** | Neither male nor female | Is this soteriological only, or does it carry ecclesiological weight? Does "no male and female" quote Genesis 1:27, and what follows from that quotation? What determines how much ecclesiological weight to assign? |
+| **6. Romans 16 (selected)** | Phoebe, Priscilla, Junia | Phoebe as *diakonos* and *prostatis*; Junia as *en tois apostolois*; Priscilla named before Aquila. What do these designations establish? What is the burden of proof for reading them restrictively rather than expansively? |
+| **7. Judges 4–5 and 2 Kings 22** | Deborah and Huldah | What kind of authority do these women actually exercise? What does their presence in the canon establish — precedent, exception, or something that resists that binary? How do we decide? |
+
+### Round 2 Cross-Examination Pairings
+
+Each advocate poses a directed challenge to one other advocate. The pairings are designed to create genuine methodological tensions — not rhetorical disputes but substantive disagreements between disciplines about what counts as evidence and how arguments should work.
+
+| Questioner | Target | Methodological Tension |
+|-----------|--------|----------------------|
+| Hermeneutician | Biblical Scholar | The gap between lexical evidence and hermeneutical principle: exegesis can establish a range of defensible readings, but it cannot choose between them without a hermeneutical principle that the biblical scholar has not yet defended. |
+| Biblical Scholar | Reception Historian | The relationship between the history of a reading and its validity: does a long history of misreading — if that is what it was — make the correct reading more or less accessible now? |
+| Reception Historian | Social/Cultural Analyst | The limits of social-location analysis: if social context shapes all reading, can any reading genuinely transcend its social location? Or does this argument dissolve itself? |
+| Social/Cultural Analyst | Systematic Theologian | The social conditioning of first principles: systematic theology claims to reason from foundations, but those foundations were articulated in specific social contexts. Has the systematician accounted for this? |
+| Systematic Theologian | Pastoral Theologian | The relationship between fruitfulness and truth: pastoral evidence of harm or flourishing is real data — but fruitfulness is not the criterion for theological truth. What exactly is the pastoral theologian's argument? |
+| Pastoral Theologian | Hermeneutician | The gap between method and practice: hermeneutical rigor is valuable, but churches must make decisions now, with real people, under the constraints of real traditions. At what point does methodological scruple become pastoral evasion? |
+
+### Speaking Order
+
+- **Rounds 1, 2, 3:** Advocates 1 → 6 (Biblical Scholar through Social/Cultural Analyst)
+- **Round 4:** Advocates 6 → 1 (reversed — the Social/Cultural Analyst speaks first, the Biblical Scholar last)
+
+The reversed order in Round 4 gives the disciplines that were asked to lead with the most empirical claims the opportunity to close, and gives the exegetical discipline the final word on what the texts establish after hearing all other perspectives.
 
 ---
 
-## Architecture
+## System Architecture
 
-### Design Principles
+### Core Design Decisions
 
-**Separation of concerns:** Each advocate is a fully independent agent. They do not share a conversation or context window with other advocates. They receive other advocates' outputs as compiled documents — the same way a real debate participant reads a position paper, not a live conversation feed.
+**Separation of concerns — independent agents, not personas.** Each advocate is a fully independent agent. They do not share a conversation or context window with other advocates. They receive other advocates' outputs as compiled documents — the same way a real debate participant reads a position paper, not a live conversation feed.
 
-**Fresh calls, not persistent conversations:** Each advocate makes a single API call per round with a carefully constructed input: system prompt + compiled prior outputs + round prompt. This gives total control over what the agent sees. Nothing hidden, nothing accumulated from prior reasoning.
+**Fresh calls, not persistent conversations.** Each advocate makes a single API call per round with a carefully constructed input: system prompt + compiled prior outputs + round prompt. This gives total control over what the agent sees. Nothing is hidden; nothing accumulates from prior reasoning within a round.
 
-**Disciplinary identity over harmonization:** The greatest risk in a single-LLM debate is that all positions harmonize toward the model's implicit priors. Separate agents with strong disciplinary system prompts resist this. The Biblical Scholar and the Social Analyst should disagree — that tension is the point. Each round prompt includes a re-anchoring instruction: "You are the [X]. Review your Statement of Limits. Respond from your discipline, not as a generalist."
+**Disciplinary identity over harmonization.** The greatest risk in a single-LLM debate is that all positions harmonize toward the model's implicit priors. Separate agents with strong disciplinary system prompts resist this. The Biblical Scholar and the Social Analyst should disagree — that tension is the point. Each round prompt includes a re-anchoring instruction: *"You are the [X]. Review your Statement of Limits. Respond from your discipline, not as a generalist."*
 
-**Structured citation protocol:** Every factual claim is tagged at point of output using a structured format. A dedicated verification agent (separate from the moderator) processes these tags with web search. Claims it can't resolve are routed to a human auditor via a structured worksheet.
+**Structured citation protocol.** Every factual claim is tagged at point of output using a structured format. A dedicated verification agent (separate from the moderator) processes these tags with web search. Claims it cannot resolve are routed to a human auditor via a structured worksheet.
 
-**Persistent canonical record:** Every round output plus every moderation report is compiled into a canonical debate record that grows across the debate. This record — not raw conversation history — is what each agent receives as context for subsequent rounds.
+**Persistent canonical record.** Every round output and moderation report is compiled into a canonical debate record that grows across the debate. This record — not raw conversation history — is what each agent receives as context for subsequent rounds. The record is rebuilt from disk after each round via `document_compiler.py`.
 
-**Context compression for later rounds:** By Round 4, the full canonical record exceeds 40,000 words. Rather than injecting everything, each advocate receives: their own prior outputs in full, a moderator-compiled summary of the other five advocates' key arguments and positions (not full text), the moderator synthesis and synthesis responses, and the Round 4 prompt. This cuts context by ~60% while preserving what matters — the advocate's own voice and a clear picture of where the debate stands.
+**Context compression for Round 4.** By Round 4, the full canonical record exceeds 40,000 words. Rather than injecting the full record, each advocate receives: their own prior outputs in full, a moderator-generated summary of the other five advocates' key arguments (200–300 words each), the moderator synthesis and synthesis responses, and the Round 4 prompt. This cuts context by ~60% while preserving the advocate's own voice and a clear picture of where the debate stands.
 
-**Explicit uncertainty:** Both advocates and the moderator are required to express uncertainty. "I cannot verify this citation" and "my discipline cannot establish this" are required outputs, not failures.
+**Explicit uncertainty.** Both advocates and the moderator are required to express uncertainty. "I cannot verify this citation" and "my discipline cannot establish this" are required outputs, not failures.
 
-### System Architecture
+### Technical Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -161,66 +268,61 @@ Plus:
     └─────────────────────────────────────────────────────┘
 ```
 
-### Citation Verification System
-
-A two-pass architecture separates automated verification from human judgment:
-
-**Pass 1 — Automated Verifier Agent:** A dedicated LLM call with web search enabled. For each citation: confirms the book exists (bibliographic check), confirms the author addresses the topic (topical check), confirms the author's known position aligns with the attributed argument (argument direction check), and checks for dissenting voices if consensus is claimed. Limited to 3 web searches per citation to control cost. Produces structured verdicts: VERIFIED, LIKELY_ACCURATE, LIKELY_ACCURATE_BUT_CONTESTED, PARTIALLY_VERIFIED, NEEDS_HUMAN_REVIEW, or FABRICATION_RISK.
-
-**Pass 2 — Human Audit Worksheet:** Claims the verifier couldn't resolve are compiled into a structured markdown worksheet, pre-sorted by priority, with the automated findings and search suggestions already attached. The auditor assigns one of five verdicts:
-- **CONFIRMED** — found in the original source
-- **CONFIRMED_INDIRECT** — corroborated by other reliable evidence (author's blog, book review, secondary citation), with structured fields for evidence type, source, and confidence
-- **PLAUSIBLE_BUT_UNCONFIRMED** — consistent with known content, no contradicting evidence
-- **LIKELY_FABRICATED** — evidence contradicts the claim or no trace found
-- **CANNOT_DETERMINE** — insufficient access to resolve
-
-Each claim also receives an impact assessment (load-bearing, supporting, or illustrative) and an action recommendation. Completed worksheets flow into the moderator's input for the fact-check report.
-
-See `verification-system.md` for the full specification.
-
 ### Model Selection
 
 Quality is the priority; cost is managed by matching model capability to round demands:
 
 | Round | Model | Rationale |
 |-------|-------|-----------|
-| Pre-debate position papers | Sonnet 4.6 | Structured output from detailed prompts — Sonnet handles this well |
+| Pre-debate position papers | Sonnet 4.6 | Structured output from detailed prompts |
 | Round 1 openings | Sonnet 4.6 | Constrained, prompted, single-discipline output |
-| Round 2 cross-examination | **Opus** | Requires understanding another discipline's argument well enough to challenge it |
-| Round 3 text responses | Sonnet 4.6 | Short, constrained per-text responses |
-| Moderator fact-checking | Sonnet 4.6 | Pattern matching against training knowledge + verification input |
-| Moderator synthesis | **Opus** | Must hold six disciplines' findings simultaneously |
+| Round 2 cross-examination | **Opus 4.6** | Requires understanding another discipline's argument well enough to challenge it at the methodological level |
+| Round 3 text responses | Sonnet 4.6 | Short, constrained per-text responses with word limits |
+| Moderator fact-checking | Sonnet 4.6 | Pattern matching against training knowledge + structured verification input |
+| Moderator synthesis | **Opus 4.6** | Must hold six disciplines' findings simultaneously and map genuine convergence and divergence |
 | Synthesis responses | Sonnet 4.6 | 100-word constrained responses |
-| Round 4 closing arguments | **Opus** | Deep reasoning, cross-disciplinary integration, ecclesial conclusions |
-| Verifier agent | Sonnet 4.6 | Bibliographic verification — doesn't need Opus reasoning |
+| Round 4 closing arguments | **Opus 4.6** | Deep reasoning, cross-disciplinary integration, ecclesial conclusions — the most demanding cognitive task in the debate |
+| Citation verifier | Sonnet 4.6 | Bibliographic verification with web search — pattern matching more than reasoning |
+| Context summarization (Round 4 prep) | Sonnet 4.6 | Summarizing advocate outputs for context compression |
 
-Temperature: 0.75 for advocates (disciplinary character without incoherence), 0.25 for moderator and verifier (consistency over creativity).
+**Temperature settings:**
+- Advocates: 0.75 (disciplinary character without incoherence)
+- Moderator and verifier: 0.25 (consistency over creativity)
+- Conductor language tasks (formatting, compilation, summarization): 0.30
+
+### Context Management Strategy
+
+Each round's human message is constructed as:
+
+```
+[shared_context — debate rules, citation protocol, Alderwood anchor text full PDF]
 
 ---
 
-## Technology Stack
+[canonical_record_so_far — all prior round outputs, compiled Markdown]
 
-### Core
-- **Language:** Python 3.11+
-- **LLM:** Anthropic API (Claude)
-- **Primary model:** Opus for cross-examination (Round 2), synthesis, and closing arguments (Round 4)
-- **Secondary model:** Sonnet 4.6 for constrained-output rounds (1, 3, pre-debate), fact-checking, and verification
-- **Web search:** Anthropic web search tool (for citation verification agent)
+---
 
-### Key Dependencies
-```
-anthropic>=0.40.0
-python-dotenv
-rich              # For readable terminal output during runs
-tenacity          # For API retry logic
+[round_prompt — specific instructions for this round, with {TEMPLATE_VARS} filled]
 ```
 
-### Environment Variables
+For Round 4, the canonical record section is replaced with the compressed context from `context_packager.py`:
+
 ```
-ANTHROPIC_API_KEY=
-DEBATE_OUTPUT_DIR=       # Where to write the canonical record
-LOG_LEVEL=INFO
+[own prior outputs — all rounds, full text]
+
+===
+
+[other advocates — Sonnet-generated 200–300 word summaries of each]
+
+===
+
+[moderator synthesis + all synthesis responses]
 ```
+
+Template variable injection uses two mechanisms:
+- `{CURLY_BRACE_VARS}` for per-round variables like `{ADVOCATE_DISPLAY_NAME}`, `{DISCIPLINARY_LEAD}`, `{TARGET_ADVOCATE}` — substituted via regex that only matches `ALL_CAPS` patterns, leaving JSON examples untouched
+- `[BRACKET_VARS]` for structural substitutions in the Round 3 texts block
 
 ---
 
@@ -230,148 +332,344 @@ All advocate outputs must follow this tagging format for factual claims:
 
 ```
 [CLAIM: brief statement of the claim being made]
-[SOURCE: Author, Title, Publisher, Year, p. XX if available]
+[SOURCE: Author, Title, Publisher, Year, page if available]
 [ARGUMENT: the specific argument being attributed to this source]
 [CONFIDENCE: HIGH / MEDIUM / LOW — advocate's own assessment]
 ```
 
-Example:
-```
-[CLAIM: authenteo carried a negative connotation in first-century Greek]
-[SOURCE: Nijay Gupta, Tell Her Story, IVP Academic, 2023, p. 170]
-[ARGUMENT: Gupta argues the word's rarity and pattern of use in ancient sources suggests it describes an abuse of power rather than neutral exercise of authority]
-[CONFIDENCE: MEDIUM — lexical debate is genuinely contested]
-```
+**Confidence levels:**
+- **HIGH** — confident the author, work, and argument are accurately stated
+- **MEDIUM** — confident about the author and work but less certain about the specific argument or page
+- **LOW** — working from general knowledge of the scholar's position; cannot confirm specifics
 
-The moderator processes all tagged claims and returns:
-```json
-{
-  "claim_id": "R1_BS_001",
-  "round": 1,
-  "advocate": "biblical_scholar",
-  "claim": "authenteo carried a negative connotation in first-century Greek",
-  "source_cited": "Gupta, Tell Her Story, 2023, p. 170",
-  "verification_status": "CONTESTED",
-  "moderator_note": "Gupta's argument exists and is accurately attributed. The claim itself is contested — Al Wolters (JETS, 2006) argues for neutral meaning. Both readings have serious scholarly defenders.",
-  "search_result": "Confirmed: Gupta makes this argument. Westfall (Paul and Gender, 2016) concurs. Wolters and Köstenberger dispute it.",
-  "flag_type": "SOFT"
-}
+Advocates are explicitly instructed not to fabricate page numbers. A LOW confidence tag with no page number is treated as more honest and more useful than a HIGH confidence tag with a fabricated number. The system prompt states this directly.
+
+**Example:**
+```
+[CLAIM: authentein carried a negative or domineering connotation in first-century Greek]
+[SOURCE: Philip Payne, Man and Woman, One in Christ, Zondervan, 2009]
+[ARGUMENT: Payne surveys pre-New Testament and contemporary uses of authentein and argues the
+negative or domineering sense is better attested in the relevant period than the neutral
+"to have authority" reading favored by complementarian translations]
+[CONFIDENCE: HIGH]
 ```
 
 ---
 
-## Project Phases
+## Citation Verification System
 
-### Phase 1 — Single High-Quality Run (current)
-Run this debate once at the highest quality achievable. The conductor script orchestrates API calls sequentially, the citation verification system catches fabrications, and a human auditor resolves what the automated verifier can't. The canonical debate record is the deliverable.
+A two-pass architecture separates automated verification from human judgment. The goal is not to eliminate hallucination — that is not achievable — but to make it visible and route it to human resolution.
 
-### Phase 2 — Reusable Framework
-Make the system topic-agnostic. Given a question and a set of disciplines, generate: the motion, the advocate identities and system prompts, the required texts/evidence, and the cross-examination pairings. This is primarily a prompt-generation problem — Claude generating the debate configuration, which then drives the same conductor script.
+### Pass 1 — Automated Verifier
 
-### Phase 3 — Web Tool (Beta)
-A web application wrapping the conductor. Users select from curated topics, the system generates the debate configuration and runs it. Key challenges: cost management (a full debate run is expensive), job queue (runs take time), and output presentation (the canonical record must be readable). Limited to pre-curated topics initially.
+A dedicated LLM call (Sonnet 4.6) with Anthropic's web search tool enabled. For each citation, the verifier:
+1. Confirms the book exists (bibliographic check)
+2. Confirms the author addresses the topic (topical check)
+3. Confirms the author's known position aligns with the attributed argument (argument direction check)
+4. Checks for significant dissenting voices if consensus is claimed
 
-### Enhancement Options (for any phase)
-These are available but not required for Phase 1:
+Limited to a bounded number of web searches per citation to control cost. Produces structured verdicts using this taxonomy:
 
-- **Web search for advocates:** Allow advocates to use web search during Round 2 cross-examination. Adds citation richness but increases cost significantly.
-- **Vector store for source material:** Load key books/articles into a vector database for the verification pipeline. Dramatically improves citation accuracy. High setup cost.
-- **Iterative position refinement:** After Round 2, allow each advocate one revision of their Round 1 opening. Models intellectual responsiveness to challenge.
-- **Multi-run consensus:** Run the full debate 3 times with different temperatures and compare. Flags where conclusions are model-stable vs. temperature-sensitive.
-- **Human-in-the-loop moderation:** Route flagged claims to a human before the moderation report is finalized. Highest accuracy, requires active participation during the run.
+### Verification Verdict Types
+
+| Verdict | Meaning |
+|---------|---------|
+| `VERIFIED` | Book confirmed to exist; author confirmed to address the topic; argument direction consistent with author's known position |
+| `LIKELY_ACCURATE` | Strong indicators of accuracy; minor uncertainties don't affect the core claim |
+| `LIKELY_ACCURATE_BUT_CONTESTED` | The claim as attributed is likely accurate, but the position is significantly contested by other serious scholars |
+| `PARTIALLY_VERIFIED` | Some elements confirmed; others could not be verified (e.g., book confirmed but specific page claim unverifiable) |
+| `NEEDS_HUMAN_REVIEW` | Insufficient evidence to verify or rule out; requires primary source access |
+| `FABRICATION_RISK` | Significant evidence the claim is inaccurate, misattributed, or fabricated |
+
+### Pass 2 — Human Audit Worksheet
+
+Claims the verifier flagged as `NEEDS_HUMAN_REVIEW` or `FABRICATION_RISK` are compiled into a structured Markdown worksheet. The worksheet pre-sorts claims by priority (fabrication risks first) and attaches the automated findings and search suggestions. A human auditor assigns one of five verdicts per claim:
+
+| Verdict | Meaning |
+|---------|---------|
+| **CONFIRMED** | Found in the original source — exact or substantially accurate |
+| **CONFIRMED_INDIRECT** | Corroborated by reliable secondary evidence (author's blog, peer review, known position) — with structured fields for evidence type, source URL, and confidence |
+| **PLAUSIBLE_BUT_UNCONFIRMED** | Consistent with known content; no contradicting evidence found; primary source not accessed |
+| **LIKELY_FABRICATED** | Evidence contradicts the claim or no trace found in the expected source |
+| **CANNOT_DETERMINE** | Insufficient access to resolve |
+
+Each claim also receives:
+- An **impact assessment** (load-bearing, supporting, or illustrative — what happens to the argument if this citation is wrong?)
+- An **action recommendation** (accept as-is, qualify, flag for moderator, or remove)
+
+Completed worksheets are compiled into moderator input files. The moderator fact-check report is generated with the verification results injected directly into the prompt, not as a separate document the moderator "reads."
+
+The final debate summary (generated after Round 4) includes an aggregated citation audit report: total citations, verdicts by category, fabrication risk count, claims awaiting human review.
+
+---
+
+## Repository Structure
+
+```
+/
+├── README.md                          # This file
+├── debate-framework.md                # Full debate design (V4 — the canonical plan)
+├── system_prompts.json                # All agent system prompts + round prompt templates
+│                                      # (Pass this file alongside the README to reviewers)
+├── scripts/
+│   ├── conductor.py                   # Main orchestration — runs rounds sequentially
+│   ├── document_compiler.py           # Compiles round outputs into canonical record
+│   ├── context_packager.py            # Builds per-advocate input context for each round
+│   ├── citation_extractor.py          # Parses [CLAIM][SOURCE][ARGUMENT][CONFIDENCE] blocks
+│   ├── citation_verifier.py           # Automated verification agent (web search)
+│   └── audit_worksheet.py             # Generates human audit worksheets
+├── outputs/                           # Generated content (real runs)
+│   ├── predebate/                     # Position papers — one .md per advocate
+│   ├── round_1/                       # One .md per advocate + moderation_report.md
+│   ├── round_2/                       # {advocate}_question.md + {advocate}_response.md
+│   │                                  # + moderation_report.md
+│   ├── round_3/                       # One .md per advocate + moderation_report.md
+│   ├── synthesis/                     # moderator_synthesis.md + {advocate}_response.md
+│   │                                  # + final_summary.md
+│   ├── round_4/                       # One .md per advocate + moderation_report.md
+│   └── canonical_record.md            # Full compiled debate — rebuilt after each round
+├── verification/
+│   ├── citations/                     # round_{N}_citations.json — extracted citation blocks
+│   ├── verifications/                 # round_{N}_verifications.json — verifier verdicts
+│   ├── audit/                         # round_{N}_worksheet.md — human audit worksheets
+│   └── moderator_input/               # round_{N}.md — verification summary for moderator
+├── alderwood_text.txt                 # Extracted anchor text (generated from PDF)
+└── outputs/tests/                     # Test run outputs (timestamped, isolated)
+    └── {YYYY-MM-DD_HHMMSS}/           # Same structure as outputs/
+```
+
+**Note for reviewers:** The primary artifacts for evaluating the approach are `system_prompts.json` (all agent identities, round prompt templates, pairing data, and required texts) and this README. The `scripts/` directory contains the orchestration code that constructs inputs, manages state, and calls the API.
 
 ---
 
 ## Known Limitations and Risks
 
 ### LLM Hallucination
-The most serious risk. LLMs generate plausible-sounding citations that may be inaccurate, misattributed, or entirely fabricated. The citation verification system (automated verifier + human audit worksheet) mitigates this but does not eliminate it. **All citations in the final canonical record must be independently verified before the record is treated as authoritative.** Estimated human audit time: 10–15 hours across the full debate.
+
+The most serious risk. LLMs generate plausible-sounding citations that may be inaccurate, misattributed, or entirely fabricated. The citation verification system (automated verifier + human audit worksheet) makes this visible and routes unresolved claims to human judgment — it does not eliminate the problem. **All citations in the final canonical record must be independently verified before the record is treated as authoritative.** Estimated human audit time: 10–15 hours across the full debate.
+
+The citation confidence tags are a partial mitigation. The system is explicit that LOW confidence is honest and HIGH confidence is a claim that should be checked. The verifier treats all page numbers as unverifiable by automated means.
 
 ### Disciplinary Drift
-Even with strong system prompts, advocates may drift from their disciplinary identity across long runs — the Biblical Scholar may start arguing like the Pastoral Theologian by Round 4. Mitigations built into the architecture: fresh API calls each round (no accumulated conversation context), re-anchoring instructions in every round prompt ("You are the [X]. Review your Statement of Limits."), and each advocate's own prior outputs given more prominence than the compiled record of other advocates.
+
+Even with strong system prompts, advocates may drift from their disciplinary identity across long runs — the Biblical Scholar may start arguing like the Pastoral Theologian by Round 4. Mitigations built into the architecture: fresh API calls each round (no accumulated conversation context), re-anchoring instructions in every round prompt, and each advocate's own prior outputs given more prominence than the compiled record of other advocates. How well this works in practice is an open empirical question.
 
 ### Harmonization Pressure
-All agents are ultimately the same underlying model. Despite separate contexts and system prompts, they share the same training priors. The most genuinely contested questions — where the model has a strong implicit lean — will show harmonization pressure. This is a known limitation of single-model multi-agent debate and cannot be fully resolved without using different base models for different advocates. The system prompts build genuine methodological tension between disciplines (e.g., the Reception Historian and the Hermeneutician should disagree about whether the history of a reading is evidence about the reading's validity).
+
+All agents are ultimately the same underlying model. Despite separate contexts and system prompts, they share the same training priors. The most genuinely contested questions — where the model has a strong implicit lean — will show harmonization pressure. The system prompts build genuine methodological tension between disciplines (the Reception Historian and the Hermeneutician should disagree about whether the history of a reading is evidence about the reading's validity), but whether the outputs actually reflect that tension or resolve it prematurely is something a reviewer would need to assess by reading the canonical record.
 
 ### Citation Confidence Overstatement
-LLMs express more confidence about citations than is warranted, especially for page numbers and specific argument attributions. The [CONFIDENCE] tag surfaces this, and the shared context instructs advocates to default to MEDIUM or LOW for specific page numbers and to HIGH only for author, work, and general argument direction. The automated verifier marks all page numbers as UNVERIFIABLE by default.
 
-### Context Window Management
-The canonical debate record grows to approximately 40,000–60,000 words by Round 4. For Round 4 specifically, the context packager compresses the record: each advocate receives their own prior outputs in full plus a moderator-compiled summary of the other five advocates' positions (not full text). This keeps the input manageable while preserving what matters. Rounds 1–3 receive the full compiled record since it's still within comfortable context limits.
+LLMs express more confidence about citations than is warranted, especially for page numbers and specific argument attributions. The `[CONFIDENCE]` tag surfaces this; the shared context explicitly instructs advocates to default to MEDIUM or LOW for page numbers and to HIGH only for author, work, and general argument direction. The automated verifier marks all page numbers as UNVERIFIABLE by default.
 
----
+### Context Window and Round 4 Compression
 
-## The Debate Is Not Designed to Produce a Winner
+The canonical debate record grows to approximately 40,000–60,000 words by Round 4. The context compression strategy (own outputs in full + Sonnet-generated summaries of other advocates) is a practical necessity. The quality of the Round 4 arguments depends significantly on the quality of those summaries. The summary prompt asks for the advocate's two or three most significant disciplinary claims, any concessions or genuine position shifts across rounds, and direct tensions or disagreements with other advocates — but how faithfully that instruction is followed is something the summaries themselves should be checked against.
 
-This bears stating explicitly in the README because it shapes every design decision.
+### What It Cannot Produce
 
-The goal is a demonstration of what it looks like when multiple disciplines engage a contested question honestly — including acknowledging limits, engaging inconvenient evidence, and arriving at provisional conclusions that are genuinely grounded in disciplinary findings rather than pre-formed positions.
-
-The canonical record is the output. Not a verdict.
+This system cannot produce scholarship. It can produce a structured record of how LLM agents, disciplined by carefully designed prompts, engage a contested theological question. That record may be useful as a starting point, as a map of the argumentative terrain, or as a demonstration of what multi-disciplinary engagement looks like when it is structured well. It is not a substitute for human scholars doing this work.
 
 ---
 
-## Implementation Plan
+## What This System Can and Cannot Produce
 
-### Build Order
+**What it can produce:**
+- A structured, disciplinarily organized engagement with a contested theological question
+- A map of where the disciplines converge and diverge
+- Well-formed arguments from multiple disciplinary perspectives, with explicit claims and sources
+- A citation record that, after human audit, provides a partially verified bibliography
+- A demonstration of the architecture for application to other contested questions
 
-**Critical: build incrementally. Each step validates the one before it. Do not build the entire system in one pass.**
+**What it cannot produce:**
+- Authoritative scholarship — all claims require independent verification
+- Genuine disagreement between agents that is not ultimately traceable to prompt differences
+- Arguments that go beyond the model's training data on this question
+- A resolution to the underlying theological question
 
-1. **Set up the output directory structure first** — create `outputs/predebate/`, `outputs/round_1/` through `outputs/round_4/`, `outputs/synthesis/`, `verification/citations/`, `verification/verifications/`, `verification/audit/`, `verification/moderator_input/` before running anything. File-not-found errors are annoying when the interesting problem is prompt quality.
+**What makes this run valuable:**
+The value is in the structure and the process, not the verdict. A well-executed run produces a canonical record that maps the argumentative terrain of a hard question with more disciplinary rigor and more explicit uncertainty than most popular treatments of the same question. Whether that map is accurate — whether the disciplinary voices are genuinely distinct, whether the citations are reliable, whether the arguments engage each other — is what a review should assess.
 
-2. **Finalize system prompts** — they are the foundation. Test each advocate's system prompt independently with a single-round test before building the multi-agent pipeline.
+---
 
-3. **Build the conductor script** — sequential round execution, input assembly, output storage. Start simple: read system prompts from JSON, make API calls, write outputs to files.
+## Usage Guide
 
-4. **Build the document compiler** — assembles round outputs into the canonical record. Markdown with clear section headers and advocate labels. Decide the format before any agents run.
+### Setup
 
-5. **Build the context packager** — the most important piece for quality. Handles: full record for Rounds 1–3, compressed record for Round 4 (own outputs in full, summaries of others), re-anchoring instructions injected at every round boundary.
-
-6. **Run Round 1 alone** — generate all six opening statements and the first moderation report. Evaluate: are the disciplinary voices distinct? Are citations well-formed? Is the moderator catching real issues? Adjust prompts before proceeding.
-
-7. **Integrate the citation verification system** — run the extractor, verifier, and audit worksheet generator after Round 1. Complete the human audit. Feed results into the moderator for the Round 1 fact-check report.
-
-8. **Run Rounds 2–4** — once Round 1 validates the architecture, run the remaining rounds. Human audit after each round before proceeding to the next.
-
-### Implementation Details That Matter
-
-**Round 3 word allocation:** The conductor should send all seven texts to each advocate in a single prompt, not one text at a time. The advocate needs to see all seven to decide where to go deep (1,750 words total, 150 minimum per text). A per-text loop with word tracking is more complex and produces worse results because the advocate can't plan allocation across texts. Send them all at once.
-
-**Template variable injection:** The round prompts in `system_prompts.json` contain injection points: `{ADVOCATE_DISPLAY_NAME}`, `{DISCIPLINARY_LEAD}`, `{TARGET_ADVOCATE}`, `{TENSION_DESCRIPTION}`, `{TEXT_NAME}`, `{TEXT_PASSAGE}`, `{TEXT_DISPUTE}`. The conductor must map these from the `system_prompts.json` agent data and `required_texts_round_3` data — do not hardcode them. Build a general template-filling function that takes a prompt template and a dict of variables.
-
-**Round 4 context compression:** This is the highest-value piece of code in the system. The compressed record must preserve each advocate's own prior outputs verbatim while summarizing the other five advocates' positions. The summarization is a specific prompt to the Sonnet coordination model — not truncation, not mechanical extraction. The prompt should instruct Sonnet to produce a 200–300 word summary of each advocate's key arguments and positions across Rounds 1–3, preserving their specific claims and any concessions made. The advocate then receives: their full outputs + five summaries + the moderator synthesis + synthesis responses.
-
-**Round 2 tension descriptions:** The pairings and tension descriptions are in the framework document, not in `system_prompts.json`. The conductor needs to map each advocate to their target and inject the correct `{TENSION_DESCRIPTION}` from the framework's Round 2 table. Consider adding the pairings to `system_prompts.json` as structured data to make this cleaner.
-
-### Temperature Settings
-- Advocates: 0.75
-- Moderator: 0.25
-- Verifier: 0.25
-- Conductor language tasks (formatting, compilation): 0.3
-
-### Key Design Decision: Canonical Record Format
-Markdown with this structure per round:
-
-```markdown
-# Round N — [Round Title]
-
-## Advocate 1: Biblical Scholar
-[output]
-
-## Advocate 2: Reception Historian  
-[output]
-
-...
-
-## Moderation Report — Round N
-[fact-check summary]
-[flagged claims]
+**1. Create a virtual environment and install dependencies:**
+```bash
+python3 -m venv .venv
+.venv/bin/pip install anthropic python-dotenv rich tenacity pymupdf
 ```
 
-This is parseable by both the document compiler (for assembly) and by the context packager (for extracting individual advocate outputs).
+**2. Create a `.env` file at the project root:**
+```
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+**3. Extract the anchor text (required before any run):**
+```bash
+.venv/bin/python -c "
+import fitz
+doc = fitz.open('What-Alderwood-Teaches-about-Women-in-Church-Leadership-Finalized.pdf')
+open('alderwood_text.txt', 'w').write(''.join(p.get_text() for p in doc))
+"
+```
+This creates `alderwood_text.txt`, which the conductor injects into every agent's context automatically.
 
 ---
 
-*Project initialized: 2026*
-*Framework version: 4.0*
-*Status: System prompts and verification system complete. Conductor script next.*
+### Running the Debate
+
+All commands run from the project root:
+
+```bash
+.venv/bin/python scripts/conductor.py [options]
+```
+
+**Run a specific round:**
+```bash
+.venv/bin/python scripts/conductor.py --round predebate
+.venv/bin/python scripts/conductor.py --round 1
+.venv/bin/python scripts/conductor.py --round 2
+.venv/bin/python scripts/conductor.py --round 3
+.venv/bin/python scripts/conductor.py --round synthesis
+.venv/bin/python scripts/conductor.py --round 4
+```
+
+**Run all rounds sequentially:**
+```bash
+.venv/bin/python scripts/conductor.py --all
+```
+
+The conductor validates prerequisites before each round — it will error if you attempt to run Round 2 before Round 1 is complete, rather than silently producing bad output.
+
+---
+
+### Flags
+
+| Flag | Effect |
+|------|--------|
+| `--test` | Write all outputs to `outputs/tests/{timestamp}/` instead of `outputs/`. Nothing touches the real outputs directory. |
+| `--fast` | Cap each API call at 600 output tokens and inject a brevity note. Use for architecture testing when output quality doesn't matter — roughly 25% of normal cost. |
+| `--advocate {id}` | Run only one advocate. Useful for prompt testing. Moderation is skipped (needs all 6); verification and citation extraction still run. |
+| `--skip-human-review` | Skip the human audit pause after each round. The automated verifier still runs and the worksheet is still generated for later review. Unreviewed claims are flagged to the moderator. |
+| `--dry-run` | Print assembled prompts without calling the API. Useful for verifying template variable injection. |
+| `--force` | Re-run even if output files already exist. Without this flag, the conductor skips existing files, allowing partial runs to be resumed. |
+
+**Flags can be combined:**
+```bash
+# Architecture test — fast, isolated, no pause
+.venv/bin/python scripts/conductor.py --round 1 --test --fast --skip-human-review
+
+# Single advocate prompt test
+.venv/bin/python scripts/conductor.py --round 1 --advocate biblical_scholar --test --fast
+
+# Full round with verification, no human pause
+.venv/bin/python scripts/conductor.py --round 1 --skip-human-review
+
+# Real run
+.venv/bin/python scripts/conductor.py --round 1
+```
+
+---
+
+### Advocate IDs
+
+| ID | Display Name |
+|----|-------------|
+| `biblical_scholar` | The Biblical Scholar |
+| `reception_historian` | The Reception Historian |
+| `hermeneutician` | The Hermeneutician |
+| `systematic_theologian` | The Systematic Theologian |
+| `pastoral_theologian` | The Pastoral Theologian |
+| `social_cultural_analyst` | The Social and Cultural Analyst |
+
+---
+
+### Output Structure
+
+**Real runs** write to `outputs/`:
+```
+outputs/
+  predebate/          {advocate_id}.md per advocate
+  round_1/            {advocate_id}.md per advocate + moderation_report.md + round_digest.md
+  round_2/            {advocate_id}_question.md + {advocate_id}_response.md
+                      + moderation_report.md + round_digest.md
+  round_3/            {advocate_id}.md per advocate + moderation_report.md + round_digest.md
+  synthesis/          moderator_synthesis.md + {advocate_id}_response.md per advocate
+                      + final_summary.md (generated after Round 4)
+  round_4/            {advocate_id}.md per advocate + moderation_report.md + round_digest.md
+  canonical_record.md Full compiled debate record — rebuilt after each round
+
+verification/
+  citations/          round_{N}_citations.json — extracted citation blocks per round
+  verifications/      round_{N}_verifications.json — automated verifier verdicts per round
+  audit/              round_{N}_worksheet.md — human audit worksheets
+  moderator_input/    round_{N}.md — verification summary injected into moderator prompt
+```
+
+**Test runs** (`--test`) write to `outputs/tests/{timestamp}/` with the same structure.
+
+**Round digests** are brief (~200 word) summaries printed to the terminal and saved to disk after each full round — an overview of what the round established and where the key tensions are.
+
+**The final summary** (generated after Round 4) includes: a narrative summary of the debate's arc, the major points of convergence and divergence, and an aggregated citation audit report showing total citations, verdicts by category, and unresolved claims.
+
+---
+
+### Human Audit Workflow
+
+After each round (without `--skip-human-review`), the conductor pauses if any citations need review:
+
+1. The automated verifier runs and assigns verdicts to all citations
+2. Claims flagged as `FABRICATION_RISK` or `NEEDS_HUMAN_REVIEW` are written to `verification/audit/round_{N}_worksheet.md`
+3. The conductor prints the worksheet path and pauses for input
+4. Open the worksheet, complete the verdict checkboxes for each claim
+5. Press Enter to continue — the moderator runs with the completed audit results injected into its prompt
+
+**If you skip human review** (`--skip-human-review`): the worksheet is still generated for async reference. The moderator receives the automated verdicts with a note that human audit was skipped. `FABRICATION_RISK` claims are surfaced to the moderator as explicit corrections.
+
+---
+
+### Recommended Run Order
+
+For a full high-quality debate:
+
+1. **Test single advocate**: `--round 1 --advocate biblical_scholar --test --fast`
+   Verify prompt quality and citation formatting before committing to a full run.
+
+2. **Test full Round 1**: `--round 1 --test --skip-human-review`
+   Check that all 6 voices are disciplinarily distinct and the moderation report is substantive.
+
+3. **Run pre-debate** (optional but recommended): `--round predebate`
+   Position papers give advocates richer context for Round 1 and produce a source register useful for verifying Round 1 citations.
+
+4. **Run Round 1 for real**: `--round 1`
+   Complete the human audit before proceeding to Round 2.
+
+5. **Continue rounds 2 → synthesis → 4** sequentially, completing the human audit after each round.
+
+---
+
+## Project Phases
+
+### Phase 1 — Single High-Quality Run (current)
+Run this debate once at the highest quality achievable. The conductor script orchestrates API calls sequentially, the citation verification system catches fabrications, and a human auditor resolves what the automated verifier cannot. The canonical debate record is the deliverable.
+
+### Phase 2 — Reusable Framework
+Make the system topic-agnostic. Given a question and a set of disciplines, generate: the motion, the advocate identities and system prompts, the required texts or evidence, and the cross-examination pairings. This is primarily a prompt-generation problem — Claude generating the debate configuration, which then drives the same conductor script.
+
+### Phase 3 — Web Tool (Beta)
+A web application wrapping the conductor. Users select from curated topics, the system generates the debate configuration and runs it. Key challenges: cost management (a full debate run is expensive), job queue (runs take time), and output presentation (the canonical record must be readable). Limited to pre-curated topics initially.
+
+### Enhancement Options
+- **Web search for advocates:** Allow advocates to use web search during Round 2 cross-examination. Adds citation richness; increases cost significantly.
+- **Vector store for source material:** Load key books/articles into a vector database for the verification pipeline. Dramatically improves citation accuracy; high setup cost.
+- **Iterative position refinement:** After Round 2, allow each advocate one revision of their Round 1 opening. Models intellectual responsiveness to challenge.
+- **Multi-run consensus:** Run the full debate 3× with different temperatures and compare. Flags where conclusions are model-stable versus temperature-sensitive.
+- **Human-in-the-loop moderation:** Route flagged claims to a human before the moderation report is finalized. Highest accuracy; requires active participation during the run.
+- **Different base models per advocate:** Assign a different model family to each advocate to reduce harmonization pressure. Currently not implemented; would require non-Anthropic models.
+
+---
+
+*Project initialized: 2026 | Framework version: 4.0 | Status: Fully implemented — ready for first full run*

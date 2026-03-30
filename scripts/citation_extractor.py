@@ -1,12 +1,33 @@
 """
 Citation Extractor
-Parses advocate debate outputs and extracts structured [CLAIM][SOURCE][ARGUMENT][CONFIDENCE] blocks.
+Parses advocate debate outputs and extracts structured [CLAIM][SOURCE][ARGUMENT][CONFIDENCE] blocks
+and [CITATION_RESPONSE] correction acknowledgment blocks.
 """
 
 import re
 import json
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 from typing import Optional
+
+
+@dataclass
+class CitationResponse:
+    """Structured response to a citation correction, using [CITATION_RESPONSE] blocks."""
+    response_id: str            # e.g. "R2_BS_RESP_001"
+    round: int
+    advocate: str
+    original_claim_id: str      # links to the Citation being responded to
+    correction_received: str    # FABRICATION_RISK / HARD_CORRECTION / SOFT_FLAG
+    advocate_position: str      # WITHDRAW / QUALIFY / DEFEND
+    revised_claim: str
+    revised_source: str         # empty string if no new source
+    revised_confidence: str     # HIGH / MEDIUM / LOW / ""
+    response_note: str
+    downstream_status: str      # ACTIVE / RESTRICTED / RETRACTED
+    raw_text: str
+
+    def to_dict(self):
+        return asdict(self)
 
 
 @dataclass
@@ -166,6 +187,112 @@ def load_citations(input_path: str) -> list[Citation]:
     with open(input_path, 'r') as f:
         data = json.load(f)
     return [Citation(**d) for d in data]
+
+
+def extract_citation_responses(
+    advocate_output: str,
+    advocate_id: str,
+    round_number: int
+) -> list[CitationResponse]:
+    """
+    Extract all [CITATION_RESPONSE] blocks from an advocate's round output.
+
+    Format:
+    [CITATION_RESPONSE: claim_id]
+    [CORRECTION_RECEIVED: ...]
+    [ADVOCATE_POSITION: WITHDRAW / QUALIFY / DEFEND]
+    [REVISED_CLAIM: ...]
+    [REVISED_SOURCE: ...]
+    [REVISED_CONFIDENCE: ...]
+    [RESPONSE_NOTE: ...]
+    [DOWNSTREAM_STATUS: ACTIVE / RESTRICTED / RETRACTED]
+    """
+    responses = []
+
+    # Match the full block — all fields after CITATION_RESPONSE up to DOWNSTREAM_STATUS
+    block_pattern = re.compile(
+        r'\[CITATION_RESPONSE:\s*(.+?)\]\s*'
+        r'\[CORRECTION_RECEIVED:\s*(.+?)\]\s*'
+        r'\[ADVOCATE_POSITION:\s*(.+?)\]\s*'
+        r'(?:\[REVISED_CLAIM:\s*(.*?)\]\s*)?'
+        r'(?:\[REVISED_SOURCE:\s*(.*?)\]\s*)?'
+        r'(?:\[REVISED_CONFIDENCE:\s*(.*?)\]\s*)?'
+        r'(?:\[RESPONSE_NOTE:\s*(.*?)\]\s*)?'
+        r'\[DOWNSTREAM_STATUS:\s*(.+?)\]',
+        re.DOTALL
+    )
+
+    abbrev = _advocate_abbrev(advocate_id)
+
+    for i, m in enumerate(block_pattern.finditer(advocate_output)):
+        original_claim_id = m.group(1).strip()
+        correction_received = m.group(2).strip().upper()
+        advocate_position = m.group(3).strip().upper()
+        revised_claim = (m.group(4) or "").strip()
+        revised_source = (m.group(5) or "").strip()
+        revised_confidence = (m.group(6) or "").strip().upper()
+        response_note = (m.group(7) or "").strip()
+        downstream_status = m.group(8).strip().upper()
+
+        # Enforce rules
+        if advocate_position == "WITHDRAW":
+            downstream_status = "RETRACTED"
+        elif advocate_position == "DEFEND" and not revised_source:
+            revised_confidence = "LOW"
+            if downstream_status == "ACTIVE":
+                downstream_status = "RESTRICTED"
+        elif advocate_position == "QUALIFY":
+            if downstream_status == "ACTIVE":
+                downstream_status = "RESTRICTED"
+
+        # Normalize downstream_status
+        if downstream_status not in ("ACTIVE", "RESTRICTED", "RETRACTED"):
+            downstream_status = "RESTRICTED"
+
+        response_id = f"R{round_number}_{abbrev}_RESP_{i + 1:03d}"
+
+        responses.append(CitationResponse(
+            response_id=response_id,
+            round=round_number,
+            advocate=advocate_id,
+            original_claim_id=original_claim_id,
+            correction_received=correction_received,
+            advocate_position=advocate_position,
+            revised_claim=revised_claim,
+            revised_source=revised_source,
+            revised_confidence=revised_confidence,
+            response_note=response_note,
+            downstream_status=downstream_status,
+            raw_text=m.group(0),
+        ))
+
+    return responses
+
+
+def extract_all_round_responses(
+    round_outputs: dict[str, str],
+    round_number: int
+) -> list[CitationResponse]:
+    """Extract citation responses from all advocates in a round."""
+    all_responses = []
+    for advocate_id, output in round_outputs.items():
+        responses = extract_citation_responses(output, advocate_id, round_number)
+        all_responses.extend(responses)
+    return all_responses
+
+
+def save_citation_responses(responses: list[CitationResponse], output_path: str):
+    """Save extracted citation responses to JSON."""
+    data = [r.to_dict() for r in responses]
+    with open(output_path, 'w') as f:
+        json.dump(data, f, indent=2)
+
+
+def load_citation_responses(input_path: str) -> list[CitationResponse]:
+    """Load citation responses from JSON."""
+    with open(input_path, 'r') as f:
+        data = json.load(f)
+    return [CitationResponse(**d) for d in data]
 
 
 if __name__ == "__main__":

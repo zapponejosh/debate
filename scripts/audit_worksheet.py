@@ -373,6 +373,7 @@ def generate_moderator_input(
     citations: list[dict],
     verifications: list[dict],
     audit_results: list[dict] | None = None,
+    citation_responses: list | None = None,
     round_number: int = 1
 ) -> str:
     """
@@ -396,15 +397,23 @@ def generate_moderator_input(
     audit_map = {}
     if audit_results:
         audit_map = {a["claim_id"]: a for a in audit_results}
-    
+
+    # Build response map: original_claim_id -> CitationResponse (or dict)
+    response_map = {}
+    if citation_responses:
+        for r in citation_responses:
+            cid = r.original_claim_id if hasattr(r, 'original_claim_id') else r.get("original_claim_id", "")
+            if cid:
+                response_map[cid] = r
+
     for cit in citations:
         cid = cit["claim_id"]
         ver = ver_map.get(cid, {})
         aud = audit_map.get(cid, {})
-        
+
         verdict = ver.get("overall_verdict", "UNVERIFIED")
         audit_verdict = aud.get("auditor_verdict", None)
-        
+
         # Determine final status
         if audit_verdict == "LIKELY_FABRICATED":
             corrections.append({"citation": cit, "verification": ver, "audit": aud})
@@ -416,7 +425,7 @@ def generate_moderator_input(
             unverified.append({"citation": cit, "verification": ver, "audit": aud})
         else:
             clean.append({"citation": cit, "verification": ver, "audit": aud})
-    
+
     lines.append(f"### Claims Needing Correction ({len(corrections)})")
     lines.append("")
     for item in corrections:
@@ -426,6 +435,20 @@ def generate_moderator_input(
         aud = item.get("audit", {})
         if aud.get("auditor_notes"):
             lines.append(f"  Auditor note: {aud['auditor_notes']}")
+        # Include advocate response if present
+        resp = response_map.get(cit["claim_id"])
+        if resp:
+            pos = resp.advocate_position if hasattr(resp, 'advocate_position') else resp.get("advocate_position", "?")
+            status = resp.downstream_status if hasattr(resp, 'downstream_status') else resp.get("downstream_status", "?")
+            revised = resp.revised_claim if hasattr(resp, 'revised_claim') else resp.get("revised_claim", "")
+            note = resp.response_note if hasattr(resp, 'response_note') else resp.get("response_note", "")
+            lines.append(f"  Advocate responded: {pos} — DOWNSTREAM: {status}")
+            if revised:
+                lines.append(f"  Revised claim: {revised}")
+            if note:
+                lines.append(f"  Note: {note}")
+        else:
+            lines.append(f"  ⚠ Advocate did not respond to this correction.")
         lines.append("")
     
     lines.append(f"### Contested Claims — Flag as SOFT ({len(contested)})")
