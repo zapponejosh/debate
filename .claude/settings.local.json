@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import anthropic; print\\(anthropic.__version__\\)\")",
+      "Bash(pip3 show:*)",
+      "Bash(pip show:*)"
+    ]
+  }
+}
