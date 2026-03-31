@@ -1,0 +1,2190 @@
+[
+  {
+    "claim_id": "R1_BS_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including the official IVP Academic publisher page, Amazon listings (ISBN 9780830825622), Internet Archive catalog, and Best Commentaries \u2014 confirm that John Goldingay's Old Testament Theology, Vol. 2 (Israel's Faith) was published by IVP Academic in 2006, exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Goldingay is known for egalitarian-leaning exegesis and would plausibly make this argument about ezer carrying connotations of strength rather than subordination.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/old-testament-theology-ott-vol-2 (IVP official page); https://www.amazon.com/Old-Testament-Theology-Israels-Faith/dp/0830825622 (Amazon listing); https://bestcommentaries.com/author/john-goldingay/ (Best Commentaries catalog entry)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/old-testament-theology-ott-vol-2 (IVP official page); https://www.amazon.com/Old-Testament-Theology-Israels-Faith/dp/0830825622 (Amazon listing); https://bestcommentaries.com/author/john-goldingay/ (Best Commentaries catalog entry).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "John Goldingay is a well-known Old Testament scholar at Fuller Theological Seminary, and his multi-volume Old Testament Theology published by IVP Academic is a recognized work; Vol. 2 in 2006 is plausible.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Goldingay is known for egalitarian-leaning exegesis and would plausibly make this argument about ezer carrying connotations of strength rather than subordination.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/old-testament-theology-ott-vol-2 (IVP official page); https://www.amazon.com/Old-Testament-Theology-Israels-Faith/dp/0830825622 (Amazon listing); https://bestcommentaries.com/author/john-goldingay/ (Best Commentaries catalog entry)",
+        "note": "Multiple credible sources \u2014 including the official IVP Academic publisher page, Amazon listings (ISBN 9780830825622), Internet Archive catalog, and Best Commentaries \u2014 confirm that John Goldingay's Old Testament Theology, Vol. 2 (Israel's Faith) was published by IVP Academic in 2006, exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The paper is confirmed as a 2004 conference paper presented by N.T. Wright at the 'Men, Women and the Church' symposium, St John's College, Durham, and is listed on NTWrightPage.com and mirrored on Fulcrum Anglican."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Wright's argument that the Twelve function as symbolic new patriarchs of Israel and that their maleness is tied to that typological role rather than establishing a gender rule is consistent with his known position in that essay.",
+        "corroborating_evidence": [
+          "https://www.fulcrum-anglican.org.uk/articles/womens-service-in-the-church-the-biblical-basis/ and multiple N.T. Wright reference pages (Theopedia, Religion Wiki, Fandom) listing the title as hosted on NTWrightPage.com"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.fulcrum-anglican.org.uk/articles/womens-service-in-the-church-the-biblical-basis/ and multiple N.T. Wright reference pages (Theopedia, Religion Wiki, Fandom) listing the title as hosted on NTWrightPage.com.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "N.T. Wright did write an essay titled 'Women's Service in the Church: The Biblical Basis' which has been made available on NTWrightPage.com; this is a recognized piece.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Wright's argument that the Twelve function as symbolic new patriarchs of Israel and that their maleness is tied to that typological role rather than establishing a gender rule is consistent with his known position in that essay.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.fulcrum-anglican.org.uk/articles/womens-service-in-the-church-the-biblical-basis/ and multiple N.T. Wright reference pages (Theopedia, Religion Wiki, Fandom) listing the title as hosted on NTWrightPage.com",
+        "note": "The paper is confirmed as a 2004 conference paper presented by N.T. Wright at the 'Men, Women and the Church' symposium, St John's College, Durham, and is listed on NTWrightPage.com and mirrored on Fulcrum Anglican."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including the Eerdmans publisher page, Amazon, Google Books, and a PDF catalog entry with copyright notice \u2014 confirm Gordon D. Fee's 'The First Epistle to the Corinthians' was originally published in 1987 by William B. Eerdmans as part of the NICNT series, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Fee is known for egalitarian interpretations and his commentary does engage the question of whether creation-order arguments in 1 Corinthians settle cultural conditionality; this characterization is broadly consistent with his approach.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page) and https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, publisher William B. Eerdmans)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page) and https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, publisher William B. Eerdmans).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Gordon Fee's commentary on 1 Corinthians in the NICNT series published by Eerdmans in 1987 is a well-known and widely cited scholarly work.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Fee is known for egalitarian interpretations and his commentary does engage the question of whether creation-order arguments in 1 Corinthians settle cultural conditionality; this characterization is broadly consistent with his approach.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page) and https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, publisher William B. Eerdmans)",
+        "note": "Multiple credible sources \u2014 including the Eerdmans publisher page, Amazon, Google Books, and a PDF catalog entry with copyright notice \u2014 confirm Gordon D. Fee's 'The First Epistle to the Corinthians' was originally published in 1987 by William B. Eerdmans as part of the NICNT series, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple highly credible sources \u2014 including the official Eerdmans publisher page, Internet Archive catalog entry, Amazon, and Barnes & Noble \u2014 unanimously confirm Richard Bauckham's 'Gospel Women' was published by Wm. B. Eerdmans in 2002, exactly as cited."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "Bauckham does discuss significant women in biblical narrative in Gospel Women, but the book's focus is primarily New Testament women; a detailed treatment of Huldah is plausible but I cannot confirm it is a central focus of that volume.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, Barnes & Noble, and multiple academic reviews"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: Gospel Women is primarily a New Testament-focused work, so a detailed argument about Huldah as the authoritative interpreter of the law may be present but cannot be confirmed as a substantive treatment in that specific volume. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, Barnes & Noble, and multiple academic reviews.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_004",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Richard Bauckham's Gospel Women was published by Eerdmans in 2002 and is a recognized scholarly work on women in the New Testament context, though it also touches on Old Testament figures.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "Bauckham does discuss significant women in biblical narrative in Gospel Women, but the book's focus is primarily New Testament women; a detailed treatment of Huldah is plausible but I cannot confirm it is a central focus of that volume.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "Gospel Women is primarily a New Testament-focused work, so a detailed argument about Huldah as the authoritative interpreter of the law may be present but cannot be confirmed as a substantive treatment in that specific volume."
+      },
+      "pass2": {
+        "claim_id": "R1_BS_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, Barnes & Noble, and multiple academic reviews",
+        "note": "Multiple highly credible sources \u2014 including the official Eerdmans publisher page, Internet Archive catalog entry, Amazon, and Barnes & Noble \u2014 unanimously confirm Richard Bauckham's 'Gospel Women' was published by Wm. B. Eerdmans in 2002, exactly as cited."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including the official IVP Academic publisher page, Amazon, the author's institutional faculty page, and peer reviews \u2014 unanimously confirm the book as: Nijay K. Gupta, *Tell Her Story: How Women Led, Taught, and Ministered in the Early Church*, IVP Academic, March 14, 2023."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Gupta's work is known for arguing that women like Phoebe held significant leadership roles, and his treatment of prostatis as carrying patronal authority rather than mere assistance is consistent with the book's known thesis.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, CBE International, and multiple academic reviews."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, CBE International, and multiple academic reviews..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Nijay Gupta is a recognized New Testament scholar and Tell Her Story published by IVP Academic in 2023 is a real and recent work focused on women in the New Testament.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Gupta's work is known for arguing that women like Phoebe held significant leadership roles, and his treatment of prostatis as carrying patronal authority rather than mere assistance is consistent with the book's known thesis.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_005",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, CBE International, and multiple academic reviews.",
+        "note": "Multiple credible sources \u2014 including the official IVP Academic publisher page, Amazon, the author's institutional faculty page, and peer reviews \u2014 unanimously confirm the book as: Nijay K. Gupta, *Tell Her Story: How Women Led, Taught, and Ministered in the Early Church*, IVP Academic, March 14, 2023."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_006",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple high-credibility sources \u2014 including the official Eerdmans publisher page, Internet Archive catalog entry, and Amazon \u2014 uniformly confirm Richard Bauckham's 'Gospel Women' was published by Wm. B. Eerdmans in 2002, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Bauckham is known for arguing Junia is female and among the apostles; this matches his documented position in that work.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, and Barnes & Noble listings"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, and Barnes & Noble listings.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_006",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Richard Bauckham's *Gospel Women* (Eerdmans, 2002) is a well-known work by a recognized NT scholar, and it does include a chapter on Junia.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Bauckham is known for arguing Junia is female and among the apostles; this matches his documented position in that work.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_006",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802849991/gospel-women/ (official Eerdmans publisher page); also confirmed by Internet Archive, Amazon, and Barnes & Noble listings",
+        "note": "Multiple high-credibility sources \u2014 including the official Eerdmans publisher page, Internet Archive catalog entry, and Amazon \u2014 uniformly confirm Richard Bauckham's 'Gospel Women' was published by Wm. B. Eerdmans in 2002, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_007",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple independent sources \u2014 including Amazon, Internet Archive, Gospel Coalition, Denver Seminary Journal, and Goodreads \u2014 uniformly confirm the book as Philip B. Payne, *Man and Woman, One in Christ: An Exegetical and Theological Study of Paul's Letters*, Grand Rapids: Zondervan, 2009, 511 pp., ISBN 978-0-310-21988-0, with all publication details matching the cited source exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Payne is known for arguing *authente\u014d* carries a negative or domineering connotation, consistent with his egalitarian conclusions about the passage.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Man-Woman-One-Christ-Theological/dp/0310219884 (Amazon listing); https://www.thegospelcoalition.org/reviews/man-woman-one-christ/ (Gospel Coalition academic review); https://archive.org/details/manwomanoneinchr0000payn (Internet Archive catalog entry); https://www.goodreads.com/book/show/6385005-man-and-woman-one-in-christ (Goodreads full citation)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/Man-Woman-One-Christ-Theological/dp/0310219884 (Amazon listing); https://www.thegospelcoalition.org/reviews/man-woman-one-christ/ (Gospel Coalition academic review); https://archive.org/details/manwomanoneinchr0000payn (Internet Archive catalog entry); https://www.goodreads.com/book/show/6385005-man-and-woman-one-in-christ (Goodreads full citation).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_007",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Philip Payne's *Man and Woman, One in Christ* (Zondervan, 2009) is a recognized egalitarian scholarly work that extensively treats 1 Timothy 2 and *authente\u014d*.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Payne is known for arguing *authente\u014d* carries a negative or domineering connotation, consistent with his egalitarian conclusions about the passage.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_007",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/Man-Woman-One-Christ-Theological/dp/0310219884 (Amazon listing); https://www.thegospelcoalition.org/reviews/man-woman-one-christ/ (Gospel Coalition academic review); https://archive.org/details/manwomanoneinchr0000payn (Internet Archive catalog entry); https://www.goodreads.com/book/show/6385005-man-and-woman-one-in-christ (Goodreads full citation)",
+        "note": "Multiple independent sources \u2014 including Amazon, Internet Archive, Gospel Coalition, Denver Seminary Journal, and Goodreads \u2014 uniformly confirm the book as Philip B. Payne, *Man and Woman, One in Christ: An Exegetical and Theological Study of Paul's Letters*, Grand Rapids: Zondervan, 2009, 511 pp., ISBN 978-0-310-21988-0, with all publication details matching the cited source exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_BS_008",
+    "verification": {
+      "bibliographic": {
+        "status": "FAILED",
+        "note": "The article by Al Wolters titled 'A Semantic Study of authentes and Its Derivatives' exists and is confirmed by multiple sources, but the journal and year cited are incorrect \u2014 it was published in JGRChJ (Journal of Greco-Roman Christianity and Judaism) vol. 1 (2000), not in the Journal of the Evangelical Theological Society in 2006; Wolters does have a separate JETS article from 2011 on a related topic."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Wolters is associated with complementarian-leaning scholarship and arguing against a negative connotation for *authente\u014d* is consistent with his known position.",
+        "corroborating_evidence": [
+          "https://www.patheos.com/blogs/cruxsola/2020/06/fb-live-lecture-did-paul-forbid-women-from-being-church-leaders-1-tim-28-15-in-context-video-recording/"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "NEEDS_HUMAN_REVIEW",
+    "human_review_needed": true,
+    "human_review_priority": "HIGH",
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFLICTING. Source: https://www.patheos.com/blogs/cruxsola/2020/06/fb-live-lecture-did-paul-forbid-women-from-being-church-leaders-1-tim-28-15-in-context-video-recording/.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_BS_008",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Al Wolters is a recognized Reformed scholar who has published on *authente\u014d* cognates; a JETS article from around 2006 on this topic is plausible, though I cannot confirm the exact title and year with certainty.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Wolters is associated with complementarian-leaning scholarship and arguing against a negative connotation for *authente\u014d* is consistent with his known position.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_BS_008",
+        "pass": 2,
+        "bibliographic_status": "CONFLICTING",
+        "source_found": "https://www.patheos.com/blogs/cruxsola/2020/06/fb-live-lecture-did-paul-forbid-women-from-being-church-leaders-1-tim-28-15-in-context-video-recording/",
+        "note": "The article by Al Wolters titled 'A Semantic Study of authentes and Its Derivatives' exists and is confirmed by multiple sources, but the journal and year cited are incorrect \u2014 it was published in JGRChJ (Journal of Greco-Roman Christianity and Judaism) vol. 1 (2000), not in the Journal of the Evangelical Theological Society in 2006; Wolters does have a separate JETS article from 2011 on a related topic."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Epistulae X.96 is universally confirmed as an authentic letter from Pliny the Younger to Emperor Trajan (~112 CE) containing the Latin term 'ministrae' for two women he interrogated under torture about Christian practice; the Latin text ('ex duabus ancillis, quae ministrae dicebantur') is reproduced verbatim at earlychristianwritings.com, and the dating and content match the citation exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The interpretation of *ministrae* as a Latin rendering of *diakonos* and the inference about early female ministerial roles is a standard argument made from this text in historical scholarship.",
+        "corroborating_evidence": [
+          "Multiple corroborating sources: Wikipedia (https://en.wikipedia.org/wiki/Pliny_the_Younger_on_Christians), World History Encyclopedia (https://www.worldhistory.org/article/1846/pliny-the-younger-on-christianity/), EarlyChurchTexts.com citing the Loeb 1915 edition, Georgetown University faculty page, and the Latin text at earlychristianwritings.com \u2014 all confirming Epistulae X.96 with the ministrae passage."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple corroborating sources: Wikipedia (https://en.wikipedia.org/wiki/Pliny_the_Younger_on_Christians), World History Encyclopedia (https://www.worldhistory.org/article/1846/pliny-the-younger-on-christianity/), EarlyChurchTexts.com citing the Loeb 1915 edition, Georgetown University faculty page, and the Latin text at earlychristianwritings.com \u2014 all confirming Epistulae X.96 with the ministrae passage..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Pliny the Younger's letter to Trajan, *Epistulae* X.96, is a well-attested primary source that does refer to two women called *ministrae* in the context of Christian interrogation.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The interpretation of *ministrae* as a Latin rendering of *diakonos* and the inference about early female ministerial roles is a standard argument made from this text in historical scholarship.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple corroborating sources: Wikipedia (https://en.wikipedia.org/wiki/Pliny_the_Younger_on_Christians), World History Encyclopedia (https://www.worldhistory.org/article/1846/pliny-the-younger-on-christianity/), EarlyChurchTexts.com citing the Loeb 1915 edition, Georgetown University faculty page, and the Latin text at earlychristianwritings.com \u2014 all confirming Epistulae X.96 with the ministrae passage.",
+        "note": "Epistulae X.96 is universally confirmed as an authentic letter from Pliny the Younger to Emperor Trajan (~112 CE) containing the Latin term 'ministrae' for two women he interrogated under torture about Christian practice; the Latin text ('ex duabus ancillis, quae ministrae dicebantur') is reproduced verbatim at earlychristianwritings.com, and the dating and content match the citation exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple authoritative sources \u2014 the official JHU Press catalog page, the lead author's Harvard faculty page, Cambridge Core, Project MUSE, and peer-reviewed journal reviews \u2014 all consistently citing Johns Hopkins University Press, 2005, exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Madigan and Osiek are known for arguing that epigraphic evidence attests real ministerial function for women in early Christianity, not merely honorific titles, which matches the attributed argument.",
+        "corroborating_evidence": [
+          "https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core journal review, Project MUSE, Amazon, and Journal of Religion citation \u2014 all listing Johns Hopkins University Press, 2005."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core journal review, Project MUSE, Amazon, and Journal of Religion citation \u2014 all listing Johns Hopkins University Press, 2005..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Kevin Madigan and Carolyn Osiek's *Ordained Women in the Early Church* (Johns Hopkins University Press, 2005) is a recognized scholarly collection of inscriptional and documentary evidence for women in early church ministry.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Madigan and Osiek are known for arguing that epigraphic evidence attests real ministerial function for women in early Christianity, not merely honorific titles, which matches the attributed argument.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core journal review, Project MUSE, Amazon, and Journal of Religion citation \u2014 all listing Johns Hopkins University Press, 2005.",
+        "note": "The book is confirmed across multiple authoritative sources \u2014 the official JHU Press catalog page, the lead author's Harvard faculty page, Cambridge Core, Project MUSE, and peer-reviewed journal reviews \u2014 all consistently citing Johns Hopkins University Press, 2005, exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple authoritative sources \u2014 including the Liturgical Press publisher page and a ProQuest academic review \u2014 as: Ute E. Eisen, Women Officeholders in Early Christianity: Epigraphical and Literary Studies, Collegeville, MN: Liturgical Press, 2000, ISBN 9780814659502."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Eisen's work is indeed a systematic survey of epigraphic and textual evidence for women in early Christian offices, and her argument that restriction was a later historical development is consistent with the book's known thesis.",
+        "corroborating_evidence": [
+          "https://litpress.org/Products/5950/Women-Officeholders-in-Early-Christianity (publisher page); also confirmed by Internet Archive, Google Books, Amazon, ProQuest academic review, Open Library, and University of Missouri library catalog"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://litpress.org/Products/5950/Women-Officeholders-in-Early-Christianity (publisher page); also confirmed by Internet Archive, Google Books, Amazon, ProQuest academic review, Open Library, and University of Missouri library catalog.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Ute Eisen is a recognized German New Testament scholar and the work 'Women Officeholders in Early Christianity' published by Liturgical Press (2000) is a real and well-known academic monograph, translated from the German original.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Eisen's work is indeed a systematic survey of epigraphic and textual evidence for women in early Christian offices, and her argument that restriction was a later historical development is consistent with the book's known thesis.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://litpress.org/Products/5950/Women-Officeholders-in-Early-Christianity (publisher page); also confirmed by Internet Archive, Google Books, Amazon, ProQuest academic review, Open Library, and University of Missouri library catalog",
+        "note": "The book is confirmed across multiple authoritative sources \u2014 including the Liturgical Press publisher page and a ProQuest academic review \u2014 as: Ute E. Eisen, Women Officeholders in Early Christianity: Epigraphical and Literary Studies, Collegeville, MN: Liturgical Press, 2000, ISBN 9780814659502."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple credible sources \u2014 including the author's own website, Amazon, Wikipedia, Baylor University's faculty page, NPR, and academic reviews in The Gospel Coalition and CBMW \u2014 all consistently listing Beth Allison Barr as author, Brazos Press as publisher, and April 20, 2021 as the publication date."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Barr does argue that modern complementarianism is historically contingent and shaped by cultural-political forces including second-wave feminism and the culture wars, and the CBMW founding dates cited (1987 organization, 1988 Danvers Statement) are consistent with what is known.",
+        "corroborating_evidence": [
+          "https://en.wikipedia.org/wiki/The_Making_of_Biblical_Womanhood | https://www.amazon.com/Making-Biblical-Womanhood-Subjugation-Became/dp/1587434709 | https://www.bethallisonbarr.com/books/the-making-of-biblical-womanhood/ | multiple academic reviews"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://en.wikipedia.org/wiki/The_Making_of_Biblical_Womanhood | https://www.amazon.com/Making-Biblical-Womanhood-Subjugation-Became/dp/1587434709 | https://www.bethallisonbarr.com/books/the-making-of-biblical-womanhood/ | multiple academic reviews.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_004",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Beth Allison Barr's 'The Making of Biblical Womanhood' published by Brazos Press in 2021 is a real and widely discussed book by a medieval historian at Baylor University.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Barr does argue that modern complementarianism is historically contingent and shaped by cultural-political forces including second-wave feminism and the culture wars, and the CBMW founding dates cited (1987 organization, 1988 Danvers Statement) are consistent with what is known.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://en.wikipedia.org/wiki/The_Making_of_Biblical_Womanhood | https://www.amazon.com/Making-Biblical-Womanhood-Subjugation-Became/dp/1587434709 | https://www.bethallisonbarr.com/books/the-making-of-biblical-womanhood/ | multiple academic reviews",
+        "note": "The book is confirmed across multiple credible sources \u2014 including the author's own website, Amazon, Wikipedia, Baylor University's faculty page, NPR, and academic reviews in The Gospel Coalition and CBMW \u2014 all consistently listing Beth Allison Barr as author, Brazos Press as publisher, and April 20, 2021 as the publication date."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by numerous independent and credible sources including the publisher's own listing, academic reviews, Amazon, and Wikipedia."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "Barr does discuss how translation choices reflect interpretive communities and engages with authente\u014d, though the specific claim about a systematic shift in major English translations between the 1970s and 1990s is a more specific empirical claim I cannot fully verify from training knowledge; the general argument direction is consistent with Barr's known approach.",
+        "corroborating_evidence": [
+          "Multiple sources including the author's own website (bethallisonbarr.com), Wikipedia, Amazon, Bookshop.org, CBMW review, The Gospel Coalition review, and NPR \u2014 all consistently confirming: Beth Allison Barr, The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth, Brazos Press, April 20, 2021, ISBN 978-1587434709."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: The specific claim about translation shifts tracking the complementarian moment is plausible given Barr's argument, but the precision of the claim (specific decades, 'major English translations') goes beyond what I can confirm she documents in detail, warranting moderate scrutiny of the specifics. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources including the author's own website (bethallisonbarr.com), Wikipedia, Amazon, Bookshop.org, CBMW review, The Gospel Coalition review, and NPR \u2014 all consistently confirming: Beth Allison Barr, The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth, Brazos Press, April 20, 2021, ISBN 978-1587434709..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "The source is the same Barr 2021 work, which is real and does engage with translation history and the word authente\u014d.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "Barr does discuss how translation choices reflect interpretive communities and engages with authente\u014d, though the specific claim about a systematic shift in major English translations between the 1970s and 1990s is a more specific empirical claim I cannot fully verify from training knowledge; the general argument direction is consistent with Barr's known approach.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The specific claim about translation shifts tracking the complementarian moment is plausible given Barr's argument, but the precision of the claim (specific decades, 'major English translations') goes beyond what I can confirm she documents in detail, warranting moderate scrutiny of the specifics."
+      },
+      "pass2": {
+        "claim_id": "R1_RH_005",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources including the author's own website (bethallisonbarr.com), Wikipedia, Amazon, Bookshop.org, CBMW review, The Gospel Coalition review, and NPR \u2014 all consistently confirming: Beth Allison Barr, The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth, Brazos Press, April 20, 2021, ISBN 978-1587434709.",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by numerous independent and credible sources including the publisher's own listing, academic reviews, Amazon, and Wikipedia."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_006",
+    "verification": {
+      "bibliographic": {
+        "status": "FAILED",
+        "note": "The book exists and was published in 2007 (print) / 2008 (online), but the publisher is Oxford University Press, not Crossroad as cited; the ISBN 9780195189704 confirms OUP as publisher."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "Multiple secondary sources strongly corroborate the attributed argument. A CBE International book review quotes Macy directly at p.86: 'Both abbesses and episcopae administered churches that were equivalent of, and sometimes were, dioceses.' A Catholic Books Review summary confirms Macy's clericalization thesis \u2014 that monasticism was clericalized in the high medieval period and women were progressively excluded through institutional rather than purely doctrinal forces. A detailed review on alivingtext.com confirms Macy argues abbesses enjoyed parity of status with ordained male clergy and that the restriction of the term 'ordinatio' was a key institutional mechanism of exclusion. The womenpriests.org source independently corroborates the quasi-episcopal jurisdiction of abbesses over male clergy in double monasteries. Macy's own earlier article 'The Ordination of Women in the Early Middle Ages' (Theological Studies, 2000) on womenpriests.org further corroborates the book's core arguments. One reviewer (alivingtext.com) does contest part of Macy's argument, expressing skepticism that the change in terminology represented a substantive shift in practice."
+      },
+      "argument_direction": {
+        "status": "CONFIRMED",
+        "note": "Multiple secondary sources strongly corroborate the attributed argument. A CBE International book review quotes Macy directly at p.86: 'Both abbesses and episcopae administered churches that were equivalent of, and sometimes were, dioceses.' A Catholic Books Review summary confirms Macy's clericalization thesis \u2014 that monasticism was clericalized in the high medieval period and women were progressively excluded through institutional rather than purely doctrinal forces. A detailed review on alivingtext.com confirms Macy argues abbesses enjoyed parity of status with ordained male clergy and that the restriction of the term 'ordinatio' was a key institutional mechanism of exclusion. The womenpriests.org source independently corroborates the quasi-episcopal jurisdiction of abbesses over male clergy in double monasteries. Macy's own earlier article 'The Ordination of Women in the Early Middle Ages' (Theological Studies, 2000) on womenpriests.org further corroborates the book's core arguments. One reviewer (alivingtext.com) does contest part of Macy's argument, expressing skepticism that the change in terminology represented a substantive shift in practice.",
+        "corroborating_evidence": [
+          "https://global.oup.com/academic/product/the-hidden-history-of-womens-ordination-9780195189704 and https://academic.oup.com/book/36027"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=MEDIUM. Suspicion: The publisher is cited as 'Crossroad' but I believe this work was published by Oxford University Press, which is a potentially significant bibliographic error worth verifying. Pass 2 (bibliographic search): CONFLICTING. Source: https://global.oup.com/academic/product/the-hidden-history-of-womens-ordination-9780195189704 and https://academic.oup.com/book/36027. Pass 3 (deep): PARTIALLY_VERIFIED. The book is real, Gary Macy is a credentialed scholar, and the attributed arguments are well-corroborated by multiple independent reviews and secondary sources. However, the publisher is definitively Oxford University Press, not Crossroad \u2014 a bibliographic error that requires correction before this citation is used in academic debate.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_006",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Gary Macy is a recognized historian of medieval Christianity at Santa Clara University, and 'The Hidden History of Women's Ordination' published by Oxford University Press (though the citation says Crossroad) is a real work \u2014 the publisher detail may be slightly off, as I associate this title more with Oxford University Press.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Macy's argument that medieval women's ministerial roles were more varied than official doctrine and were progressively restricted through clericalization is consistent with his known scholarly position.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The publisher is cited as 'Crossroad' but I believe this work was published by Oxford University Press, which is a potentially significant bibliographic error worth verifying."
+      },
+      "pass2": {
+        "claim_id": "R1_RH_006",
+        "pass": 2,
+        "bibliographic_status": "CONFLICTING",
+        "source_found": "https://global.oup.com/academic/product/the-hidden-history-of-womens-ordination-9780195189704 and https://academic.oup.com/book/36027",
+        "note": "The book exists and was published in 2007 (print) / 2008 (online), but the publisher is Oxford University Press, not Crossroad as cited; the ISBN 9780195189704 confirms OUP as publisher."
+      },
+      "pass3": {
+        "claim_id": "R1_RH_006",
+        "pass": 3,
+        "bibliographic_status": "CONFLICTING",
+        "bibliographic_source": "The book exists and was published in 2007, but by Oxford University Press (ISBN 9780195189704), not Crossroad. Multiple sources \u2014 Oxford University Press, Oxford Scholarship Online, Barnes & Noble, Amazon, National Humanities Center, and Wikipedia \u2014 all confirm OUP as the publisher. No evidence of a Crossroad edition was found.",
+        "argument_status": "CORROBORATED",
+        "argument_evidence": "Multiple secondary sources strongly corroborate the attributed argument. A CBE International book review quotes Macy directly at p.86: 'Both abbesses and episcopae administered churches that were equivalent of, and sometimes were, dioceses.' A Catholic Books Review summary confirms Macy's clericalization thesis \u2014 that monasticism was clericalized in the high medieval period and women were progressively excluded through institutional rather than purely doctrinal forces. A detailed review on alivingtext.com confirms Macy argues abbesses enjoyed parity of status with ordained male clergy and that the restriction of the term 'ordinatio' was a key institutional mechanism of exclusion. The womenpriests.org source independently corroborates the quasi-episcopal jurisdiction of abbesses over male clergy in double monasteries. Macy's own earlier article 'The Ordination of Women in the Early Middle Ages' (Theological Studies, 2000) on womenpriests.org further corroborates the book's core arguments. One reviewer (alivingtext.com) does contest part of Macy's argument, expressing skepticism that the change in terminology represented a substantive shift in practice.",
+        "overall_verdict": "PARTIALLY_VERIFIED",
+        "human_review_priority": "MEDIUM",
+        "summary": "The book is real, Gary Macy is a credentialed scholar, and the attributed arguments are well-corroborated by multiple independent reviews and secondary sources. However, the publisher is definitively Oxford University Press, not Crossroad \u2014 a bibliographic error that requires correction before this citation is used in academic debate."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_RH_007",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is definitively confirmed as Lyndal Roper, 'The Holy Household: Women and Morals in Reformation Augsburg,' published by Oxford University Press / Clarendon Press in 1989, with multiple authoritative sources (OUP publisher page, Stanford library catalog, Internet Archive, and Holberg Prize) all corroborating the author, title, publisher, and year; some later editions/printings appear dated 1990\u20131991 but the original publication year of 1989 is consistently confirmed."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Roper's argument that the Reformation reorganized religious life around the household and the male pastor, thereby contracting women's institutional religious roles despite the priesthood-of-all-believers rhetoric, is consistent with the known thesis of this book.",
+        "corroborating_evidence": [
+          "https://global.oup.com/academic/product/the-holy-household-9780198202806 (Oxford University Press official page); also confirmed by Stanford University library catalog (https://searchworks.stanford.edu/view/1818689), Internet Archive (https://archive.org/details/holyhouseholdwom0000rope), and Holberg Prize biography (https://holbergprize.org/laureates/holbergprize/lyndal-roper/)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://global.oup.com/academic/product/the-holy-household-9780198202806 (Oxford University Press official page); also confirmed by Stanford University library catalog (https://searchworks.stanford.edu/view/1818689), Internet Archive (https://archive.org/details/holyhouseholdwom0000rope), and Holberg Prize biography (https://holbergprize.org/laureates/holbergprize/lyndal-roper/).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_007",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Lyndal Roper is a recognized historian of the Reformation and early modern Germany, and 'The Holy Household: Women and Morals in Reformation Augsburg' published by Oxford University Press in 1989 is a real and well-known work.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Roper's argument that the Reformation reorganized religious life around the household and the male pastor, thereby contracting women's institutional religious roles despite the priesthood-of-all-believers rhetoric, is consistent with the known thesis of this book.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_007",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://global.oup.com/academic/product/the-holy-household-9780198202806 (Oxford University Press official page); also confirmed by Stanford University library catalog (https://searchworks.stanford.edu/view/1818689), Internet Archive (https://archive.org/details/holyhouseholdwom0000rope), and Holberg Prize biography (https://holbergprize.org/laureates/holbergprize/lyndal-roper/)",
+        "note": "The book is definitively confirmed as Lyndal Roper, 'The Holy Household: Women and Morals in Reformation Augsburg,' published by Oxford University Press / Clarendon Press in 1989, with multiple authoritative sources (OUP publisher page, Stanford library catalog, Internet Archive, and Holberg Prize) all corroborating the author, title, publisher, and year; some later editions/printings appear dated 1990\u20131991 but the original publication year of 1989 is consistently confirmed."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_008",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Chrysostom's Homily 31 on Romans is fully accessible at New Advent and CCEL as part of the Nicene and Post-Nicene Fathers, First Series, Vol. 11; the text explicitly references Junia and the apostolic appellation, and the Homilies on 1 Timothy appear in the same NPNF series volume covering Galatians\u2013Philemon."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "This accurately reflects the scholarly consensus on Chrysostom's dual stance: affirming Junia's apostolic designation while maintaining restrictions on women's public teaching roles in his own context.",
+        "corroborating_evidence": [
+          "https://www.newadvent.org/fathers/210231.htm (New Advent / NPNF); https://www.ccel.org/ccel/schaff/npnf111.html (CCEL, NPNF First Series, Vol. 11, ed. Philip Schaff, Christian Literature Publishing Co., 1889)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.newadvent.org/fathers/210231.htm (New Advent / NPNF); https://www.ccel.org/ccel/schaff/npnf111.html (CCEL, NPNF First Series, Vol. 11, ed. Philip Schaff, Christian Literature Publishing Co., 1889).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_008",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Chrysostom's Homily 31 on Romans is well-known for its positive comment on Junia as 'apostle,' and his Homilies on 1 Timothy do address restrictions on women teaching \u2014 both are genuine primary sources.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "This accurately reflects the scholarly consensus on Chrysostom's dual stance: affirming Junia's apostolic designation while maintaining restrictions on women's public teaching roles in his own context.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_008",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.newadvent.org/fathers/210231.htm (New Advent / NPNF); https://www.ccel.org/ccel/schaff/npnf111.html (CCEL, NPNF First Series, Vol. 11, ed. Philip Schaff, Christian Literature Publishing Co., 1889)",
+        "note": "Chrysostom's Homily 31 on Romans is fully accessible at New Advent and CCEL as part of the Nicene and Post-Nicene Fathers, First Series, Vol. 11; the text explicitly references Junia and the apostolic appellation, and the Homilies on 1 Timothy appear in the same NPNF series volume covering Galatians\u2013Philemon."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_RH_009",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "All major sources \u2014 Internet Archive, the publisher's own website, an academic journal review, and multiple bookseller catalogs \u2014 consistently confirm the title as 'In Memory of Her: A Feminist Theological Reconstruction of Christian Origins' by Elisabeth Sch\u00fcssler Fiorenza, published by Crossroad (New York) in 1983, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The characterization of her hermeneutic of suspicion and the critique that her reconstruction relies on evidence her own method has problematized is a well-known and fair summary of debates surrounding her methodology.",
+        "corroborating_evidence": [
+          "Multiple corroborating sources: Internet Archive (archive.org/details/inmemoryofherfem0000schu) with publication date 1983, publisher New York: Crossroad; Pepperdine University academic review (digitalcommons.pepperdine.edu) citing 'New York: The Crossroad Publishing Company, 1983'; official Crossroad publisher page (crossroadpublishing.com/product/in-memory-of-her/); Google Books; Biblio.com listings dated 'Crossroad, 1983-03-01'."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple corroborating sources: Internet Archive (archive.org/details/inmemoryofherfem0000schu) with publication date 1983, publisher New York: Crossroad; Pepperdine University academic review (digitalcommons.pepperdine.edu) citing 'New York: The Crossroad Publishing Company, 1983'; official Crossroad publisher page (crossroadpublishing.com/product/in-memory-of-her/); Google Books; Biblio.com listings dated 'Crossroad, 1983-03-01'..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_RH_009",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Sch\u00fcssler Fiorenza's *In Memory of Her* was published by Crossroad in 1983 and is a landmark feminist biblical studies text \u2014 bibliographic details are accurate.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The characterization of her hermeneutic of suspicion and the critique that her reconstruction relies on evidence her own method has problematized is a well-known and fair summary of debates surrounding her methodology.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_RH_009",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple corroborating sources: Internet Archive (archive.org/details/inmemoryofherfem0000schu) with publication date 1983, publisher New York: Crossroad; Pepperdine University academic review (digitalcommons.pepperdine.edu) citing 'New York: The Crossroad Publishing Company, 1983'; official Crossroad publisher page (crossroadpublishing.com/product/in-memory-of-her/); Google Books; Biblio.com listings dated 'Crossroad, 1983-03-01'.",
+        "note": "All major sources \u2014 Internet Archive, the publisher's own website, an academic journal review, and multiple bookseller catalogs \u2014 consistently confirm the title as 'In Memory of Her: A Feminist Theological Reconstruction of Christian Origins' by Elisabeth Sch\u00fcssler Fiorenza, published by Crossroad (New York) in 1983, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_001",
+    "verification": {
+      "bibliographic": {
+        "status": "UNVERIFIABLE",
+        "note": "The web search returned no results \u2014 no publisher page, library catalog entry, church website, or any other credible source confirming the existence of this document."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "The theological argument attributed to the document \u2014 using 1 Timothy 2:13's creation-order appeal as the criterion distinguishing transcultural from culturally conditioned instructions \u2014 is a well-attested complementarian hermeneutical move found in mainstream evangelical scholarship (e.g., D.A. Carson, Thomas Schreiner). It is entirely plausible that a conservative non-denominational church like Alderwood would employ this argument. However, no secondary source, citation, or review of the specific Alderwood document was found to corroborate the precise argument or the existence of 'Appendix 1.'"
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "The theological argument attributed to the document \u2014 using 1 Timothy 2:13's creation-order appeal as the criterion distinguishing transcultural from culturally conditioned instructions \u2014 is a well-attested complementarian hermeneutical move found in mainstream evangelical scholarship (e.g., D.A. Carson, Thomas Schreiner). It is entirely plausible that a conservative non-denominational church like Alderwood would employ this argument. However, no secondary source, citation, or review of the specific Alderwood document was found to corroborate the precise argument or the existence of 'Appendix 1.'",
+        "corroborating_evidence": []
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "NEEDS_HUMAN_REVIEW",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=UNCERTAIN, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: This is an internal church document I cannot verify; its existence, title, and specific content cannot be confirmed from training knowledge, making it unverifiable and potentially fabricated or mischaracterized. Pass 2 (bibliographic search): UNCONFIRMED. No source found. Pass 3 (deep): NEEDS_HUMAN_REVIEW. Alderwood Community Church is a real institution and was releasing position papers in early 2026, but no publicly accessible document matching the cited title or appendix structure could be located. The theological argument attributed to it is plausible and consistent with standard complementarian hermeneutics, but without direct access to the document, neither the bibliographic existence nor the specific claim can be verified.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_001",
+        "pass": 1,
+        "bibliographic_plausibility": "UNCERTAIN",
+        "bibliographic_note": "Alderwood Community Church is a real congregation, but I cannot verify the existence or specific content of this internal church document from my training knowledge.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "The argument attributed \u2014 using creation-order grounding as the marker of transcultural applicability \u2014 is a common complementarian hermeneutical move, so the attributed position is plausible for a document of this type.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "This is an internal church document I cannot verify; its existence, title, and specific content cannot be confirmed from training knowledge, making it unverifiable and potentially fabricated or mischaracterized."
+      },
+      "pass2": {
+        "claim_id": "R1_HM_001",
+        "pass": 2,
+        "bibliographic_status": "UNCONFIRMED",
+        "source_found": null,
+        "note": "The web search returned no results \u2014 no publisher page, library catalog entry, church website, or any other credible source confirming the existence of this document."
+      },
+      "pass3": {
+        "claim_id": "R1_HM_001",
+        "pass": 3,
+        "bibliographic_status": "UNCONFIRMED",
+        "bibliographic_source": "Alderwood Community Church (alderwood.cc) is a confirmed real institution in Lynnwood/Bothell, WA. Their website references a Position Papers framework released in early 2026, but no document titled 'What Alderwood Teaches about Women in Church Leadership' with an 'Appendix 1' is publicly accessible or indexed online. The church's women's ministry page and essentials/doctrine page contain no such document or appendix.",
+        "argument_status": "PLAUSIBLE",
+        "argument_evidence": "The theological argument attributed to the document \u2014 using 1 Timothy 2:13's creation-order appeal as the criterion distinguishing transcultural from culturally conditioned instructions \u2014 is a well-attested complementarian hermeneutical move found in mainstream evangelical scholarship (e.g., D.A. Carson, Thomas Schreiner). It is entirely plausible that a conservative non-denominational church like Alderwood would employ this argument. However, no secondary source, citation, or review of the specific Alderwood document was found to corroborate the precise argument or the existence of 'Appendix 1.'",
+        "overall_verdict": "NEEDS_HUMAN_REVIEW",
+        "human_review_priority": "HIGH",
+        "summary": "Alderwood Community Church is a real institution and was releasing position papers in early 2026, but no publicly accessible document matching the cited title or appendix structure could be located. The theological argument attributed to it is plausible and consistent with standard complementarian hermeneutics, but without direct access to the document, neither the bibliographic existence nor the specific claim can be verified."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_HM_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The ESV text of 1 Corinthians 11:8-9 is confirmed verbatim on the official ESV.org publisher website, matching the quoted language in the claim exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The observation that 1 Corinthians 11 and 1 Timothy 2:13 share a structurally similar creation-order appeal is a standard and accurate exegetical observation made across the scholarly spectrum.",
+        "corroborating_evidence": [
+          "https://www.esv.org/verses/1+Corinthians+11:8%E2%80%939/ \u2014 Official ESV Bible website (Crossway)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.esv.org/verses/1+Corinthians+11:8%E2%80%939/ \u2014 Official ESV Bible website (Crossway).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "1 Corinthians 11:8-9 in the ESV does read as quoted, and the broader passage 11:2-16 does contain Paul's creation-order argument for head coverings.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The observation that 1 Corinthians 11 and 1 Timothy 2:13 share a structurally similar creation-order appeal is a standard and accurate exegetical observation made across the scholarly spectrum.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.esv.org/verses/1+Corinthians+11:8%E2%80%939/ \u2014 Official ESV Bible website (Crossway)",
+        "note": "The ESV text of 1 Corinthians 11:8-9 is confirmed verbatim on the official ESV.org publisher website, matching the quoted language in the claim exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including the Eerdmans publisher page, Amazon listings, and a full copyright/CIP record \u2014 confirm Gordon D. Fee's 'The First Epistle to the Corinthians' was originally published in 1987 by William B. Eerdmans as part of the New International Commentary on the New Testament (NICNT) series, exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Fee is known for arguing that head coverings in 1 Corinthians 11 are culturally conditioned despite the creation-order appeal, and his commentary does engage this tension \u2014 the attributed argument is consistent with his known interpretive approach.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page); https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, William B. Eerdmans Publishing Company); https://pdfroom.com/books/... (bibliographic page confirming Copyright \u00a9 1987, Wm. B. Eerdmans, NICNT series)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page); https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, William B. Eerdmans Publishing Company); https://pdfroom.com/books/... (bibliographic page confirming Copyright \u00a9 1987, Wm. B. Eerdmans, NICNT series).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Gordon Fee's *The First Epistle to the Corinthians* in the NICNT series published by Eerdmans in 1987 is a well-known and real commentary.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Fee is known for arguing that head coverings in 1 Corinthians 11 are culturally conditioned despite the creation-order appeal, and his commentary does engage this tension \u2014 the attributed argument is consistent with his known interpretive approach.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802871367/the-first-epistle-to-the-corinthians-revised-edition/ (Eerdmans publisher page); https://www.amazon.com/dp/0802822886 (Amazon listing for original 1987 edition, ISBN 0-8028-2288-6, William B. Eerdmans Publishing Company); https://pdfroom.com/books/... (bibliographic page confirming Copyright \u00a9 1987, Wm. B. Eerdmans, NICNT series)",
+        "note": "Multiple credible sources \u2014 including the Eerdmans publisher page, Amazon listings, and a full copyright/CIP record \u2014 confirm Gordon D. Fee's 'The First Epistle to the Corinthians' was originally published in 1987 by William B. Eerdmans as part of the New International Commentary on the New Testament (NICNT) series, exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed on the Yale University Press official website, Amazon, PhilPapers, and Wikipedia \u2014 all consistently listing E.D. Hirsch Jr., 'Validity in Interpretation,' Yale University Press, 1967, with the meaning/significance distinction explicitly noted in publisher and academic descriptions."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Hirsch's distinction between 'meaning' (authorial intent, stable) and 'significance' (relation to later contexts, variable) is precisely the central thesis of this book.",
+        "corroborating_evidence": [
+          "https://yalebooks.yale.edu/book/9780300016925/validity-in-interpretation/ (Yale University Press official page); also confirmed by Amazon listing (ISBN 9780300016925, pub. date September 10, 1967), PhilPapers, Wikipedia, and multiple academic reviews."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://yalebooks.yale.edu/book/9780300016925/validity-in-interpretation/ (Yale University Press official page); also confirmed by Amazon listing (ISBN 9780300016925, pub. date September 10, 1967), PhilPapers, Wikipedia, and multiple academic reviews..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_004",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Hirsch's Validity in Interpretation (Yale University Press, 1967) is a well-known and widely cited work in hermeneutics theory.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Hirsch's distinction between 'meaning' (authorial intent, stable) and 'significance' (relation to later contexts, variable) is precisely the central thesis of this book.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://yalebooks.yale.edu/book/9780300016925/validity-in-interpretation/ (Yale University Press official page); also confirmed by Amazon listing (ISBN 9780300016925, pub. date September 10, 1967), PhilPapers, Wikipedia, and multiple academic reviews.",
+        "note": "The book is confirmed on the Yale University Press official website, Amazon, PhilPapers, and Wikipedia \u2014 all consistently listing E.D. Hirsch Jr., 'Validity in Interpretation,' Yale University Press, 1967, with the meaning/significance distinction explicitly noted in publisher and academic descriptions."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed by the official IVP publisher page (published May 30, 2001, IVP Academic, ISBN 9780830815616), multiple retail listings, a Wikipedia article on William J. Webb, and several academic reviews, all matching the cited author, title, publisher, and year exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Webb does propose a set of criteria (often cited as eighteen) for distinguishing culturally accommodated from transcultural ethics, and applies this to women and slavery in the NT.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/slaves-women-homosexuals \u2014 Official IVP publisher page; also confirmed by Amazon, Wikipedia, AbeBooks, and ThriftBooks"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/slaves-women-homosexuals \u2014 Official IVP publisher page; also confirmed by Amazon, Wikipedia, AbeBooks, and ThriftBooks.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "William Webb's Slaves, Women and Homosexuals (IVP Academic, 2001) is a real and well-known work presenting the redemptive-movement hermeneutic with multiple criteria.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Webb does propose a set of criteria (often cited as eighteen) for distinguishing culturally accommodated from transcultural ethics, and applies this to women and slavery in the NT.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_005",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/slaves-women-homosexuals \u2014 Official IVP publisher page; also confirmed by Amazon, Wikipedia, AbeBooks, and ThriftBooks",
+        "note": "The book is confirmed by the official IVP publisher page (published May 30, 2001, IVP Academic, ISBN 9780830815616), multiple retail listings, a Wikipedia article on William J. Webb, and several academic reviews, all matching the cited author, title, publisher, and year exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_006",
+    "verification": {
+      "bibliographic": {
+        "status": "UNVERIFIABLE",
+        "note": "No search result confirmed a Denny Burk article responding to Webb published in JETS in 2003; the major JETS review articles on Webb's redemptive-movement hermeneutic found are by Wayne Grudem (JETS 47, 2004) and Thomas Schreiner (SBJT 6, 2002), with no Burk-authored JETS piece surfacing in any result."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "The substantive argument attributed to Burk \u2014 that Webb's method lacks adequate controls and effectively makes cultural consensus or the interpreter's constructed trajectory the hermeneutical authority \u2014 is a well-documented critique in the literature, but it is most prominently associated with Wayne Grudem (JETS 47, 2004) and Kevin Vanhoozer, not Burk. Burk's own blog posts show he holds this general view and defers to Grudem's JETS critique as the authoritative statement of it. The 'no principled textual stopping point' argument is also echoed in CBMW-published critiques and Vanhoozer's response in Four Views. Burk's known position is consistent with the attributed argument, but no independent Burk-authored 2003 JETS article making this specific argument was found."
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The substantive argument attributed to Burk \u2014 that Webb's method lacks adequate controls and effectively makes cultural consensus or the interpreter's constructed trajectory the hermeneutical authority \u2014 is a well-documented critique in the literature, but it is most prominently associated with Wayne Grudem (JETS 47, 2004) and Kevin Vanhoozer, not Burk. Burk's own blog posts show he holds this general view and defers to Grudem's JETS critique as the authoritative statement of it. The 'no principled textual stopping point' argument is also echoed in CBMW-published critiques and Vanhoozer's response in Four Views. Burk's known position is consistent with the attributed argument, but no independent Burk-authored 2003 JETS article making this specific argument was found.",
+        "corroborating_evidence": []
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "FABRICATION_RISK",
+    "human_review_needed": true,
+    "human_review_priority": "HIGH",
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=CONSISTENT, suspicion=MEDIUM. Suspicion: The specific journal, year, and article cannot be confirmed from training knowledge, and the JETS publication details may be slightly off. Pass 2 (bibliographic search): UNCONFIRMED. No source found. Pass 3 (deep): FABRICATION_RISK. No bibliographic evidence of a Denny Burk article or response to Webb in JETS 2003 was found; Burk's own publications page lists no such piece, and the major JETS responses to Webb in that era are by Grudem (2004) and Webb himself (2005). The argument attributed to Burk is substantively plausible and consistent with his known views, but it closely mirrors critiques published by Grudem and Vanhoozer, raising the possibility that the citation conflates Burk's general position with a specific article that does not exist.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_006",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Denny Burk is a recognized evangelical scholar who has engaged critically with Webb's work; a JETS response article around 2003 is plausible, though I cannot confirm the exact year or article title.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Burk's known complementarian commitments and critiques of trajectory hermeneutics align with the argument that Webb's method lacks controls against importing contemporary ethical intuitions.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The specific journal, year, and article cannot be confirmed from training knowledge, and the JETS publication details may be slightly off."
+      },
+      "pass2": {
+        "claim_id": "R1_HM_006",
+        "pass": 2,
+        "bibliographic_status": "UNCONFIRMED",
+        "source_found": null,
+        "note": "No search result confirmed a Denny Burk article responding to Webb published in JETS in 2003; the major JETS review articles on Webb's redemptive-movement hermeneutic found are by Wayne Grudem (JETS 47, 2004) and Thomas Schreiner (SBJT 6, 2002), with no Burk-authored JETS piece surfacing in any result."
+      },
+      "pass3": {
+        "claim_id": "R1_HM_006",
+        "pass": 3,
+        "bibliographic_status": "UNCONFIRMED",
+        "bibliographic_source": "Denny Burk's full publications list (dennyburk.com/publications) shows his JETS articles from 2006, 2007, 2009, and 2015, but no article or response to Webb in JETS 2003. The major JETS responses to Webb found are Grudem (JETS 47, 2004) and Webb himself (JETS 48, 2005). No Burk-authored JETS piece from 2003 on Webb's hermeneutic was located in any source.",
+        "argument_status": "PLAUSIBLE",
+        "argument_evidence": "The substantive argument attributed to Burk \u2014 that Webb's method lacks adequate controls and effectively makes cultural consensus or the interpreter's constructed trajectory the hermeneutical authority \u2014 is a well-documented critique in the literature, but it is most prominently associated with Wayne Grudem (JETS 47, 2004) and Kevin Vanhoozer, not Burk. Burk's own blog posts show he holds this general view and defers to Grudem's JETS critique as the authoritative statement of it. The 'no principled textual stopping point' argument is also echoed in CBMW-published critiques and Vanhoozer's response in Four Views. Burk's known position is consistent with the attributed argument, but no independent Burk-authored 2003 JETS article making this specific argument was found.",
+        "overall_verdict": "FABRICATION_RISK",
+        "human_review_priority": "HIGH",
+        "summary": "No bibliographic evidence of a Denny Burk article or response to Webb in JETS 2003 was found; Burk's own publications page lists no such piece, and the major JETS responses to Webb in that era are by Grudem (2004) and Webb himself (2005). The argument attributed to Burk is substantively plausible and consistent with his known views, but it closely mirrors critiques published by Grudem and Vanhoozer, raising the possibility that the citation conflates Burk's general position with a specific article that does not exist."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_HM_007",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book exists and was published in 2004, confirmed by Amazon, Wikipedia, Google Books, Cambridge Core (Scottish Journal of Theology review), and Logos Bible Software \u2014 but the publisher is Baker Academic (Grand Rapids), not IVP Academic as cited; the title and year are correct."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "Secondary sources confirm Marshall uses a 'principled approach' to move from Scripture to contemporary theology, examining how principles can be established from Scripture to guide ongoing doctrinal development. A Themelios review notes that Vanhoozer characterizes Marshall's approach as a form of 'redemptive trajectory' using timeless principles \u2014 suggesting overlap with Webb's method, not a sharp contrast. The claim that Marshall explicitly frames Scripture's task as 'stimulating and guiding moral reasoning' rather than 'giving final answers,' and that he contrasts this with Webb's multi-criteria extrapolation, is not directly corroborated by any accessible secondary source. The advocate's framing of Marshall as more 'modest' than Webb is a plausible interpretive gloss, but the specific language attributed ('stimulate and guide moral reasoning,' 'direction and purpose of biblical instruction') could not be verified in any accessible text. Vanhoozer's critique actually suggests Marshall's approach is vulnerable to the same trajectory-based concerns as Webb's."
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Secondary sources confirm Marshall uses a 'principled approach' to move from Scripture to contemporary theology, examining how principles can be established from Scripture to guide ongoing doctrinal development. A Themelios review notes that Vanhoozer characterizes Marshall's approach as a form of 'redemptive trajectory' using timeless principles \u2014 suggesting overlap with Webb's method, not a sharp contrast. The claim that Marshall explicitly frames Scripture's task as 'stimulating and guiding moral reasoning' rather than 'giving final answers,' and that he contrasts this with Webb's multi-criteria extrapolation, is not directly corroborated by any accessible secondary source. The advocate's framing of Marshall as more 'modest' than Webb is a plausible interpretive gloss, but the specific language attributed ('stimulate and guide moral reasoning,' 'direction and purpose of biblical instruction') could not be verified in any accessible text. Vanhoozer's critique actually suggests Marshall's approach is vulnerable to the same trajectory-based concerns as Webb's.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Beyond-Bible-Scripture-Theology-Studies/dp/0801027756 | https://en.wikipedia.org/wiki/I._Howard_Marshall | https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/i-howard-marshall-beyond-the-bible-moving-from-scripture-to-theology-grand-rapids-mi-baker-academic-2004-pp-136-1399/4ACB5AD31A9672226C8EE44D27934CED"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFLICTING. Source: https://www.amazon.com/Beyond-Bible-Scripture-Theology-Studies/dp/0801027756 | https://en.wikipedia.org/wiki/I._Howard_Marshall | https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/i-howard-marshall-beyond-the-bible-moving-from-scripture-to-theology-grand-rapids-mi-baker-academic-2004-pp-136-1399/4ACB5AD31A9672226C8EE44D27934CED. Pass 3 (deep): PARTIALLY_VERIFIED. The book exists and is confirmed, but the publisher is Baker Academic, not IVP Academic as cited \u2014 a bibliographic error. The specific argumentative framing attributed to Marshall (Scripture 'stimulates and guides moral reasoning' rather than giving 'final answers,' contrasted explicitly with Webb's multi-criteria method) could not be corroborated in any accessible secondary source, and a peer review suggests Marshall's approach may be more similar to Webb's trajectory hermeneutic than the claim implies.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_007",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "I. Howard Marshall's Beyond the Bible: Moving from Scripture to Theology (IVP Academic, 2004) is a real work, part of the Acadia Studies in Bible and Theology series.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Marshall's approach in this book does emphasize going 'beyond the Bible' guided by the direction and purpose of biblical instruction, and is generally considered more modest in its claims than Webb's multi-criteria method.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_007",
+        "pass": 2,
+        "bibliographic_status": "CONFLICTING",
+        "source_found": "https://www.amazon.com/Beyond-Bible-Scripture-Theology-Studies/dp/0801027756 | https://en.wikipedia.org/wiki/I._Howard_Marshall | https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/i-howard-marshall-beyond-the-bible-moving-from-scripture-to-theology-grand-rapids-mi-baker-academic-2004-pp-136-1399/4ACB5AD31A9672226C8EE44D27934CED",
+        "note": "The book exists and was published in 2004, confirmed by Amazon, Wikipedia, Google Books, Cambridge Core (Scottish Journal of Theology review), and Logos Bible Software \u2014 but the publisher is Baker Academic (Grand Rapids), not IVP Academic as cited; the title and year are correct."
+      },
+      "pass3": {
+        "claim_id": "R1_HM_007",
+        "pass": 3,
+        "bibliographic_status": "CONFIRMED",
+        "bibliographic_source": "The book 'Beyond the Bible: Moving from Scripture to Theology' by I. Howard Marshall is confirmed as published by Baker Academic (not IVP Academic) in 2004, with co-respondents Kevin J. Vanhoozer and Stanley E. Porter. It is listed in Wikipedia, Amazon, Google Books, Logos, Theopedia, and reviewed in The Gospel Coalition/Themelios and the Scottish Journal of Theology. The publisher attribution in the claim ('IVP Academic') is incorrect \u2014 the correct publisher is Baker Academic.",
+        "argument_status": "PLAUSIBLE",
+        "argument_evidence": "Secondary sources confirm Marshall uses a 'principled approach' to move from Scripture to contemporary theology, examining how principles can be established from Scripture to guide ongoing doctrinal development. A Themelios review notes that Vanhoozer characterizes Marshall's approach as a form of 'redemptive trajectory' using timeless principles \u2014 suggesting overlap with Webb's method, not a sharp contrast. The claim that Marshall explicitly frames Scripture's task as 'stimulating and guiding moral reasoning' rather than 'giving final answers,' and that he contrasts this with Webb's multi-criteria extrapolation, is not directly corroborated by any accessible secondary source. The advocate's framing of Marshall as more 'modest' than Webb is a plausible interpretive gloss, but the specific language attributed ('stimulate and guide moral reasoning,' 'direction and purpose of biblical instruction') could not be verified in any accessible text. Vanhoozer's critique actually suggests Marshall's approach is vulnerable to the same trajectory-based concerns as Webb's.",
+        "overall_verdict": "PARTIALLY_VERIFIED",
+        "human_review_priority": "HIGH",
+        "summary": "The book exists and is confirmed, but the publisher is Baker Academic, not IVP Academic as cited \u2014 a bibliographic error. The specific argumentative framing attributed to Marshall (Scripture 'stimulates and guides moral reasoning' rather than giving 'final answers,' contrasted explicitly with Webb's multi-criteria method) could not be corroborated in any accessible secondary source, and a peer review suggests Marshall's approach may be more similar to Webb's trajectory hermeneutic than the claim implies."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_HM_008",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple independent sources (Amazon, AbeBooks, Christianbook, PhilPapers, Internet Archive) uniformly confirm the book as Richard B. Hays, *The Moral Vision of the New Testament*, published by HarperOne (originally HarperSanFrancisco) in 1996, ISBN 978-0060637965, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Hays's method of moving from text to community to norm, and his use of focal images (cross, community, new creation) as organizing frameworks, is accurately described here.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon product listing; also confirmed by AbeBooks, Christianbook.com, PhilPapers, ThriftBooks, Internet Archive, and Google Books"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon product listing; also confirmed by AbeBooks, Christianbook.com, PhilPapers, ThriftBooks, Internet Archive, and Google Books.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_008",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Richard Hays's The Moral Vision of the New Testament (HarperOne/HarperSanFrancisco, 1996) is a widely recognized and influential work in NT ethics.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Hays's method of moving from text to community to norm, and his use of focal images (cross, community, new creation) as organizing frameworks, is accurately described here.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_008",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon product listing; also confirmed by AbeBooks, Christianbook.com, PhilPapers, ThriftBooks, Internet Archive, and Google Books",
+        "note": "Multiple independent sources (Amazon, AbeBooks, Christianbook, PhilPapers, Internet Archive) uniformly confirm the book as Richard B. Hays, *The Moral Vision of the New Testament*, published by HarperOne (originally HarperSanFrancisco) in 1996, ISBN 978-0060637965, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_HM_009",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across library catalogs, booksellers, and academic reviews as published by Eerdmans in 1980, exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "This accurately reflects Thiselton's project of appropriating Gadamerian hermeneutics for evangelical biblical interpretation, including the concept of horizon-fusion and the text's capacity to challenge the reader's pre-understanding.",
+        "corroborating_evidence": [
+          "Multiple sources confirm: Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review (Sage Journals, Westminster Theological Journal 43/1, 1980) all list Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources confirm: Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review (Sage Journals, Westminster Theological Journal 43/1, 1980) all list Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_HM_009",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Thiselton's 'The Two Horizons' (Eerdmans, 1980) is a well-known and widely cited work in hermeneutics that engages Gadamer and Wittgenstein in relation to New Testament interpretation.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "This accurately reflects Thiselton's project of appropriating Gadamerian hermeneutics for evangelical biblical interpretation, including the concept of horizon-fusion and the text's capacity to challenge the reader's pre-understanding.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_HM_009",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources confirm: Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review (Sage Journals, Westminster Theological Journal 43/1, 1980) all list Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp.",
+        "note": "The book is confirmed across library catalogs, booksellers, and academic reviews as published by Eerdmans in 1980, exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_ST_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple independent sources \u2014 including the official Eerdmans publisher page, Amazon, Google Books, a Brill journal review, and a SAGE journal review \u2014 unanimously confirm the title, author, publisher (Wm. B. Eerdmans), and year (1998) exactly as cited."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Volf does argue for a free-church ecclesiology grounded in trinitarian mutuality, emphasizing that church authority is recognized from below rather than hierarchically delegated, which aligns with his known position.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802844408/after-our-likeness/ (official Eerdmans publisher page); also confirmed by Amazon listing (ASIN B011T8F81M), Google Books, Brill academic review (Evangelical Quarterly, 2001), and a bibliographic blog entry all citing: Volf, Miroslav. After Our Likeness: The Church as the Image of the Trinity. Grand Rapids: William B. Eerdmans, 1998."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802844408/after-our-likeness/ (official Eerdmans publisher page); also confirmed by Amazon listing (ASIN B011T8F81M), Google Books, Brill academic review (Evangelical Quarterly, 2001), and a bibliographic blog entry all citing: Volf, Miroslav. After Our Likeness: The Church as the Image of the Trinity. Grand Rapids: William B. Eerdmans, 1998..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_ST_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Volf's 'After Our Likeness' (Eerdmans, 1998) is a recognized and influential work in ecclesiology engaging trinitarian theology in dialogue with Ratzinger and Zizioulas.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Volf does argue for a free-church ecclesiology grounded in trinitarian mutuality, emphasizing that church authority is recognized from below rather than hierarchically delegated, which aligns with his known position.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_ST_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802844408/after-our-likeness/ (official Eerdmans publisher page); also confirmed by Amazon listing (ASIN B011T8F81M), Google Books, Brill academic review (Evangelical Quarterly, 2001), and a bibliographic blog entry all citing: Volf, Miroslav. After Our Likeness: The Church as the Image of the Trinity. Grand Rapids: William B. Eerdmans, 1998.",
+        "note": "Multiple independent sources \u2014 including the official Eerdmans publisher page, Amazon, Google Books, a Brill journal review, and a SAGE journal review \u2014 unanimously confirm the title, author, publisher (Wm. B. Eerdmans), and year (1998) exactly as cited."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_ST_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including Amazon, Wikipedia, AbeBooks, the Internet Archive, Google Books, and Grudem's own website \u2014 unanimously confirm the book as Wayne Grudem, Systematic Theology: An Introduction to Biblical Doctrine, Zondervan (and Inter-Varsity Press), 1994, 1264 pages."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Grudem is well known for arguing that the eternal functional subordination of the Son (ESS) provides a model for male-female authority relations, a position he has defended in multiple works including this one.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Systematic-Theology-Introduction-Biblical-Doctrine/dp/0310286700 (Amazon listing); https://en.wikipedia.org/wiki/Systematic_Theology_(book) (Wikipedia); https://www.waynegrudem.com (author's own website); AbeBooks listing (ISBN 9780851106526)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/Systematic-Theology-Introduction-Biblical-Doctrine/dp/0310286700 (Amazon listing); https://en.wikipedia.org/wiki/Systematic_Theology_(book) (Wikipedia); https://www.waynegrudem.com (author's own website); AbeBooks listing (ISBN 9780851106526).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_ST_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Grudem's 'Systematic Theology' (Zondervan, 1994) is a widely used evangelical systematic theology text and is a real and well-known publication.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Grudem is well known for arguing that the eternal functional subordination of the Son (ESS) provides a model for male-female authority relations, a position he has defended in multiple works including this one.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_ST_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/Systematic-Theology-Introduction-Biblical-Doctrine/dp/0310286700 (Amazon listing); https://en.wikipedia.org/wiki/Systematic_Theology_(book) (Wikipedia); https://www.waynegrudem.com (author's own website); AbeBooks listing (ISBN 9780851106526)",
+        "note": "Multiple credible sources \u2014 including Amazon, Wikipedia, AbeBooks, the Internet Archive, Google Books, and Grudem's own website \u2014 unanimously confirm the book as Wayne Grudem, Systematic Theology: An Introduction to Biblical Doctrine, Zondervan (and Inter-Varsity Press), 1994, 1264 pages."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_ST_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple credible sources including the official InterVarsity Press publisher page, library/archive records, and retail listings, all consistently citing Kevin Giles as author, IVP Academic as publisher, and 2002 as the publication year."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Giles is known precisely for arguing that ESS is incompatible with Nicene orthodoxy and that the Son's submission is economic and temporal, not an eternal feature of the immanent Trinity, which matches the attributed argument.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings \u2014 ISBN 978-0830826636, IVP Academic, 2002"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings \u2014 ISBN 978-0830826636, IVP Academic, 2002.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_ST_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Kevin Giles's 'The Trinity and Subordinationism' (IVP Academic, 2002) is a real and recognized work in which Giles critiques eternal subordinationism from a Nicene perspective.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Giles is known precisely for arguing that ESS is incompatible with Nicene orthodoxy and that the Son's submission is economic and temporal, not an eternal feature of the immanent Trinity, which matches the attributed argument.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_ST_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings \u2014 ISBN 978-0830826636, IVP Academic, 2002",
+        "note": "The book is confirmed across multiple credible sources including the official InterVarsity Press publisher page, library/archive records, and retail listings, all consistently citing Kevin Giles as author, IVP Academic as publisher, and 2002 as the publication year."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_ST_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed by the official Eerdmans publisher page, Amazon, the author's personal website, and multiple academic reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "The argument attributed \u2014 that the Son's humanity rather than his maleness is the ground of his representative role \u2014 is consistent with what I understand to be Peeler's general approach, though I cannot verify the specific argument with high confidence.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (Eerdmans publisher page); also confirmed by Amazon listing (ISBN 978-0802879097, pub. date October 4, 2022) and author's own website (amypeeler.com)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=PLAUSIBLE, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (Eerdmans publisher page); also confirmed by Amazon listing (ISBN 978-0802879097, pub. date October 4, 2022) and author's own website (amypeeler.com).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_ST_004",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Amy Peeler is a recognized New Testament scholar at Wheaton College, and 'Women and the Gender of God' (Eerdmans, 2022) is plausible as a recent publication; I have some awareness of this work but cannot confirm all details with high confidence.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "The argument attributed \u2014 that the Son's humanity rather than his maleness is the ground of his representative role \u2014 is consistent with what I understand to be Peeler's general approach, though I cannot verify the specific argument with high confidence.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_ST_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (Eerdmans publisher page); also confirmed by Amazon listing (ISBN 978-0802879097, pub. date October 4, 2022) and author's own website (amypeeler.com)",
+        "note": "The book is confirmed by the official Eerdmans publisher page, Amazon, the author's personal website, and multiple academic reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_ST_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book definitively exists and was published in 1977, but the original 1977 publisher was SCM Press (London) / Harper & Row (New York) \u2014 not Fortress Press; Fortress Press issued a later reprint edition (ISBN 9780800628215), confirmed on the Fortress Press product page and AbeBooks listings."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "Multiple secondary sources strongly corroborate the attributed argument. (1) The Boston Collaborative Encyclopedia of Western Theology confirms the book takes 'an ecclesiological and pneumatological perspective' and that 'the church lives between the past history of Jesus and the universal future in which that history will reach its fulfillment.' (2) A peer-reviewed article (Geraty/ThinkTheology) confirms Moltmann's 'pneumatological christology leads to a charismatic ecclesiology' and that he highlights 'the importance of pneumatology to messianic eschatological ecclesiology.' (3) A reader-cited passage from the book itself (p. 105) directly supports the 'eschatological freedom / new creation' argument: the church's 'new freedom is freedom in the spirit of the new creation of the world.' (4) An Academia.edu paper confirms 'Moltmann's insistence on the charismatic structure of the church' as a key ecclesiological position. (5) A discipleship blog citing the book confirms Moltmann's anti-hierarchical, 'unity in diversity and freedom' ecclesiology grounded in the Spirit's gifts. The Gospel Coalition review confirms 'the driving impulse of Moltmann's critique is New Testament eschatology wherein the God who makes all things new offers Christ and Spirit for the freedom of humankind.' No contradicting sources were found."
+      },
+      "argument_direction": {
+        "status": "CONFIRMED",
+        "note": "Multiple secondary sources strongly corroborate the attributed argument. (1) The Boston Collaborative Encyclopedia of Western Theology confirms the book takes 'an ecclesiological and pneumatological perspective' and that 'the church lives between the past history of Jesus and the universal future in which that history will reach its fulfillment.' (2) A peer-reviewed article (Geraty/ThinkTheology) confirms Moltmann's 'pneumatological christology leads to a charismatic ecclesiology' and that he highlights 'the importance of pneumatology to messianic eschatological ecclesiology.' (3) A reader-cited passage from the book itself (p. 105) directly supports the 'eschatological freedom / new creation' argument: the church's 'new freedom is freedom in the spirit of the new creation of the world.' (4) An Academia.edu paper confirms 'Moltmann's insistence on the charismatic structure of the church' as a key ecclesiological position. (5) A discipleship blog citing the book confirms Moltmann's anti-hierarchical, 'unity in diversity and freedom' ecclesiology grounded in the Spirit's gifts. The Gospel Coalition review confirms 'the driving impulse of Moltmann's critique is New Testament eschatology wherein the God who makes all things new offers Christ and Spirit for the freedom of humankind.' No contradicting sources were found.",
+        "corroborating_evidence": [
+          "https://www.fortresspress.com/store/product/9780800628215/The-Church-in-the-Power-of-the-Spirit (Fortress Press page); https://archive.org/details/churchinpowerofs0000molt (Internet Archive); https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/church-in-the-power-of-the-spirit-by-jurgen-moltmann-london-scm-press-ltd-1977 (peer-reviewed review in Scottish Journal of Theology)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": "LOW",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFLICTING. Source: https://www.fortresspress.com/store/product/9780800628215/The-Church-in-the-Power-of-the-Spirit (Fortress Press page); https://archive.org/details/churchinpowerofs0000molt (Internet Archive); https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/church-in-the-power-of-the-spirit-by-jurgen-moltmann-london-scm-press-ltd-1977 (peer-reviewed review in Scottish Journal of Theology). Pass 3 (deep): LIKELY_ACCURATE. The book exists and is well-documented, though the original 1977 English publisher was Harper & Row / SCM Press, not Fortress Press (which issued a later reprint edition). The attributed argument \u2014 that Moltmann grounds church structure pneumatologically and eschatologically, with the church as a proleptic sign of the Kingdom anticipating the freedom of new creation \u2014 is strongly corroborated by multiple independent secondary sources and a directly cited passage from the book itself.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_ST_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Moltmann's 'The Church in the Power of the Spirit' is a well-known work in pneumatological ecclesiology; it was originally published in German (1975) and translated into English \u2014 the Fortress Press edition and approximate date are plausible, though SCM Press (UK) is also associated with this translation.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Moltmann's ecclesiology in this work does ground church structure in the Spirit's charismatic gifts rather than hierarchical office, and his eschatological framework emphasizing the Kingdom as normative horizon is characteristic of his theology throughout this period.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_ST_005",
+        "pass": 2,
+        "bibliographic_status": "CONFLICTING",
+        "source_found": "https://www.fortresspress.com/store/product/9780800628215/The-Church-in-the-Power-of-the-Spirit (Fortress Press page); https://archive.org/details/churchinpowerofs0000molt (Internet Archive); https://www.cambridge.org/core/journals/scottish-journal-of-theology/article/abs/church-in-the-power-of-the-spirit-by-jurgen-moltmann-london-scm-press-ltd-1977 (peer-reviewed review in Scottish Journal of Theology)",
+        "note": "The book definitively exists and was published in 1977, but the original 1977 publisher was SCM Press (London) / Harper & Row (New York) \u2014 not Fortress Press; Fortress Press issued a later reprint edition (ISBN 9780800628215), confirmed on the Fortress Press product page and AbeBooks listings."
+      },
+      "pass3": {
+        "claim_id": "R1_ST_005",
+        "pass": 3,
+        "bibliographic_status": "CONFIRMED",
+        "bibliographic_source": "The book 'The Church in the Power of the Spirit: A Contribution to Messianic Ecclesiology' by J\u00fcrgen Moltmann is confirmed as a real, widely-cited work. It was first published in German in 1975 and appeared in English translation in 1977. The English edition was published by Harper & Row (New York) and SCM Press (London), not Fortress Press. A Fortress Press paperback edition (ISBN 0800628217) exists but appears to be a later reprint, not the original 1977 publisher. The Internet Archive, Google Books, Amazon, and multiple academic sources all confirm the book's existence and content.",
+        "argument_status": "CORROBORATED",
+        "argument_evidence": "Multiple secondary sources strongly corroborate the attributed argument. (1) The Boston Collaborative Encyclopedia of Western Theology confirms the book takes 'an ecclesiological and pneumatological perspective' and that 'the church lives between the past history of Jesus and the universal future in which that history will reach its fulfillment.' (2) A peer-reviewed article (Geraty/ThinkTheology) confirms Moltmann's 'pneumatological christology leads to a charismatic ecclesiology' and that he highlights 'the importance of pneumatology to messianic eschatological ecclesiology.' (3) A reader-cited passage from the book itself (p. 105) directly supports the 'eschatological freedom / new creation' argument: the church's 'new freedom is freedom in the spirit of the new creation of the world.' (4) An Academia.edu paper confirms 'Moltmann's insistence on the charismatic structure of the church' as a key ecclesiological position. (5) A discipleship blog citing the book confirms Moltmann's anti-hierarchical, 'unity in diversity and freedom' ecclesiology grounded in the Spirit's gifts. The Gospel Coalition review confirms 'the driving impulse of Moltmann's critique is New Testament eschatology wherein the God who makes all things new offers Christ and Spirit for the freedom of humankind.' No contradicting sources were found.",
+        "overall_verdict": "LIKELY_ACCURATE",
+        "human_review_priority": "LOW",
+        "summary": "The book exists and is well-documented, though the original 1977 English publisher was Harper & Row / SCM Press, not Fortress Press (which issued a later reprint edition). The attributed argument \u2014 that Moltmann grounds church structure pneumatologically and eschatologically, with the church as a proleptic sign of the Kingdom anticipating the freedom of new creation \u2014 is strongly corroborated by multiple independent secondary sources and a directly cited passage from the book itself."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_PT_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources (Amazon, AbeBooks, ResearchGate peer review, Internet Archive, Logos Bible Software) unanimously confirm the book as James K. A. Smith, *You Are What You Love: The Spiritual Power of Habit*, Brazos Press, 2016, ISBN 9781587433801, xii + 210 pp."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Smith's central thesis across his liturgical anthropology project is precisely that embodied, habitual practices \u2014 liturgies \u2014 form human desires and imaginations more deeply than propositional instruction, which matches the attributed argument closely.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive catalog, and The Gospel Coalition author interview"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive catalog, and The Gospel Coalition author interview.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_PT_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "'You Are What You Love' by James K.A. Smith, published by Brazos Press in 2016, is a well-known popular-level work drawing on his more academic 'Cultural Liturgies' series.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Smith's central thesis across his liturgical anthropology project is precisely that embodied, habitual practices \u2014 liturgies \u2014 form human desires and imaginations more deeply than propositional instruction, which matches the attributed argument closely.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_PT_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive catalog, and The Gospel Coalition author interview",
+        "note": "Multiple credible sources (Amazon, AbeBooks, ResearchGate peer review, Internet Archive, Logos Bible Software) unanimously confirm the book as James K. A. Smith, *You Are What You Love: The Spiritual Power of Habit*, Brazos Press, 2016, ISBN 9781587433801, xii + 210 pp."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_PT_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including retailer listings, a Logos Bible Software catalog entry, and peer-reviewed journal reviews in Taylor & Francis and SAGE \u2014 unanimously confirm the book as: Diane Langberg, *Redeeming Power: Understanding Authority and Abuse in the Church*, Brazos Press, 2020, ISBN 9781587434389, 224 pages; all publication details match the cited source exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "Langberg's work does center on power misuse as the root of abuse in Christian settings and calls for structural accountability; however, the specific extension of her argument to gender-exclusive leadership as a contributing structural factor is an inference the advocate is drawing \u2014 Langberg's primary frame is power and accountability broadly, and I cannot confirm she explicitly targets gender-exclusive structures in this way.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Redeeming-Power-Understanding-Authority-Church/dp/1587434385 \u2014 Amazon listing; also confirmed by Logos Bible Software, Christianbook.com, Westminster Bookstore, Taylor & Francis (academic review), and SAGE Journals review"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: The core argument about power and accountability is consistent with Langberg's known position, but the specific attribution that she implicates gender-exclusive leadership structures as a causal factor appears to be an advocate's extrapolation rather than a confirmed direct claim in the work. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/Redeeming-Power-Understanding-Authority-Church/dp/1587434385 \u2014 Amazon listing; also confirmed by Logos Bible Software, Christianbook.com, Westminster Bookstore, Taylor & Francis (academic review), and SAGE Journals review.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_PT_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "'Redeeming Power' by Diane Langberg, Brazos Press, 2020 is a recognized work; Langberg is a well-known Christian psychologist and trauma specialist who writes on abuse and power in Christian contexts.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "Langberg's work does center on power misuse as the root of abuse in Christian settings and calls for structural accountability; however, the specific extension of her argument to gender-exclusive leadership as a contributing structural factor is an inference the advocate is drawing \u2014 Langberg's primary frame is power and accountability broadly, and I cannot confirm she explicitly targets gender-exclusive structures in this way.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The core argument about power and accountability is consistent with Langberg's known position, but the specific attribution that she implicates gender-exclusive leadership structures as a causal factor appears to be an advocate's extrapolation rather than a confirmed direct claim in the work."
+      },
+      "pass2": {
+        "claim_id": "R1_PT_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/Redeeming-Power-Understanding-Authority-Church/dp/1587434385 \u2014 Amazon listing; also confirmed by Logos Bible Software, Christianbook.com, Westminster Bookstore, Taylor & Francis (academic review), and SAGE Journals review",
+        "note": "Multiple credible sources \u2014 including retailer listings, a Logos Bible Software catalog entry, and peer-reviewed journal reviews in Taylor & Francis and SAGE \u2014 unanimously confirm the book as: Diane Langberg, *Redeeming Power: Understanding Authority and Abuse in the Church*, Brazos Press, 2020, ISBN 9781587434389, 224 pages; all publication details match the cited source exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_PT_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources \u2014 including the official Tyndale House publisher page, Amazon, an academic review in the Journal of Urban Mission, and Audible \u2014 all confirm the book exists as authored by Scot McKnight and Laura Barringer, published by Tyndale House Publishers in October 2020, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "McKnight and Barringer do analyze structural factors enabling abuse and institutional self-protection, but I cannot confirm they explicitly identify gender-exclusive authority structures as a named contributing factor \u2014 this specific causal link may be an advocate's inference beyond what the authors directly argue.",
+        "corroborating_evidence": [
+          "https://www.tyndale.com/p/a-church-called-tov/9781496446008 (official Tyndale House publisher page); also confirmed by Amazon listing, Journal of Urban Mission academic review, and dedicated book website (churchcalledtov.org)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: The book's general argument about toxic institutional cultures is accurately represented, but the specific claim that absence of women from authoritative positions is documented by McKnight and Barringer as a structural factor in concealment is not something I can confirm and may overstate the book's direct argument. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.tyndale.com/p/a-church-called-tov/9781496446008 (official Tyndale House publisher page); also confirmed by Amazon listing, Journal of Urban Mission academic review, and dedicated book website (churchcalledtov.org).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_PT_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "'A Church Called Tov' by Scot McKnight and Laura Barringer, Tyndale House, 2020 is a recognized work addressing toxic church cultures with reference to high-profile abuse cases.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "McKnight and Barringer do analyze structural factors enabling abuse and institutional self-protection, but I cannot confirm they explicitly identify gender-exclusive authority structures as a named contributing factor \u2014 this specific causal link may be an advocate's inference beyond what the authors directly argue.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The book's general argument about toxic institutional cultures is accurately represented, but the specific claim that absence of women from authoritative positions is documented by McKnight and Barringer as a structural factor in concealment is not something I can confirm and may overstate the book's direct argument."
+      },
+      "pass2": {
+        "claim_id": "R1_PT_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.tyndale.com/p/a-church-called-tov/9781496446008 (official Tyndale House publisher page); also confirmed by Amazon listing, Journal of Urban Mission academic review, and dedicated book website (churchcalledtov.org)",
+        "note": "Multiple credible sources \u2014 including the official Tyndale House publisher page, Amazon, an academic review in the Journal of Urban Mission, and Audible \u2014 all confirm the book exists as authored by Scot McKnight and Laura Barringer, published by Tyndale House Publishers in October 2020, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_PT_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple credible retail, library, and academic review sources with exact publisher (Zondervan), year (2016), and author (Ruth A. Tucker) matching the cited details precisely."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "Tucker's known scholarly work engages questions of women in ministry and complementarian/egalitarian debates, so an argument about the pastoral cost of vocational restriction to women would be directionally consistent with her broader body of work.",
+        "corroborating_evidence": [
+          "Multiple sources including Amazon (https://www.amazon.com/Black-White-Bible-Blue-Wife/dp/0310524989), Google Books (https://books.google.com/books/about/Black_and_White_Bible_Black_and_Blue_Wif.html?id=okwVCgAAQBAJ), Barnes & Noble, CBMW academic review, and The Aquila Report \u2014 all confirming Ruth A. Tucker, Black and White Bible, Black and Blue Wife: My Story of Finding Hope after Domestic Abuse, Zondervan, Grand Rapids, 2016, ISBN 978-0-310-52498-4."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=UNCERTAIN, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: I cannot confidently confirm this specific title exists as described; the author is real and works in adjacent areas, but the title and its specific argument about vocational calling and pastoral cost require verification I cannot provide from training knowledge alone. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources including Amazon (https://www.amazon.com/Black-White-Bible-Blue-Wife/dp/0310524989), Google Books (https://books.google.com/books/about/Black_and_White_Bible_Black_and_Blue_Wif.html?id=okwVCgAAQBAJ), Barnes & Noble, CBMW academic review, and The Aquila Report \u2014 all confirming Ruth A. Tucker, Black and White Bible, Black and Blue Wife: My Story of Finding Hope after Domestic Abuse, Zondervan, Grand Rapids, 2016, ISBN 978-0-310-52498-4..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_PT_004",
+        "pass": 1,
+        "bibliographic_plausibility": "UNCERTAIN",
+        "bibliographic_note": "Ruth Tucker is a recognized Christian scholar who has written on women in ministry and related topics; a Zondervan 2016 publication is plausible for her, but I am not confident I can confirm this specific title 'Black and White Bible, Black and Blue Wife' as a work I clearly recognize from training data.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "Tucker's known scholarly work engages questions of women in ministry and complementarian/egalitarian debates, so an argument about the pastoral cost of vocational restriction to women would be directionally consistent with her broader body of work.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "I cannot confidently confirm this specific title exists as described; the author is real and works in adjacent areas, but the title and its specific argument about vocational calling and pastoral cost require verification I cannot provide from training knowledge alone."
+      },
+      "pass2": {
+        "claim_id": "R1_PT_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources including Amazon (https://www.amazon.com/Black-White-Bible-Blue-Wife/dp/0310524989), Google Books (https://books.google.com/books/about/Black_and_White_Bible_Black_and_Blue_Wif.html?id=okwVCgAAQBAJ), Barnes & Noble, CBMW academic review, and The Aquila Report \u2014 all confirming Ruth A. Tucker, Black and White Bible, Black and Blue Wife: My Story of Finding Hope after Domestic Abuse, Zondervan, Grand Rapids, 2016, ISBN 978-0-310-52498-4.",
+        "note": "The book is confirmed across multiple credible retail, library, and academic review sources with exact publisher (Zondervan), year (2016), and author (Ruth A. Tucker) matching the cited details precisely."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_PT_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by numerous independent and credible sources including the publisher's own listing, library/retail catalogs, academic reviews, and the author's institutional faculty page at Baylor University."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Barr, a medieval historian and Baptist pastor's wife, argues throughout the book that complementarianism is a historically constructed ideology that has constrained women and failed to deliver promised flourishing \u2014 this matches the attributed argument closely.",
+        "corroborating_evidence": [
+          "Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, NPR, The Gospel Coalition, CBMW, and Bookshop.org \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, NPR, The Gospel Coalition, CBMW, and Bookshop.org \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_PT_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Beth Allison Barr's 'The Making of Biblical Womanhood' published by Brazos Press in 2021 is a well-known and widely discussed work; author, title, publisher, and year all check out.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Barr, a medieval historian and Baptist pastor's wife, argues throughout the book that complementarianism is a historically constructed ideology that has constrained women and failed to deliver promised flourishing \u2014 this matches the attributed argument closely.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_PT_005",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, NPR, The Gospel Coalition, CBMW, and Bookshop.org \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709.",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by numerous independent and credible sources including the publisher's own listing, library/retail catalogs, academic reviews, and the author's institutional faculty page at Baylor University."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_SA_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is unambiguously confirmed across publisher listings, academic journal reviews, library catalogs, and the author's own website as published by Liveright in 2020, with full title 'Jesus and John Wayne: How White Evangelicals Corrupted a Faith and Fractured a Nation.'"
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Du Mez's central thesis is precisely that evangelical masculinity and gender ideology were shaped by Cold War anxieties, second-wave feminist backlash, and culture-war politics rather than purely by biblical exegesis \u2014 the attributed argument is a faithful summary of her position.",
+        "corroborating_evidence": [
+          "Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal entry in Church History Vol. 89 Issue 3 (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), Denver Seminary Journal review, author's own website (kristindumez.com), and Wikipedia article \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal entry in Church History Vol. 89 Issue 3 (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), Denver Seminary Journal review, author's own website (kristindumez.com), and Wikipedia article \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_SA_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Kristin Kobes Du Mez's 'Jesus and John Wayne' published by Liveright in 2020 is a recognized and widely reviewed work of religious history; all bibliographic details are consistent with my training knowledge.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Du Mez's central thesis is precisely that evangelical masculinity and gender ideology were shaped by Cold War anxieties, second-wave feminist backlash, and culture-war politics rather than purely by biblical exegesis \u2014 the attributed argument is a faithful summary of her position.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_SA_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal entry in Church History Vol. 89 Issue 3 (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), Denver Seminary Journal review, author's own website (kristindumez.com), and Wikipedia article \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020.",
+        "note": "The book is unambiguously confirmed across publisher listings, academic journal reviews, library catalogs, and the author's own website as published by Liveright in 2020, with full title 'Jesus and John Wayne: How White Evangelicals Corrupted a Faith and Fractured a Nation.'"
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_SA_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed by multiple high-credibility sources including the official IVP Academic publisher page, Amazon (with ISBN), a SAGE peer-reviewed journal review, a library catalog entry, and The Gospel Coalition \u2014 all consistently listing Sandra Glahn, 'Nobody's Mother: Artemis of the Ephesians in Antiquity and the New Testament,' IVP Academic, 2023."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Glahn's known scholarly work argues that the Artemis cult context is essential for interpreting 1 Timothy 2, and that this context complicates universalizing readings \u2014 the attributed argument aligns well with her published positions.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/nobody-s-mother (official IVP publisher page); https://www.amazon.com/Nobodys-Mother-Ephesians-Antiquity-Testament/dp/1514005921 (Amazon listing, ISBN 9781514005927); https://journals.sagepub.com/doi/10.1177/07398913241274406g (peer-reviewed academic review, SAGE Journals, 2024); library catalog entry at cmc.marmot.org confirming IVP Academic, Downers Grove, IL, 2023"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/nobody-s-mother (official IVP publisher page); https://www.amazon.com/Nobodys-Mother-Ephesians-Antiquity-Testament/dp/1514005921 (Amazon listing, ISBN 9781514005927); https://journals.sagepub.com/doi/10.1177/07398913241274406g (peer-reviewed academic review, SAGE Journals, 2024); library catalog entry at cmc.marmot.org confirming IVP Academic, Downers Grove, IL, 2023.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_SA_002",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Sandra Glahn is a recognized evangelical New Testament scholar at Dallas Theological Seminary who has published extensively on Artemis of Ephesus and 1 Timothy; a 2023 IVP Academic monograph under this title is plausible and consistent with her known research trajectory, though I cannot fully confirm the exact title and year from training knowledge.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Glahn's known scholarly work argues that the Artemis cult context is essential for interpreting 1 Timothy 2, and that this context complicates universalizing readings \u2014 the attributed argument aligns well with her published positions.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_SA_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/nobody-s-mother (official IVP publisher page); https://www.amazon.com/Nobodys-Mother-Ephesians-Antiquity-Testament/dp/1514005921 (Amazon listing, ISBN 9781514005927); https://journals.sagepub.com/doi/10.1177/07398913241274406g (peer-reviewed academic review, SAGE Journals, 2024); library catalog entry at cmc.marmot.org confirming IVP Academic, Downers Grove, IL, 2023",
+        "note": "The book is confirmed by multiple high-credibility sources including the official IVP Academic publisher page, Amazon (with ISBN), a SAGE peer-reviewed journal review, a library catalog entry, and The Gospel Coalition \u2014 all consistently listing Sandra Glahn, 'Nobody's Mother: Artemis of the Ephesians in Antiquity and the New Testament,' IVP Academic, 2023."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_SA_003",
+    "verification": {
+      "bibliographic": {
+        "status": "FAILED",
+        "note": "The book exists and was published by Fortress Press in 2006, confirmed by the official Fortress Press page, Amazon, Internet Archive, and an academic review (SAGE Journals); however, the authors are Bruce J. Malina and John J. Pilch \u2014 NOT Richard Rohrbaugh, who co-authored earlier volumes in the series (Synoptic Gospels, Gospel of John) but is credited only as a blurb writer for this title."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "The book does engage Paul's letters through the honor/shame framework of Mediterranean social life, as confirmed by multiple reviews and the publisher's description. A companion volume, Malina and Pilch's Social-Science Commentary on the Deutero-Pauline Letters (2013), explicitly lists 'Household Codes' as a reading scenario topic, corroborating that the Malina/Pilch series addresses household codes in a Mediterranean social-science frame. However, the specific argument about oikos, paterfamilias subordination, and 'subversive reframings' within the honor/shame framework cannot be directly verified as appearing in the 2006 Malina/Pilch volume on Paul's letters, since the book covers only the seven undisputed Pauline letters (which do not include the deutero-Pauline household code passages in Colossians, Ephesians, or the Pastorals)."
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The book does engage Paul's letters through the honor/shame framework of Mediterranean social life, as confirmed by multiple reviews and the publisher's description. A companion volume, Malina and Pilch's Social-Science Commentary on the Deutero-Pauline Letters (2013), explicitly lists 'Household Codes' as a reading scenario topic, corroborating that the Malina/Pilch series addresses household codes in a Mediterranean social-science frame. However, the specific argument about oikos, paterfamilias subordination, and 'subversive reframings' within the honor/shame framework cannot be directly verified as appearing in the 2006 Malina/Pilch volume on Paul's letters, since the book covers only the seven undisputed Pauline letters (which do not include the deutero-Pauline household code passages in Colossians, Ephesians, or the Pastorals).",
+        "corroborating_evidence": [
+          "https://www.fortresspress.com/store/product/9780800636401/Social-Science-Commentary-on-the-Letters-of-Paul and https://www.amazon.com/Social-Science-Commentary-Letters-Bruce-Malina/dp/0800636406"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "NEEDS_HUMAN_REVIEW",
+    "human_review_needed": true,
+    "human_review_priority": "HIGH",
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFLICTING. Source: https://www.fortresspress.com/store/product/9780800636401/Social-Science-Commentary-on-the-Letters-of-Paul and https://www.amazon.com/Social-Science-Commentary-Letters-Bruce-Malina/dp/0800636406. Pass 3 (deep): NEEDS_HUMAN_REVIEW. The cited book exists and was published by Fortress in 2006, but the co-author is John J. Pilch, not Richard Rohrbaugh \u2014 a significant bibliographic error in the citation. Additionally, the household codes (wives/children/slaves to paterfamilias) appear primarily in the deutero-Pauline letters, which are not covered in this 2006 volume but in a separate 2013 Malina/Pilch commentary, raising further doubt that the specific argument attributed here appears in the cited source.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_SA_003",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Bruce Malina and Richard Rohrbaugh are recognized social-scientific New Testament scholars who co-authored multiple social-science commentaries published by Fortress Press; a 2006 volume on the Pauline letters is plausible, though I am not certain of the exact title and year for this specific volume.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Malina and Rohrbaugh's social-scientific approach consistently interprets Pauline texts through honor/shame and Mediterranean household frameworks, and their work typically notes both the cultural embeddedness and the subversive dimensions of the household codes \u2014 this matches the attributed argument.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_SA_003",
+        "pass": 2,
+        "bibliographic_status": "CONFLICTING",
+        "source_found": "https://www.fortresspress.com/store/product/9780800636401/Social-Science-Commentary-on-the-Letters-of-Paul and https://www.amazon.com/Social-Science-Commentary-Letters-Bruce-Malina/dp/0800636406",
+        "note": "The book exists and was published by Fortress Press in 2006, confirmed by the official Fortress Press page, Amazon, Internet Archive, and an academic review (SAGE Journals); however, the authors are Bruce J. Malina and John J. Pilch \u2014 NOT Richard Rohrbaugh, who co-authored earlier volumes in the series (Synoptic Gospels, Gospel of John) but is credited only as a blurb writer for this title."
+      },
+      "pass3": {
+        "claim_id": "R1_SA_003",
+        "pass": 3,
+        "bibliographic_status": "CONFLICTING",
+        "bibliographic_source": "The book exists and was published by Fortress Press in 2006 (ISBN 9780800636401), but its authors are Bruce J. Malina and John J. Pilch \u2014 NOT Malina and Rohrbaugh as cited. Rohrbaugh appears only as a blurb endorser on the back cover. The Malina\u2013Rohrbaugh collaboration produced commentaries on the Synoptic Gospels (1993/2003) and the Gospel of John (1998), not the Letters of Paul.",
+        "argument_status": "PLAUSIBLE",
+        "argument_evidence": "The book does engage Paul's letters through the honor/shame framework of Mediterranean social life, as confirmed by multiple reviews and the publisher's description. A companion volume, Malina and Pilch's Social-Science Commentary on the Deutero-Pauline Letters (2013), explicitly lists 'Household Codes' as a reading scenario topic, corroborating that the Malina/Pilch series addresses household codes in a Mediterranean social-science frame. However, the specific argument about oikos, paterfamilias subordination, and 'subversive reframings' within the honor/shame framework cannot be directly verified as appearing in the 2006 Malina/Pilch volume on Paul's letters, since the book covers only the seven undisputed Pauline letters (which do not include the deutero-Pauline household code passages in Colossians, Ephesians, or the Pastorals).",
+        "overall_verdict": "NEEDS_HUMAN_REVIEW",
+        "human_review_priority": "HIGH",
+        "summary": "The cited book exists and was published by Fortress in 2006, but the co-author is John J. Pilch, not Richard Rohrbaugh \u2014 a significant bibliographic error in the citation. Additionally, the household codes (wives/children/slaves to paterfamilias) appear primarily in the deutero-Pauline letters, which are not covered in this 2006 volume but in a separate 2013 Malina/Pilch commentary, raising further doubt that the specific argument attributed here appears in the cited source."
+      }
+    }
+  },
+  {
+    "claim_id": "R1_SA_004",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed as published by Fortress (Minneapolis) in 2006, authored by Carolyn Osiek and Margaret Y. MacDonald with Janet H. Tulloch; the citation attributes sole authorship to Osiek and lists the year as 2006, which matches the Fortress publication date, though the book has three co-authors."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Osiek's scholarship consistently emphasizes the social diversity of early Christian women and the danger of flattening Pauline instructions into universal principles \u2014 the attributed argument is consistent with her known scholarly stance.",
+        "corroborating_evidence": [
+          "https://journals.sagepub.com/doi/abs/10.1177/002096430706100412 (peer-reviewed journal review in Interpretation: A Journal of Bible and Theology, 2007) and https://www.amazon.com/Womans-Place-Churches-Earliest-Christianity/dp/0800637771 (Amazon listing)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=PLAUSIBLE, argument=CONSISTENT, suspicion=MEDIUM. Suspicion: The citation lists Osiek as sole author, but the book is co-authored with Margaret MacDonald and Janet Tulloch; this omission may indicate imprecise citation handling, though it does not affect the argument direction. Pass 2 (bibliographic search): CONFIRMED. Source: https://journals.sagepub.com/doi/abs/10.1177/002096430706100412 (peer-reviewed journal review in Interpretation: A Journal of Bible and Theology, 2007) and https://www.amazon.com/Womans-Place-Churches-Earliest-Christianity/dp/0800637771 (Amazon listing).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_SA_004",
+        "pass": 1,
+        "bibliographic_plausibility": "PLAUSIBLE",
+        "bibliographic_note": "Carolyn Osiek is a recognized early Christianity scholar known for work on house churches and women; she co-authored 'A Woman's Place: House Churches in Earliest Christianity' with Margaret MacDonald (and Janet Tulloch), published by Fortress \u2014 the year 2006 is plausible, though the omission of co-authors MacDonald and Tulloch is a notable bibliographic gap.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Osiek's scholarship consistently emphasizes the social diversity of early Christian women and the danger of flattening Pauline instructions into universal principles \u2014 the attributed argument is consistent with her known scholarly stance.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The citation lists Osiek as sole author, but the book is co-authored with Margaret MacDonald and Janet Tulloch; this omission may indicate imprecise citation handling, though it does not affect the argument direction."
+      },
+      "pass2": {
+        "claim_id": "R1_SA_004",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://journals.sagepub.com/doi/abs/10.1177/002096430706100412 (peer-reviewed journal review in Interpretation: A Journal of Bible and Theology, 2007) and https://www.amazon.com/Womans-Place-Churches-Earliest-Christianity/dp/0800637771 (Amazon listing)",
+        "note": "The book is confirmed as published by Fortress (Minneapolis) in 2006, authored by Carolyn Osiek and Margaret Y. MacDonald with Janet H. Tulloch; the citation attributes sole authorship to Osiek and lists the year as 2006, which matches the Fortress publication date, though the book has three co-authors."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R1_SA_005",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple high-credibility sources \u2014 including the Stanford University Press official catalog page, an Oxford Academic journal review, an American Journal of Sociology review, and an Amazon listing \u2014 all confirm the book exists as cited: Pierre Bourdieu, Masculine Domination, Stanford University Press, 2001."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The description of symbolic violence as domination maintained through the internalization of hierarchical categories by the dominated is entirely consistent with Bourdieu's core theoretical framework as developed in *Masculine Domination* and elsewhere in his work.",
+        "corroborating_evidence": [
+          "https://www.sup.org/books/sociology/masculine-domination (Stanford University Press official page); also confirmed by Oxford Academic review (Social Forces, 2002) and American Journal of Sociology review, both citing: Pierre Bourdieu, Masculine Domination, trans. Richard Nice, Stanford University Press, 2001."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.sup.org/books/sociology/masculine-domination (Stanford University Press official page); also confirmed by Oxford Academic review (Social Forces, 2002) and American Journal of Sociology review, both citing: Pierre Bourdieu, Masculine Domination, trans. Richard Nice, Stanford University Press, 2001..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R1_SA_005",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Pierre Bourdieu's *Masculine Domination* (La Domination masculine) is a real and well-known work, originally published in French in 1998 and translated into English; Stanford University Press is a plausible publisher for this translation, and 2001 is a plausible year for the English edition.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The description of symbolic violence as domination maintained through the internalization of hierarchical categories by the dominated is entirely consistent with Bourdieu's core theoretical framework as developed in *Masculine Domination* and elsewhere in his work.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R1_SA_005",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.sup.org/books/sociology/masculine-domination (Stanford University Press official page); also confirmed by Oxford Academic review (Social Forces, 2002) and American Journal of Sociology review, both citing: Pierre Bourdieu, Masculine Domination, trans. Richard Nice, Stanford University Press, 2001.",
+        "note": "Multiple high-credibility sources \u2014 including the Stanford University Press official catalog page, an Oxford Academic journal review, an American Journal of Sociology review, and an Amazon listing \u2014 all confirm the book exists as cited: Pierre Bourdieu, Masculine Domination, Stanford University Press, 2001."
+      },
+      "pass3": null
+    }
+  }
+]

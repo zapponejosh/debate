@@ -799,6 +799,34 @@ def run_verification_pipeline(
                 console.print(f"  [red]Rate limit exhausted for {label}: {exc}[/red]")
                 return None
 
+        def _repair_json(broken_text: str, label: str) -> str | None:
+            """One cheap call to recover valid JSON from a malformed response."""
+            system = (
+                "You are a JSON repair assistant. "
+                "Return ONLY the corrected JSON object with no prose, no markdown fencing, "
+                "no explanation, and no trailing text. "
+                "Do not add, remove, or infer any fields — only fix encoding/syntax errors."
+            )
+            human = (
+                "The following text was supposed to be a valid JSON object but failed to parse. "
+                "Strip any invisible characters, fix encoding issues, and return ONLY valid JSON:\n\n"
+                f"{broken_text}"
+            )
+            console.print(f"  [yellow]JSON parse failed for {label} — attempting cheap repair call[/yellow]")
+            try:
+                return call_api(
+                    client, SONNET,
+                    system_prompt=system,
+                    human_message=human,
+                    temperature=0.0,
+                    max_tokens=2048,
+                    label=f"{label}/json_repair",
+                    bypass_fast=True,
+                )
+            except Exception as exc:
+                console.print(f"  [red]JSON repair call failed for {label}: {exc}[/red]")
+                return None
+
         # ── Pass 1: training knowledge, batched ──────────────────────────────
         console.print("  [bold]Pass 1[/bold] — training knowledge triage")
         pass1_results: dict[str, dict] = {}
@@ -844,6 +872,10 @@ def run_verification_pipeline(
             )
             if response:
                 result = parse_json_response(response, expect_array=False)
+                if result == {} and response.strip():
+                    repaired = _repair_json(response, label=f"pass2/{cid}")
+                    if repaired:
+                        result = parse_json_response(repaired, expect_array=False)
                 if isinstance(result, dict) and result:
                     result["claim_id"] = result.get("claim_id", cid)
                     pass2_results[cid] = result
@@ -875,6 +907,10 @@ def run_verification_pipeline(
             )
             if response:
                 result = parse_json_response(response, expect_array=False)
+                if result == {} and response.strip():
+                    repaired = _repair_json(response, label=f"pass3/{cid}")
+                    if repaired:
+                        result = parse_json_response(repaired, expect_array=False)
                 if isinstance(result, dict) and result:
                     result["claim_id"] = result.get("claim_id", cid)
                     pass3_results[cid] = result
