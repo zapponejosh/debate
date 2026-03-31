@@ -41,6 +41,7 @@ class Citation:
     advocate_confidence: str  # HIGH / MEDIUM / LOW
     raw_text: str  # The original block as it appeared in output
     context: str  # Surrounding sentence/paragraph for auditor reference
+    _original_response_id: str = ""  # Set when citation is derived from a CITATION_RESPONSE block
 
     def to_dict(self):
         return asdict(self)

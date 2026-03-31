@@ -1,0 +1,74 @@
+[
+  {
+    "claim_id": "R2_BS_001",
+    "round": 2,
+    "advocate": "biblical_scholar",
+    "claim": "Cynthia Westfall argues that canonical context must constrain the reading of disputed passages, and that the breadth of women's attested ministry in both testaments creates interpretive pressure against maximalist readings of the restriction texts",
+    "source": "Cynthia Westfall, *Paul and Gender*, Baker Academic, 2016",
+    "argument": "Westfall contends that reading 1 Timothy 2:12 as a universal prohibition on all female authority requires ignoring the canonical evidence Paul himself affirms elsewhere",
+    "advocate_confidence": "HIGH",
+    "raw_text": "[CLAIM: Cynthia Westfall argues that canonical context must constrain the reading of disputed passages, and that the breadth of women's attested ministry in both testaments creates interpretive pressure against maximalist readings of the restriction texts][SOURCE: Cynthia Westfall, *Paul and Gender*, Baker Academic, 2016][ARGUMENT: Westfall contends that reading 1 Timothy 2:12 as a universal prohibition on all female authority requires ignoring the canonical evidence Paul himself affirms elsewhere][CONFIDENCE: HIGH]",
+    "context": "...r articulate as a rule. The canon does not say \"leadership belongs to men with these exceptions.\" It presents women exercising prophetic, judicial, teaching, and apostolic functions *without apology or qualification* \u2014 and then presents restriction texts whose scope is lexically contested.\n\n[CLAIM: Cynthia Westfall argues that canonical context must constrain the reading of disputed passages, and that the breadth of women's attested ministry in both testaments creates interpretive pressure against maximalist readings of the restriction texts]\n[SOURCE: Cynthia Westfall, *Paul and Gender*, Baker Academic, 2016]\n[ARGUMENT: Westfall contends that...",
+    "_original_response_id": ""
+  },
+  {
+    "claim_id": "R2_RH_001",
+    "round": 2,
+    "advocate": "reception_historian",
+    "claim": "Eldon Jay Epp documents that the masculinization of Junia to Junias in critical editions began with Aegidius of Rome in the thirteenth century and was cemented in modern critical texts, despite the unanimous witness of patristic commentators who recognized the name as female",
+    "source": "Eldon Jay Epp, *Junia: The First Woman Apostle*, Fortress, 2005",
+    "argument": "The shift from female to male reading had no manuscript basis and can be traced to interpretive pressure rather than textual evidence",
+    "advocate_confidence": "HIGH",
+    "raw_text": "[CLAIM: Eldon Jay Epp documents that the masculinization of Junia to Junias in critical editions began with Aegidius of Rome in the thirteenth century and was cemented in modern critical texts, despite the unanimous witness of patristic commentators who recognized the name as female][SOURCE: Eldon Jay Epp, *Junia: The First Woman Apostle*, Fortress, 2005][ARGUMENT: The shift from female to male reading had no manuscript basis and can be traced to interpretive pressure rather than textual evidence][CONFIDENCE: HIGH]",
+    "context": "... when an attested earlier reading is replaced by one without independent textual support \u2014 reception history must ask what force was strong enough to override the documentary evidence. In Junia's case, the force was not textual discovery. It was theological discomfort with the implication.\n\n[CLAIM: Eldon Jay Epp documents that the masculinization of Junia to Junias in critical editions began with Aegidius of Rome in the thirteenth century and was cemented in modern critical texts, despite the unanimous witness of patristic commentators who recognized the name as female]\n[SOURCE: Eldon Jay Epp, *Junia: The First Woman Apostle*, Fortress, 2005]...",
+    "_original_response_id": ""
+  },
+  {
+    "claim_id": "R2_HM_001",
+    "round": 2,
+    "advocate": "hermeneutician",
+    "claim": "Nicholas Wolterstorff argues that communities bear moral obligations in how they hold and apply interpretive judgments, particularly when those judgments impose costs on members of the community",
+    "source": "Nicholas Wolterstorff, *Divine Discourse*, Cambridge University Press, 1995",
+    "argument": "Wolterstorff's account of divine discourse through Scripture implies that interpretive responsibility includes accountability for the pastoral consequences of interpretive decisions",
+    "advocate_confidence": "MEDIUM",
+    "raw_text": "[CLAIM: Nicholas Wolterstorff argues that communities bear moral obligations in how they hold and apply interpretive judgments, particularly when those judgments impose costs on members of the community][SOURCE: Nicholas Wolterstorff, *Divine Discourse*, Cambridge University Press, 1995][ARGUMENT: Wolterstorff's account of divine discourse through Scripture implies that interpretive responsibility includes accountability for the pastoral consequences of interpretive decisions][CONFIDENCE: MEDIUM]",
+    "context": "...tion with the confidence of settled conviction while the hermeneutical basis remains undefended. That is the gap between Alderwood's tone \u2014 which presents the position as what Scripture teaches \u2014 and its actual hermeneutical situation, which the consistency test has shown to be unresolved.\n\n[CLAIM: Nicholas Wolterstorff argues that communities bear moral obligations in how they hold and apply interpretive judgments, particularly when those judgments impose costs on members of the community]\n[SOURCE: Nicholas Wolterstorff, *Divine Discourse*, Cambridge University Press, 1995]\n[ARGUMENT: Wolterstorff's account of divine discourse through Script...",
+    "_original_response_id": ""
+  },
+  {
+    "claim_id": "R2_ST_001",
+    "round": 2,
+    "advocate": "systematic_theologian",
+    "claim": "Amy Peeler argues that the Son's representative role is grounded in his humanity, not his maleness, and that Scripture's use of masculine divine language does not establish maleness as necessary for representing God",
+    "source": "Amy Peeler, *Women and the Gender of God*, Eerdmans, 2022",
+    "argument": "If representation is grounded in shared humanity with the incarnate Christ rather than shared maleness, the representational model does not yield the gendered conclusion it has historically produced",
+    "advocate_confidence": "MEDIUM",
+    "raw_text": "[CLAIM: Amy Peeler argues that the Son's representative role is grounded in his humanity, not his maleness, and that Scripture's use of masculine divine language does not establish maleness as necessary for representing God][SOURCE: Amy Peeler, *Women and the Gender of God*, Eerdmans, 2022][ARGUMENT: If representation is grounded in shared humanity with the incarnate Christ rather than shared maleness, the representational model does not yield the gendered conclusion it has historically produced][CONFIDENCE: MEDIUM]",
+    "context": "... of *testing* frameworks against their claimed theological warrants. The representational model claims to ground eldership in the elder's function of representing divine authority. The test is whether that theological warrant actually requires maleness \u2014 and here Peeler's work is decisive:\n\n[CLAIM: Amy Peeler argues that the Son's representative role is grounded in his humanity, not his maleness, and that Scripture's use of masculine divine language does not establish maleness as necessary for representing God]\n[SOURCE: Amy Peeler, *Women and the Gender of God*, Eerdmans, 2022]\n[ARGUMENT: If representation is grounded in shared humanity with ...",
+    "_original_response_id": ""
+  },
+  {
+    "claim_id": "R2_PT_001",
+    "round": 2,
+    "advocate": "pastoral_theologian",
+    "claim": "Jesus teaches that true and false prophets \u2014 and by extension, true and false practices \u2014 are known by their fruits",
+    "source": "Matthew 7:15-20",
+    "argument": "The fruit criterion is not a modern pastoral invention but a dominical principle that makes outcomes relevant to the evaluation of practices and teachings",
+    "advocate_confidence": "HIGH",
+    "raw_text": "[CLAIM: Jesus teaches that true and false prophets \u2014 and by extension, true and false practices \u2014 are known by their fruits][SOURCE: Matthew 7:15-20][ARGUMENT: The fruit criterion is not a modern pastoral invention but a dominical principle that makes outcomes relevant to the evaluation of practices and teachings][CONFIDENCE: HIGH]",
+    "context": "...ical ecclesiology alone but in a principle I believe *any* Protestant ecclesiology committed to *semper reformanda* must accept: the church's structures are revisable in light of Scripture, and the fruits of those structures are one form of evidence Scripture itself authorizes as relevant.\n\n[CLAIM: Jesus teaches that true and false prophets \u2014 and by extension, true and false practices \u2014 are known by their fruits]\n[SOURCE: Matthew 7:15-20]\n[ARGUMENT: The fruit criterion is not a modern pastoral invention but a dominical principle that makes outcomes relevant to the evaluation of practices and teachings]\n[CONFIDENCE: HIGH]\n\nThis does not make p...",
+    "_original_response_id": ""
+  },
+  {
+    "claim_id": "R2_SA_001",
+    "round": 2,
+    "advocate": "social_cultural_analyst",
+    "claim": "R. Marie Griffith documents that women in conservative evangelical contexts often construct agency and meaning within restrictive frameworks, complicating any simple narrative of either false consciousness or genuine freedom",
+    "source": "R. Marie Griffith, *God's Daughters*, University of California Press, 1997",
+    "argument": "Griffith argues that women's agency within patriarchal religious structures is real but operates within constraints that shape the available categories of self-understanding",
+    "advocate_confidence": "HIGH",
+    "raw_text": "[CLAIM: R. Marie Griffith documents that women in conservative evangelical contexts often construct agency and meaning within restrictive frameworks, complicating any simple narrative of either false consciousness or genuine freedom][SOURCE: R. Marie Griffith, *God's Daughters*, University of California Press, 1997][ARGUMENT: Griffith argues that women's agency within patriarchal religious structures is real but operates within constraints that shape the available categories of self-understanding][CONFIDENCE: HIGH]",
+    "context": "... social reward. Bourdieu's framework distinguishes between convictions that align with ambient power structures (which require scrutiny for internalization) and convictions that resist them (which carry a different evidentiary weight, because they are costly rather than rewarding to hold).\n\n[CLAIM: R. Marie Griffith documents that women in conservative evangelical contexts often construct agency and meaning within restrictive frameworks, complicating any simple narrative of either false consciousness or genuine freedom]\n[SOURCE: R. Marie Griffith, *God's Daughters*, University of California Press, 1997]\n[ARGUMENT: Griffith argues that women's...",
+    "_original_response_id": ""
+  }
+]

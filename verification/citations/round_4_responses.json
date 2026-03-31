@@ -1,0 +1,72 @@
+[
+  {
+    "response_id": "R4_SA_RESP_001",
+    "round": 4,
+    "advocate": "social_cultural_analyst",
+    "original_claim_id": "R1_SA_003",
+    "correction_received": "NEEDS_HUMAN_REVIEW",
+    "advocate_position": "QUALIFY",
+    "revised_claim": "In the first-century Mediterranean world, the oikos was the basic unit of social organization, and Paul's letters operated within Greco-Roman household conventions. Bruce Malina and John J. Pilch's social-scientific commentary analyzes the honor/shame framework within which Pauline instructions operated. The household codes (haustafeln) appear primarily in Ephesians and Colossians; for those, deSilva's treatment of honor/patronage dynamics is the more directly applicable source.",
+    "revised_source": "Bruce Malina and John J. Pilch, *Social-Science Commentary on the Letters of Paul*, Fortress, 2006; David deSilva, *Honor, Patronage, Kinship and Purity*, IVP Academic, 2000",
+    "revised_confidence": "MEDIUM",
+    "response_note": "I misidentified the co-author as Rohrbaugh rather than Pilch in Round 1, and the household code material falls partly outside the 2006 volume's scope; the haustafeln argument now rests on deSilva, whose treatment of Mediterranean honor dynamics and household structure is directly relevant.",
+    "downstream_status": "RESTRICTED",
+    "raw_text": "[CITATION_RESPONSE: R1_SA_003]\n[CORRECTION_RECEIVED: NEEDS_HUMAN_REVIEW]\n[ADVOCATE_POSITION: QUALIFY]\n[REVISED_CLAIM: In the first-century Mediterranean world, the oikos was the basic unit of social organization, and Paul's letters operated within Greco-Roman household conventions. Bruce Malina and John J. Pilch's social-scientific commentary analyzes the honor/shame framework within which Pauline instructions operated. The household codes (haustafeln) appear primarily in Ephesians and Colossians; for those, deSilva's treatment of honor/patronage dynamics is the more directly applicable source.]\n[REVISED_SOURCE: Bruce Malina and John J. Pilch, *Social-Science Commentary on the Letters of Paul*, Fortress, 2006; David deSilva, *Honor, Patronage, Kinship and Purity*, IVP Academic, 2000]\n[REVISED_CONFIDENCE: MEDIUM]\n[RESPONSE_NOTE: I misidentified the co-author as Rohrbaugh rather than Pilch in Round 1, and the household code material falls partly outside the 2006 volume's scope; the haustafeln argument now rests on deSilva, whose treatment of Mediterranean honor dynamics and household structure is directly relevant.]\n[DOWNSTREAM_STATUS: RESTRICTED]"
+  },
+  {
+    "response_id": "R4_HM_RESP_001",
+    "round": 4,
+    "advocate": "hermeneutician",
+    "original_claim_id": "R1_HM_001",
+    "correction_received": "NEEDS_HUMAN_REVIEW",
+    "advocate_position": "DEFEND",
+    "revised_claim": "Alderwood's document states that Paul's appeal to creation order rather than cultural considerations means the prohibition \"is a principle that transcends individual cultures.\" This is a direct quotation from the anchor text distributed to all debate participants.",
+    "revised_source": "Alderwood Community Church, \"What Alderwood Teaches about Women in Church Leadership,\" anchor text supplied for this debate, Appendix 1, 1 Timothy 2:11-14 section",
+    "revised_confidence": "HIGH",
+    "response_note": "This is the anchor document provided to all advocates; I am quoting directly from the supplied text, not from an independently located external source.",
+    "downstream_status": "ACTIVE",
+    "raw_text": "[CITATION_RESPONSE: R1_HM_001]\n[CORRECTION_RECEIVED: NEEDS_HUMAN_REVIEW]\n[ADVOCATE_POSITION: DEFEND]\n[REVISED_CLAIM: Alderwood's document states that Paul's appeal to creation order rather than cultural considerations means the prohibition \"is a principle that transcends individual cultures.\" This is a direct quotation from the anchor text distributed to all debate participants.]\n[REVISED_SOURCE: Alderwood Community Church, \"What Alderwood Teaches about Women in Church Leadership,\" anchor text supplied for this debate, Appendix 1, 1 Timothy 2:11-14 section]\n[REVISED_CONFIDENCE: HIGH]\n[RESPONSE_NOTE: This is the anchor document provided to all advocates; I am quoting directly from the supplied text, not from an independently located external source.]\n[DOWNSTREAM_STATUS: ACTIVE]"
+  },
+  {
+    "response_id": "R4_HM_RESP_002",
+    "round": 4,
+    "advocate": "hermeneutician",
+    "original_claim_id": "R1_HM_006",
+    "correction_received": "FABRICATION_RISK",
+    "advocate_position": "WITHDRAW",
+    "revised_claim": "N/A",
+    "revised_source": "N/A",
+    "revised_confidence": "N/A",
+    "response_note": "I withdraw the attribution to a specific Burk 2003 JETS article, which cannot be verified. The substantive critique of Webb's redemptive-movement hermeneutic \u2014 that it lacks adequate controls against importing contemporary ethical intuitions as the trajectory's endpoint \u2014 belongs to Wayne Grudem's documented 2004 JETS response and to the broader CBMW critique. I will not use the Burk 2003 citation again.",
+    "downstream_status": "RETRACTED",
+    "raw_text": "[CITATION_RESPONSE: R1_HM_006]\n[CORRECTION_RECEIVED: FABRICATION_RISK]\n[ADVOCATE_POSITION: WITHDRAW]\n[REVISED_CLAIM: N/A]\n[REVISED_SOURCE: N/A]\n[REVISED_CONFIDENCE: N/A]\n[RESPONSE_NOTE: I withdraw the attribution to a specific Burk 2003 JETS article, which cannot be verified. The substantive critique of Webb's redemptive-movement hermeneutic \u2014 that it lacks adequate controls against importing contemporary ethical intuitions as the trajectory's endpoint \u2014 belongs to Wayne Grudem's documented 2004 JETS response and to the broader CBMW critique. I will not use the Burk 2003 citation again.]\n[DOWNSTREAM_STATUS: RETRACTED]"
+  },
+  {
+    "response_id": "R4_BS_RESP_001",
+    "round": 4,
+    "advocate": "biblical_scholar",
+    "original_claim_id": "R1_BS_008",
+    "correction_received": "NEEDS_HUMAN_REVIEW",
+    "advocate_position": "QUALIFY",
+    "revised_claim": "Al Wolters has published scholarly work arguing that authente\u014d and its cognates do not carry an inherently negative force, supporting a more general authority reading of 1 Timothy 2:12. The specific publication venue and date require independent verification.",
+    "revised_source": "",
+    "revised_confidence": "LOW",
+    "response_note": "I have already qualified this claim in Rounds 2 and 3; my position remains that the argument attributed is consistent with Wolters' known scholarly work, but the specific JETS 2006 citation cannot be independently confirmed from my available evidence.",
+    "downstream_status": "RESTRICTED",
+    "raw_text": "[CITATION_RESPONSE: R1_BS_008]\n[CORRECTION_RECEIVED: NEEDS_HUMAN_REVIEW]\n[ADVOCATE_POSITION: QUALIFY]\n[REVISED_CLAIM: Al Wolters has published scholarly work arguing that authente\u014d and its cognates do not carry an inherently negative force, supporting a more general authority reading of 1 Timothy 2:12. The specific publication venue and date require independent verification.]\n[REVISED_CONFIDENCE: LOW]\n[RESPONSE_NOTE: I have already qualified this claim in Rounds 2 and 3; my position remains that the argument attributed is consistent with Wolters' known scholarly work, but the specific JETS 2006 citation cannot be independently confirmed from my available evidence.]\n[DOWNSTREAM_STATUS: RESTRICTED]"
+  },
+  {
+    "response_id": "R4_BS_RESP_002",
+    "round": 4,
+    "advocate": "biblical_scholar",
+    "original_claim_id": "R3_BS_003",
+    "correction_received": "FABRICATION_RISK",
+    "advocate_position": "WITHDRAW",
+    "revised_claim": "N/A",
+    "revised_source": "N/A",
+    "revised_confidence": "N/A",
+    "response_note": "The fact-checker is correct. Linda Belleville is not a contributor to the Schreiner/K\u00f6stenberger Women in the Church volume; her arguments appear in her own publications, including chapters in Discovering Biblical Equality and Two Views on Women in Ministry. I attributed her argument to the wrong volume. I withdraw the specific source attribution entirely.",
+    "downstream_status": "RETRACTED",
+    "raw_text": "[CITATION_RESPONSE: R3_BS_003]\n[CORRECTION_RECEIVED: FABRICATION_RISK]\n[ADVOCATE_POSITION: WITHDRAW]\n[REVISED_CLAIM: N/A]\n[REVISED_SOURCE: N/A]\n[REVISED_CONFIDENCE: N/A]\n[RESPONSE_NOTE: The fact-checker is correct. Linda Belleville is not a contributor to the Schreiner/K\u00f6stenberger Women in the Church volume; her arguments appear in her own publications, including chapters in Discovering Biblical Equality and Two Views on Women in Ministry. I attributed her argument to the wrong volume. I withdraw the specific source attribution entirely.]\n[DOWNSTREAM_STATUS: RETRACTED]"
+  }
+]

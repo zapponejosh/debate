@@ -1,0 +1,626 @@
+[
+  {
+    "claim_id": "R4_SA_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is unambiguously confirmed as published by Liveright in 2020, with hardcover release dated June 23, 2020, reviewed in peer-reviewed journals including Church History (Cambridge), and listed on Amazon and the author's official website."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Du Mez's central thesis is precisely that evangelical gender ideology is entangled with conservative political and cultural projects, and she does discuss CBMW and the Danvers Statement in this context.",
+        "corroborating_evidence": [
+          "Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal review (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), author's own website (https://kristindumez.com/books/jesus-and-john-wayne/), Wikipedia entry, and Denver Seminary journal review \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal review (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), author's own website (https://kristindumez.com/books/jesus-and-john-wayne/), Wikipedia entry, and Denver Seminary journal review \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_SA_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Kristin Kobes Du Mez's 'Jesus and John Wayne' (Liveright, 2020) is a well-known and widely reviewed work on evangelical masculinity and political culture.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Du Mez's central thesis is precisely that evangelical gender ideology is entangled with conservative political and cultural projects, and she does discuss CBMW and the Danvers Statement in this context.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_SA_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources confirm: Amazon listing (https://www.amazon.com/Jesus-John-Wayne-Evangelicals-Corrupted/dp/1631495739), Cambridge University Press peer-reviewed journal review (https://www.cambridge.org/core/journals/church-history/article/abs/jesus-and-john-wayne...), author's own website (https://kristindumez.com/books/jesus-and-john-wayne/), Wikipedia entry, and Denver Seminary journal review \u2014 all consistently citing Kristin Kobes Du Mez, Jesus and John Wayne, Liveright, 2020.",
+        "note": "The book is unambiguously confirmed as published by Liveright in 2020, with hardcover release dated June 23, 2020, reviewed in peer-reviewed journals including Church History (Cambridge), and listed on Amazon and the author's official website."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_SA_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed by the publisher's own page, multiple library catalogs, a peer-reviewed journal review in *Sociology of Religion* (Oxford Academic), and the author's institutional faculty profile, all matching the cited author, title, publisher, and year exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Griffith's work is known for its nuanced treatment of agency within constraint, resisting both false-consciousness and pure-freedom framings of women's participation in conservative religious contexts.",
+        "corroborating_evidence": [
+          "Multiple sources confirm: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library (https://openlibrary.org/books/OL659614M/God's_daughters), Internet Archive, Oxford Academic peer review, and Washington University faculty profile \u2014 all consistently listing R. Marie Griffith, *God's Daughters: Evangelical Women and the Power of Submission*, University of California Press, 1997."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources confirm: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library (https://openlibrary.org/books/OL659614M/God's_daughters), Internet Archive, Oxford Academic peer review, and Washington University faculty profile \u2014 all consistently listing R. Marie Griffith, *God's Daughters: Evangelical Women and the Power of Submission*, University of California Press, 1997..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_SA_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "R. Marie Griffith's 'God's Daughters' (University of California Press, 1997) is a recognized ethnographic study of women in the Aglow Fellowship, a conservative evangelical women's organization.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Griffith's work is known for its nuanced treatment of agency within constraint, resisting both false-consciousness and pure-freedom framings of women's participation in conservative religious contexts.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_SA_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources confirm: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library (https://openlibrary.org/books/OL659614M/God's_daughters), Internet Archive, Oxford Academic peer review, and Washington University faculty profile \u2014 all consistently listing R. Marie Griffith, *God's Daughters: Evangelical Women and the Power of Submission*, University of California Press, 1997.",
+        "note": "The book is confirmed by the publisher's own page, multiple library catalogs, a peer-reviewed journal review in *Sociology of Religion* (Oxford Academic), and the author's institutional faculty profile, all matching the cited author, title, publisher, and year exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_PT_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple credible sources (Amazon, AbeBooks, ResearchGate, Internet Archive, Logos) unanimously confirm the book as James K. A. Smith, *You Are What You Love: The Spiritual Power of Habit*, Brazos Press, 2016, ISBN 9781587433801, 210\u2013224 pages \u2014 all details match the cited source exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Smith's central argument is that embodied, repeated practices form desires and imagination more deeply than propositional instruction, which aligns directly with the attributed claim.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive, Logos Bible Software, and The Gospel Coalition author interview"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive, Logos Bible Software, and The Gospel Coalition author interview.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_PT_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "James K.A. Smith's 'You Are What You Love' (Brazos Press, 2016) is a well-known popular-level work drawing on his broader 'Cultural Liturgies' project about formative practices.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Smith's central argument is that embodied, repeated practices form desires and imagination more deeply than propositional instruction, which aligns directly with the attributed claim.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_PT_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/You-Are-What-Love-Spiritual/dp/158743380X \u2014 Amazon listing; also corroborated by AbeBooks, ResearchGate academic review, Internet Archive, Logos Bible Software, and The Gospel Coalition author interview",
+        "note": "Multiple credible sources (Amazon, AbeBooks, ResearchGate, Internet Archive, Logos) unanimously confirm the book as James K. A. Smith, *You Are What You Love: The Spiritual Power of Habit*, Brazos Press, 2016, ISBN 9781587433801, 210\u2013224 pages \u2014 all details match the cited source exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_ST_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed by the official Eerdmans publisher page, Amazon, the author's personal website, and multiple academic reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Peeler's work is known to argue that the Son's incarnation is grounded in humanity rather than maleness, and that masculine divine language does not require male priests or leaders as representatives \u2014 the attributed argument aligns with her known position.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and author's own website (amypeeler.com)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and author's own website (amypeeler.com).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_ST_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Amy Peeler's 'Women and the Gender of God' (Eerdmans, 2022) is a real and recent work by a New Testament scholar at Wheaton College addressing divine gender language and women's roles.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Peeler's work is known to argue that the Son's incarnation is grounded in humanity rather than maleness, and that masculine divine language does not require male priests or leaders as representatives \u2014 the attributed argument aligns with her known position.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_ST_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and author's own website (amypeeler.com)",
+        "note": "The book is confirmed by the official Eerdmans publisher page, Amazon, the author's personal website, and multiple academic reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_ST_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple credible sources \u2014 including the official IVP publisher page, Internet Archive catalog, and Wikipedia bibliography \u2014 as authored by Kevin Giles, published by IVP Academic (InterVarsity Press, Downers Grove, IL) in 2002, exactly matching the cited details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Giles is well known for arguing that eternal subordination of the Son in will or function contradicts Nicene trinitarianism, and for critiquing its use to ground male authority \u2014 the attributed argument is central to his project.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings (ISBN 978-0830826636)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings (ISBN 978-0830826636).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_ST_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Kevin Giles's 'The Trinity and Subordinationism' (IVP Academic, 2002) is a recognized work in which Giles critiques eternal functional subordinationism as inconsistent with Nicene orthodoxy.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Giles is well known for arguing that eternal subordination of the Son in will or function contradicts Nicene trinitarianism, and for critiquing its use to ground male authority \u2014 the attributed argument is central to his project.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_ST_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/the-trinity-subordinationism (IVP publisher page); also confirmed by CBE International, Wikipedia, Internet Archive, Amazon, and AbeBooks listings (ISBN 978-0830826636)",
+        "note": "The book is confirmed across multiple credible sources \u2014 including the official IVP publisher page, Internet Archive catalog, and Wikipedia bibliography \u2014 as authored by Kevin Giles, published by IVP Academic (InterVarsity Press, Downers Grove, IL) in 2002, exactly matching the cited details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_HM_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple high-credibility sources \u2014 including the Cambridge University Press publisher page, Amazon, Open Library, Internet Archive, and peer-reviewed journal reviews in Philosophy and Religious Studies \u2014 unanimously confirm the book as: Nicholas Wolterstorff, Divine Discourse: Philosophical Reflections on the Claim that God Speaks, Cambridge University Press, 1995, x + 326 pp., exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "Divine Discourse focuses on speech-act theory and divine communication; while Wolterstorff does address interpretive responsibility, the specific framing about 'moral obligations of interpretive communities' and 'pastoral consequences' is a plausible extension but not a claim I can confirm is explicitly central to that book.",
+        "corroborating_evidence": [
+          "https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Open Library, Internet Archive, PhilPapers, and Cambridge Core journal reviews"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: The attributed argument about pastoral accountability for interpretive certainty is a reasonable inference from Wolterstorff's broader project but may be an extrapolation beyond what the text explicitly argues; the specific framing should be verified. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Open Library, Internet Archive, PhilPapers, and Cambridge Core journal reviews.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_HM_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Wolterstorff's Divine Discourse (Cambridge University Press, 1995) is a well-known work in philosophy of religion and hermeneutics dealing with divine speech acts and interpretive theory.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "Divine Discourse focuses on speech-act theory and divine communication; while Wolterstorff does address interpretive responsibility, the specific framing about 'moral obligations of interpretive communities' and 'pastoral consequences' is a plausible extension but not a claim I can confirm is explicitly central to that book.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The attributed argument about pastoral accountability for interpretive certainty is a reasonable inference from Wolterstorff's broader project but may be an extrapolation beyond what the text explicitly argues; the specific framing should be verified."
+      },
+      "pass2": {
+        "claim_id": "R4_HM_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Open Library, Internet Archive, PhilPapers, and Cambridge Core journal reviews",
+        "note": "Multiple high-credibility sources \u2014 including the Cambridge University Press publisher page, Amazon, Open Library, Internet Archive, and peer-reviewed journal reviews in Philosophy and Religious Studies \u2014 unanimously confirm the book as: Nicholas Wolterstorff, Divine Discourse: Philosophical Reflections on the Claim that God Speaks, Cambridge University Press, 1995, x + 326 pp., exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_HM_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is extensively confirmed across library catalogs, booksellers, and academic reviews; all details (author, title, publisher Eerdmans, year 1980) match the cited source exactly."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The attributed argument about fused horizons, pre-understanding as condition rather than disqualification, and the text interrogating the interpreter is entirely consistent with Thiselton's well-known engagement with Gadamerian hermeneutics in that work.",
+        "corroborating_evidence": [
+          "Multiple sources including Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review in Westminster Theological Journal 43/1 (1980) \u2014 all confirming Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources including Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review in Westminster Theological Journal 43/1 (1980) \u2014 all confirming Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_HM_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Thiselton's The Two Horizons (Eerdmans, 1980) is a foundational and widely recognized work in theological hermeneutics engaging Gadamer and Wittgenstein.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The attributed argument about fused horizons, pre-understanding as condition rather than disqualification, and the text interrogating the interpreter is entirely consistent with Thiselton's well-known engagement with Gadamerian hermeneutics in that work.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_HM_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources including Open Library (https://openlibrary.org/books/OL4410892M/The_two_horizons), Internet Archive (https://archive.org/details/twohorizonsnewte0000this), AbeBooks, Christianbook.com, PhilPapers, and a peer-reviewed journal review in Westminster Theological Journal 43/1 (1980) \u2014 all confirming Anthony C. Thiselton, The Two Horizons: New Testament Hermeneutics and Philosophical Description, Grand Rapids: Wm. B. Eerdmans Publishing Co., 1980, 484 pp.",
+        "note": "The book is extensively confirmed across library catalogs, booksellers, and academic reviews; all details (author, title, publisher Eerdmans, year 1980) match the cited source exactly."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_HM_003",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple independent retail, library, and academic sources confirm the book as Richard B. Hays, *The Moral Vision of the New Testament: Community, Cross, New Creation*, published by HarperOne (HarperSanFrancisco) in 1996, ISBN 978-0060637965, with the focal images of community, cross, and new creation explicitly named in the title and description."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The focal images of cross, community, and new creation as organizing ethical frameworks is precisely Hays's well-known methodological contribution in that book, and the argument attributed here accurately reflects his approach.",
+        "corroborating_evidence": [
+          "https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon listing; also corroborated by AbeBooks, Christianbook.com, PhilPapers, Internet Archive, and Google Books"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon listing; also corroborated by AbeBooks, Christianbook.com, PhilPapers, Internet Archive, and Google Books.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_HM_003",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Richard Hays's The Moral Vision of the New Testament (HarperOne/HarperSanFrancisco, 1996) is a major and widely cited work in New Testament ethics.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The focal images of cross, community, and new creation as organizing ethical frameworks is precisely Hays's well-known methodological contribution in that book, and the argument attributed here accurately reflects his approach.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_HM_003",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.amazon.com/Moral-Vision-New-Testament-Contemporary/dp/006063796X \u2014 Amazon listing; also corroborated by AbeBooks, Christianbook.com, PhilPapers, Internet Archive, and Google Books",
+        "note": "Multiple independent retail, library, and academic sources confirm the book as Richard B. Hays, *The Moral Vision of the New Testament: Community, Cross, New Creation*, published by HarperOne (HarperSanFrancisco) in 1996, ISBN 978-0060637965, with the focal images of community, cross, and new creation explicitly named in the title and description."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_RH_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by at least eight independent credible sources including the publisher's author page, Amazon, Wikipedia, a Baylor University faculty page, and multiple academic/theological reviews."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Barr's central thesis is precisely that the application of biblical texts to restrict women's church roles is a historically contingent modern development rather than a continuous ancient tradition, consistent with the attributed argument.",
+        "corroborating_evidence": [
+          "Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, The Gospel Coalition review, NPR coverage, and AbeBooks \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709 (paperback) / 978-1587435348 (hardcover)."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=MEDIUM. Suspicion: The specific claim about Genesis 2 creation-order arguments being distinctively applied to church office restriction only in modern evangelicalism is consistent with Barr's general thesis, but her expertise is medieval rather than patristic, so the precision of the patristic-versus-modern distinction should be verified against what she actually documents. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, The Gospel Coalition review, NPR coverage, and AbeBooks \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709 (paperback) / 978-1587435348 (hardcover)..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_RH_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Beth Allison Barr's The Making of Biblical Womanhood (Brazos Press, 2021) is a recognized and widely discussed work by a medieval historian arguing that complementarianism is a modern construction.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Barr's central thesis is precisely that the application of biblical texts to restrict women's church roles is a historically contingent modern development rather than a continuous ancient tradition, consistent with the attributed argument.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The specific claim about Genesis 2 creation-order arguments being distinctively applied to church office restriction only in modern evangelicalism is consistent with Barr's general thesis, but her expertise is medieval rather than patristic, so the precision of the patristic-versus-modern distinction should be verified against what she actually documents."
+      },
+      "pass2": {
+        "claim_id": "R4_RH_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources including the author's own website (bethallisonbarr.com), Amazon listing, Wikipedia, Baylor University faculty page, The Gospel Coalition review, NPR coverage, and AbeBooks \u2014 all consistently confirming: Beth Allison Barr, *The Making of Biblical Womanhood: How the Subjugation of Women Became Gospel Truth*, Brazos Press, April 20, 2021, ISBN 978-1587434709 (paperback) / 978-1587435348 (hardcover).",
+        "note": "The book's existence, publisher (Brazos Press), and 2021 publication date are confirmed by at least eight independent credible sources including the publisher's author page, Amazon, Wikipedia, a Baylor University faculty page, and multiple academic/theological reviews."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_RH_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed across multiple highly credible sources \u2014 the official JHU Press catalog, the author's Harvard Divinity School faculty page, Cambridge Core, Project MUSE, and the Journal of Ecclesiastical History \u2014 all consistently citing Kevin Madigan and Carolyn Osiek, Ordained Women in the Early Church: A Documentary History, Johns Hopkins University Press, 2005."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "The book documents evidence of women in ministerial roles in the early church; however, the specific framing that patristic reception was characterized by 'recognition without extension' as a deliberate interpretive choice is an interpretive conclusion that goes somewhat beyond the primarily documentary nature of that work.",
+        "corroborating_evidence": [
+          "https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core, Project MUSE, Journal of Religion, and Amazon listing"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: Madigan and Osiek's work is primarily a documentary sourcebook rather than an argument about patristic interpretive strategy; the attributed argument may be an inference drawn from their evidence rather than their explicit thesis, and should be verified. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core, Project MUSE, Journal of Religion, and Amazon listing.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_RH_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Madigan and Osiek's Ordained Women in the Early Church (Johns Hopkins University Press, 2005) is a recognized scholarly collection of primary source evidence for women's ministerial roles in early Christianity.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "The book documents evidence of women in ministerial roles in the early church; however, the specific framing that patristic reception was characterized by 'recognition without extension' as a deliberate interpretive choice is an interpretive conclusion that goes somewhat beyond the primarily documentary nature of that work.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "Madigan and Osiek's work is primarily a documentary sourcebook rather than an argument about patristic interpretive strategy; the attributed argument may be an inference drawn from their evidence rather than their explicit thesis, and should be verified."
+      },
+      "pass2": {
+        "claim_id": "R4_RH_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.press.jhu.edu/books/title/3880/ordained-women-early-church (Johns Hopkins University Press official page); also confirmed by Harvard Divinity School faculty page, Cambridge Core, Project MUSE, Journal of Religion, and Amazon listing",
+        "note": "The book is confirmed across multiple highly credible sources \u2014 the official JHU Press catalog, the author's Harvard Divinity School faculty page, Cambridge Core, Project MUSE, and the Journal of Ecclesiastical History \u2014 all consistently citing Kevin Madigan and Carolyn Osiek, Ordained Women in the Early Church: A Documentary History, Johns Hopkins University Press, 2005."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_BS_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "John Goldingay, Old Testament Theology Vol. 2 (Israel's Faith), IVP Academic, 2006 is confirmed by the official IVP Academic publisher page, multiple Amazon listings (ISBN 0830825622), a Best Commentaries bibliography entry explicitly citing 'IVP Academic, 2006', and an Internet Archive catalog record listing Downers Grove, Ill.: IVP Academic as publisher."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Goldingay is known for reading OT narratives on their own terms without imposing later theological frameworks, so treating Deborah's leadership as normative rather than exceptional is consistent with his general approach.",
+        "corroborating_evidence": [
+          "Multiple sources confirm: IVP Academic publisher page (https://www.ivpress.com/old-testament-theology-ott-vol-2), Amazon listing (https://www.amazon.com/dp/0830825622), Best Commentaries author bibliography (https://bestcommentaries.com/author/john-goldingay/), and Internet Archive catalog entry (https://archive.org/details/oldtestamenttheo0002gold)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple sources confirm: IVP Academic publisher page (https://www.ivpress.com/old-testament-theology-ott-vol-2), Amazon listing (https://www.amazon.com/dp/0830825622), Best Commentaries author bibliography (https://bestcommentaries.com/author/john-goldingay/), and Internet Archive catalog entry (https://archive.org/details/oldtestamenttheo0002gold).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_BS_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "John Goldingay is a well-known Old Testament scholar and his multi-volume Old Testament Theology published by IVP Academic is a recognized major work; Vol. 2 appearing around 2006 is plausible.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Goldingay is known for reading OT narratives on their own terms without imposing later theological frameworks, so treating Deborah's leadership as normative rather than exceptional is consistent with his general approach.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_BS_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple sources confirm: IVP Academic publisher page (https://www.ivpress.com/old-testament-theology-ott-vol-2), Amazon listing (https://www.amazon.com/dp/0830825622), Best Commentaries author bibliography (https://bestcommentaries.com/author/john-goldingay/), and Internet Archive catalog entry (https://archive.org/details/oldtestamenttheo0002gold)",
+        "note": "John Goldingay, Old Testament Theology Vol. 2 (Israel's Faith), IVP Academic, 2006 is confirmed by the official IVP Academic publisher page, multiple Amazon listings (ISBN 0830825622), a Best Commentaries bibliography entry explicitly citing 'IVP Academic, 2006', and an Internet Archive catalog record listing Downers Grove, Ill.: IVP Academic as publisher."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R4_BS_002",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is unambiguously confirmed as Nijay K. Gupta, Tell Her Story: How Women Led, Taught, and Ministered in the Early Church, IVP Academic, published March 14, 2023, with consistent details across the publisher's own website, Amazon, and peer academic reviews."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Gupta's work is known for arguing that women like Phoebe held substantive leadership and ministry roles in the Pauline communities, making this attribution fully consistent with his known position.",
+        "corroborating_evidence": [
+          "https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, and multiple academic reviews."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, and multiple academic reviews..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_BS_002",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Nijay Gupta is a recognized New Testament scholar who works on Pauline studies and women in early Christianity; Tell Her Story published by IVP Academic in 2023 is a real and recognized work.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Gupta's work is known for arguing that women like Phoebe held substantive leadership and ministry roles in the Pauline communities, making this attribution fully consistent with his known position.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R4_BS_002",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.ivpress.com/tell-her-story (official IVP Academic publisher page); also confirmed by Amazon listing (ISBN 978-1514000748), Northern Seminary faculty page, and multiple academic reviews.",
+        "note": "The book is unambiguously confirmed as Nijay K. Gupta, Tell Her Story: How Women Led, Taught, and Ministered in the Early Church, IVP Academic, published March 14, 2023, with consistent details across the publisher's own website, Amazon, and peer academic reviews."
+      },
+      "pass3": null
+    }
+  }
+]

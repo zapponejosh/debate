@@ -1,31 +1,28 @@
 # ROUND 2 — CROSS-DISCIPLINARY QUESTION
-## Biblical Scholar → Reception Historian
+## The Biblical Scholar → The Reception Historian
 
 ---
 
-Your Finding Three interests me most — the medieval gap and the Reformation contraction. You cite Roper's argument that the Reformation's closure of convents eliminated the primary institutional space for women's recognized spiritual authority, and Macy's evidence that medieval abbesses exercised quasi-episcopal functions. You present this as evidence that "the picture of uniformly male leadership from the earliest period is a retrospective construction."
+You have established two things I take seriously. First, that the epigraphic record attests women holding titles like *presbytera* and *diakonissa* in early Christian communities. Second, that Chrysostom — who clearly knew the Romans 16 evidence — simultaneously recognized Junia as an apostle and maintained restrictions on women's public teaching.
 
-I want to press on the relationship between this historical evidence and the canonical texts themselves.
+It is the second finding I want to press on, because it creates a problem for both of us that neither of us has resolved.
 
-Here is my difficulty. The epigraphic and documentary evidence you marshal — *presbytera*, *episkopa*, Pliny's *ministrae* — is genuinely significant. But the interpretive question it raises cuts in two directions, and I want to know which direction you think it actually cuts.
+Here is my exegetical concern. You cite Chrysostom as evidence that "restriction was not based on ignorance of the evidence but on theological conviction about order." I accept that characterization. But I want to push harder on what it means for the reception history you are constructing.
 
-**Direction one:** The early evidence of women in these roles shows that the earliest communities did not read the Pauline restriction texts as universally prohibitive. If so, the restriction is a later development, and the texts are more open than the complementarian tradition acknowledges.
+If Chrysostom read Romans 16:7 and recognized Junia as female and as an apostle — and your evidence suggests he did —
 
-**Direction two:** The early evidence of women in these roles shows that the Pauline restriction texts were contested *from the beginning* — that communities disagreed about their scope, that some applied them narrowly and others broadly, and that what we have is not a pristine egalitarian origin corrupted by later restriction, but a genuine diversity of practice from the start. You yourself acknowledged this in your inconvenient finding: "Reception history cannot show that there was a pristine egalitarian origin that restriction corrupted."
+[CLAIM: Chrysostom in Homily 31 on Romans explicitly identifies Junia as a woman and expresses admiration that she was counted worthy of the title apostle]
+[SOURCE: John Chrysostom, *Homilies on Romans*, Homily 31, primary source]
+[ARGUMENT: Chrysostom's recognition of Junia as a female apostle is a well-attested patristic datum]
+[CONFIDENCE: HIGH]
 
-My question is this: **Given that you acknowledge the early evidence is genuinely mixed, what does reception history actually establish about the *texts themselves* — as opposed to what it establishes about the communities that read them?**
+— then the subsequent erasure of Junia's gender in later manuscript traditions and translations requires explanation. The name was masculinized to *Junias* in some critical editions beginning in the modern period, despite the absence of any ancient attestation for a masculine form.
 
-Because from my discipline's vantage, there is a significant difference between these two claims:
+[CLAIM: The masculinization of Junia to Junias in critical Greek texts originated with later editorial decisions, not ancient manuscript evidence]
+[SOURCE: Eldon Jay Epp, *Junia: The First Woman Apostle*, Fortress, 2005]
+[ARGUMENT: Epp documents that the shift to a masculine reading was a modern editorial phenomenon without ancient textual support]
+[CONFIDENCE: HIGH]
 
-(a) "The texts permit women in eldership, and early communities recognized this."
+My question is this: **When a reading that was available to the earliest interpreters — Junia as female apostle — was subsequently obscured, and when the obscuring cannot be explained by textual evidence but can be explained by theological discomfort, does reception history treat that obscuring as evidence about the text's meaning, or only about the interpreters' commitments?**
 
-(b) "Early communities practiced women's leadership in various forms, and the texts were read diversely."
-
-Claim (a) is an exegetical conclusion drawn from historical evidence. Claim (b) is a historical observation that leaves the exegetical question open.
-
-[CLAIM: Madigan and Osiek note that the epigraphic evidence for women officeholders is geographically and chronologically uneven, and that its interpretation remains debated]
-[SOURCE: Kevin Madigan and Carolyn Osiek, *Ordained Women in the Early Church*, Johns Hopkins University Press, 2005]
-[ARGUMENT: The evidence attests real diversity of practice but does not establish a single normative early pattern]
-[CONFIDENCE: MEDIUM]
-
-Which claim are you making — and if it is (b), does your discipline's evidence carry the weight you have placed on it in challenging Alderwood's reading of the texts?
+Put differently: does the *recovery* of an older reading carry more evidential weight in your discipline than the *persistence* of a later one? You have argued that Alderwood should know where its reading came from. I am asking whether the genealogy of a reading's *suppression* is as significant as the genealogy of its *construction* — and if so, what that means for how we weigh the Junia evidence specifically.

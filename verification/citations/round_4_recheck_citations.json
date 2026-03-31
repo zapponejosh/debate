@@ -1,0 +1,14 @@
+[
+  {
+    "claim_id": "R4_HM_RECHECK_001",
+    "round": 4,
+    "advocate": "hermeneutician",
+    "claim": "Alderwood's document states that Paul's appeal to creation order rather than cultural considerations means the prohibition \"is a principle that transcends individual cultures.\" This is a direct quotation from the anchor text distributed to all debate participants.",
+    "source": "Alderwood Community Church, \"What Alderwood Teaches about Women in Church Leadership,\" anchor text supplied for this debate, Appendix 1, 1 Timothy 2:11-14 section",
+    "argument": "Alderwood's document states that Paul's appeal to creation order rather than cultural considerations means the prohibition \"is a principle that transcends individual cultures.\" This is a direct quotation from the anchor text distributed to all debate participants.",
+    "advocate_confidence": "HIGH",
+    "raw_text": "[CITATION_RESPONSE: R1_HM_001]\n[CORRECTION_RECEIVED: NEEDS_HUMAN_REVIEW]\n[ADVOCATE_POSITION: DEFEND]\n[REVISED_CLAIM: Alderwood's document states that Paul's appeal to creation order rather than cultural considerations means the prohibition \"is a principle that transcends individual cultures.\" This is a direct quotation from the anchor text distributed to all debate participants.]\n[REVISED_SOURCE: Alderwood Community Church, \"What Alderwood Teaches about Women in Church Leadership,\" anchor text supplied for this debate, Appendix 1, 1 Timothy 2:11-14 section]\n[REVISED_CONFIDENCE: HIGH]\n[RESPONSE_NOTE: This is the anchor document provided to all advocates; I am quoting directly from the supplied text, not from an independently located external source.]\n[DOWNSTREAM_STATUS: ACTIVE]",
+    "context": "",
+    "_original_response_id": "R4_HM_RESP_001"
+  }
+]

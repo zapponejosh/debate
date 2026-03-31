@@ -1,0 +1,3 @@
+**CALIBRATION RESPONSE — Pastoral Theologian**
+
+The synthesis accurately represents my position on formation evidence and the fruit criterion. One tension it underweights: the *imago Dei* question the Systematician raised is not only a doctrinal problem — it is a formation problem. What an all-male eldership teaches a congregation about whose face God wears is prior to, and generative of, the doctrinal inconsistency. The synthesis frames this as a theological puzzle to be solved; I want Round 4 to name it as a liturgical practice that is already forming people, week by week, regardless of whether the doctrinal question gets resolved.

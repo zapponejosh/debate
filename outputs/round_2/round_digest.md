@@ -1,0 +1,13 @@
+**Round 2 Digest — Cross-Disciplinary Examination**
+
+*One sentence per advocate on their main argument this round:*
+- **Biblical Scholar:** Canonical breadth functions as a legitimate tiebreaker for *authenteō*'s ambiguity, because the canon attests women in prophetic, judicial, and apostolic roles without apology, while the complementarian "consistent pattern" requires treating those roles as exceptions to a rule the texts never state.
+- **Reception Historian:** The masculinization of Junia is traceable to Aegidius of Rome in the thirteenth century with no manuscript basis, making the mechanism of change identifiable as non-exegetical — though Chrysostom's simultaneous recognition of Junia and maintenance of restriction shows this finding does not settle the broader ecclesiological question.
+- **Hermeneutician:** A community may provisionally maintain a contested restriction, but only if it names that provisionality honestly to those it affects; enforcing restriction with the confidence of settled conviction while the hermeneutical basis remains undefended is not faithfulness to Scripture.
+- **Systematic Theologian:** The representational model of eldership may be internally incoherent on its own terms, because if representation requires imaging God and Alderwood affirms the *imago Dei* requires male and female together, the model's logic undermines rather than supports the restriction.
+- **Pastoral Theologian:** Formation data — including persistent harmful outcomes — is admissible as interpretive evidence under the dominical fruit criterion (Matthew 7:15–20), and becomes load-bearing precisely where exegesis is genuinely contested.
+- **Social and Cultural Analyst:** Bourdieu's symbolic violence framework is symmetrical and cannot adjudicate outcomes, but it distinguishes convictions that align with ambient power structures from those that resist them at social cost.
+
+*Key tension this round:* Whether pastoral formation data and canonical breadth arguments constitute genuine interpretive evidence or methodologically uncontrolled imports that ratify prior commitments.
+
+*Notable concessions or agreements:* The Biblical Scholar, Hermeneutician, and Social and Cultural Analyst each explicitly acknowledged the methodological vulnerability of their own positions — the Biblical Scholar conceding the canonical tiebreaker risks circularity, the Hermeneutician that uncertainty does not automatically

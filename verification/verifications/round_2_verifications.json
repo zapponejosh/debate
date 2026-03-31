@@ -1,0 +1,314 @@
+[
+  {
+    "claim_id": "R2_BS_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is unambiguously confirmed across multiple credible sources \u2014 including the official Baker Academic publisher page, Amazon, Logos Bible Software, and peer academic reviews \u2014 as: Cynthia Long Westfall, *Paul and Gender: Reclaiming the Apostle's Vision for Men and Women in Christ*, Baker Academic, November 15, 2016, 368 pages, ISBN 9780801097942."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Westfall's work is known for arguing against maximalist complementarian readings of Pauline restriction texts by appealing to broader canonical context, which aligns with the attributed argument.",
+        "corroborating_evidence": [
+          "https://bakeracademic.com/p/Paul-and-Gender-Cynthia-Long-Westfall/41482 (Baker Academic publisher page); also confirmed by Amazon listing (ISBN 978-0801097942), CBMW academic review, and multiple library/retail sources"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://bakeracademic.com/p/Paul-and-Gender-Cynthia-Long-Westfall/41482 (Baker Academic publisher page); also confirmed by Amazon listing (ISBN 978-0801097942), CBMW academic review, and multiple library/retail sources.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_BS_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Cynthia Westfall's 'Paul and Gender' published by Baker Academic in 2016 is a recognized scholarly work; Westfall is a New Testament scholar who works on Pauline literature and gender.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Westfall's work is known for arguing against maximalist complementarian readings of Pauline restriction texts by appealing to broader canonical context, which aligns with the attributed argument.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R2_BS_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://bakeracademic.com/p/Paul-and-Gender-Cynthia-Long-Westfall/41482 (Baker Academic publisher page); also confirmed by Amazon listing (ISBN 978-0801097942), CBMW academic review, and multiple library/retail sources",
+        "note": "The book is unambiguously confirmed across multiple credible sources \u2014 including the official Baker Academic publisher page, Amazon, Logos Bible Software, and peer academic reviews \u2014 as: Cynthia Long Westfall, *Paul and Gender: Reclaiming the Apostle's Vision for Men and Women in Christ*, Baker Academic, November 15, 2016, 368 pages, ISBN 9780801097942."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R2_RH_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is unambiguously confirmed across multiple independent sources \u2014 publisher page, library archive, booksellers, and academic review \u2014 as: Eldon Jay Epp, Junia: The First Woman Apostle, Fortress Press, 2005, ISBN 9780800637712."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Epp's work is specifically focused on documenting the textual and reception history of the name Junia/Junias, and his argument that the masculinization lacked manuscript support and was driven by interpretive bias is the central thesis of that book.",
+        "corroborating_evidence": [
+          "https://www.fortresspress.com/store/product/9780800637712/Junia-The-First-Woman-Apostle \u2014 official Fortress Press publisher page; also confirmed by Internet Archive catalog entry, Amazon listings (ISBN 9780800637712), Augsburg Fortress store page, and a peer-reviewed academic review in Themelios (The Gospel Coalition)."
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.fortresspress.com/store/product/9780800637712/Junia-The-First-Woman-Apostle \u2014 official Fortress Press publisher page; also confirmed by Internet Archive catalog entry, Amazon listings (ISBN 9780800637712), Augsburg Fortress store page, and a peer-reviewed academic review in Themelios (The Gospel Coalition)..",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_RH_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Eldon Jay Epp's 'Junia: The First Woman Apostle' published by Fortress Press in 2005 is a well-known monograph by a recognized New Testament textual critic.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Epp's work is specifically focused on documenting the textual and reception history of the name Junia/Junias, and his argument that the masculinization lacked manuscript support and was driven by interpretive bias is the central thesis of that book.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R2_RH_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.fortresspress.com/store/product/9780800637712/Junia-The-First-Woman-Apostle \u2014 official Fortress Press publisher page; also confirmed by Internet Archive catalog entry, Amazon listings (ISBN 9780800637712), Augsburg Fortress store page, and a peer-reviewed academic review in Themelios (The Gospel Coalition).",
+        "note": "The book is unambiguously confirmed across multiple independent sources \u2014 publisher page, library archive, booksellers, and academic review \u2014 as: Eldon Jay Epp, Junia: The First Woman Apostle, Fortress Press, 2005, ISBN 9780800637712."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R2_HM_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Multiple high-credibility sources \u2014 including the Cambridge University Press publisher page, Amazon, Internet Archive, Open Library, and PhilPapers \u2014 unanimously confirm the book as: Nicholas Wolterstorff, Divine Discourse: Philosophical Reflections on the Claim that God Speaks, Cambridge University Press, 1995, x + 326 pp., exactly matching the cited publication details."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "While 'Divine Discourse' addresses the nature of scriptural authority and divine speech acts, the specific extension to pastoral accountability for interpretive consequences is an inference from Wolterstorff's framework rather than a clearly documented central claim of that work, making the attribution plausible but not certain.",
+        "corroborating_evidence": [
+          "https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Internet Archive, Open Library, PhilPapers, and an academic review in Religious Studies (Cambridge Core)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "PARTIALLY_VERIFIED",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: The attributed argument extrapolates from Wolterstorff's speech-act framework to pastoral accountability in a way that may go beyond what he explicitly argues in that text; the connection is inferential rather than directly stated. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Internet Archive, Open Library, PhilPapers, and an academic review in Religious Studies (Cambridge Core).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_HM_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Nicholas Wolterstorff's 'Divine Discourse' published by Cambridge University Press in 1995 is a recognized work in philosophy of religion and hermeneutics.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "While 'Divine Discourse' addresses the nature of scriptural authority and divine speech acts, the specific extension to pastoral accountability for interpretive consequences is an inference from Wolterstorff's framework rather than a clearly documented central claim of that work, making the attribution plausible but not certain.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "The attributed argument extrapolates from Wolterstorff's speech-act framework to pastoral accountability in a way that may go beyond what he explicitly argues in that text; the connection is inferential rather than directly stated."
+      },
+      "pass2": {
+        "claim_id": "R2_HM_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.cambridge.org/core/books/divine-discourse/82E0BB77A24320802E7F6A14B6AC78B8 (Cambridge University Press publisher page); also confirmed by Amazon, Internet Archive, Open Library, PhilPapers, and an academic review in Religious Studies (Cambridge Core)",
+        "note": "Multiple high-credibility sources \u2014 including the Cambridge University Press publisher page, Amazon, Internet Archive, Open Library, and PhilPapers \u2014 unanimously confirm the book as: Nicholas Wolterstorff, Divine Discourse: Philosophical Reflections on the Claim that God Speaks, Cambridge University Press, 1995, x + 326 pp., exactly matching the cited publication details."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R2_ST_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed on the official Eerdmans publisher page, Amazon, the author's own website, and multiple peer reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Peeler's work is known for arguing that divine masculine language in Scripture does not establish maleness as theologically necessary for representing God, which aligns with the attributed argument.",
+        "corroborating_evidence": [
+          "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and multiple academic reviews"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and multiple academic reviews.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_ST_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Amy Peeler's 'Women and the Gender of God' published by Eerdmans in 2022 is a recognized recent work by a New Testament scholar at Wheaton College.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Peeler's work is known for arguing that divine masculine language in Scripture does not establish maleness as theologically necessary for representing God, which aligns with the attributed argument.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R2_ST_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "https://www.eerdmans.com/9780802879097/women-and-the-gender-of-god/ (official Eerdmans publisher page); also confirmed by Amazon listing (ISBN-13: 978-0802879097, publication date October 4, 2022) and multiple academic reviews",
+        "note": "The book is confirmed on the official Eerdmans publisher page, Amazon, the author's own website, and multiple peer reviews \u2014 all consistently citing Amy Peeler, Women and the Gender of God, Eerdmans, 2022."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R2_PT_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "Matthew 7:15-20 is universally confirmed as a canonical New Testament passage (Sermon on the Mount) present in all major Bible translations, concerning false prophets and the 'fruits' test \u2014 no publisher details are applicable as this is a primary scriptural source, not a secondary publication."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "The fruit criterion is indeed the content of that passage, and the argument that it constitutes a dominical principle making outcomes relevant to evaluating practices is a standard and defensible reading of the text.",
+        "corroborating_evidence": [
+          "Multiple Bible platforms (YouVersion, BibleStudyTools, Bible.org, Bible.com) all confirm Matthew 7:15-20 across KJV, NIV, ESV, NASB, NLT, and BBE translations"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple Bible platforms (YouVersion, BibleStudyTools, Bible.org, Bible.com) all confirm Matthew 7:15-20 across KJV, NIV, ESV, NASB, NLT, and BBE translations.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_PT_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "Matthew 7:15-20 is the standard locus for Jesus's teaching on knowing true and false prophets by their fruits, and the citation is accurate.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "The fruit criterion is indeed the content of that passage, and the argument that it constitutes a dominical principle making outcomes relevant to evaluating practices is a standard and defensible reading of the text.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R2_PT_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple Bible platforms (YouVersion, BibleStudyTools, Bible.org, Bible.com) all confirm Matthew 7:15-20 across KJV, NIV, ESV, NASB, NLT, and BBE translations",
+        "note": "Matthew 7:15-20 is universally confirmed as a canonical New Testament passage (Sermon on the Mount) present in all major Bible translations, concerning false prophets and the 'fruits' test \u2014 no publisher details are applicable as this is a primary scriptural source, not a secondary publication."
+      },
+      "pass3": null
+    }
+  },
+  {
+    "claim_id": "R2_SA_001",
+    "verification": {
+      "bibliographic": {
+        "status": "VERIFIED",
+        "note": "The book is confirmed as 'God's Daughters: Evangelical Women and the Power of Submission' by R. Marie Griffith, published by University of California Press in 1997, with full bibliographic details (ISBN 9780520207646 hardcover) verified across publisher, library catalog, academic review, and bookseller sources."
+      },
+      "topical": {
+        "status": "VERIFIED",
+        "note": ""
+      },
+      "argument_direction": {
+        "status": "LIKELY",
+        "note": "Griffith's central argument in this book is precisely that evangelical women exercise a form of agency within submission frameworks, resisting simple 'false consciousness' narratives while acknowledging structural constraints \u2014 this matches the attributed argument closely.",
+        "corroborating_evidence": [
+          "Multiple corroborating sources: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library entry, Internet Archive, Oxford Academic peer review (Sociology of Religion, Winter 1998), Washington University faculty profile, and De Gruyter DOI record (https://doi.org/10.1525/9780520926172)"
+        ]
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "LIKELY_ACCURATE",
+    "human_review_needed": false,
+    "human_review_priority": null,
+    "summary": "Pass 1 (training): bibliographic=RECOGNIZED, argument=CONSISTENT, suspicion=LOW. Pass 2 (bibliographic search): CONFIRMED. Source: Multiple corroborating sources: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library entry, Internet Archive, Oxford Academic peer review (Sociology of Religion, Winter 1998), Washington University faculty profile, and De Gruyter DOI record (https://doi.org/10.1525/9780520926172).",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R2_SA_001",
+        "pass": 1,
+        "bibliographic_plausibility": "RECOGNIZED",
+        "bibliographic_note": "R. Marie Griffith's 'God's Daughters: Evangelical Women and the Power of Submission' published by University of California Press in 1997 is a well-known ethnographic study of the Women's Aglow Fellowship that I recognize as a real and widely cited work.",
+        "argument_direction": "CONSISTENT",
+        "argument_note": "Griffith's central argument in this book is precisely that evangelical women exercise a form of agency within submission frameworks, resisting simple 'false consciousness' narratives while acknowledging structural constraints \u2014 this matches the attributed argument closely.",
+        "suspicion_level": "LOW",
+        "suspicion_reason": null
+      },
+      "pass2": {
+        "claim_id": "R2_SA_001",
+        "pass": 2,
+        "bibliographic_status": "CONFIRMED",
+        "source_found": "Multiple corroborating sources: UC Press publisher page (https://www.ucpress.edu/book/9780520226821/gods-daughters), Open Library entry, Internet Archive, Oxford Academic peer review (Sociology of Religion, Winter 1998), Washington University faculty profile, and De Gruyter DOI record (https://doi.org/10.1525/9780520926172)",
+        "note": "The book is confirmed as 'God's Daughters: Evangelical Women and the Power of Submission' by R. Marie Griffith, published by University of California Press in 1997, with full bibliographic details (ISBN 9780520207646 hardcover) verified across publisher, library catalog, academic review, and bookseller sources."
+      },
+      "pass3": null
+    }
+  }
+]

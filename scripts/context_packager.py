@@ -102,7 +102,7 @@ def _generate_advocate_summary(client, advocate_id: str, output_dir: Path, confi
         ADVOCATE_OUTPUTS=retraction_note + advocate_outputs,
     )
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=4, max=60))
+    @retry(stop=stop_after_attempt(20), wait=wait_exponential(min=15, max=300))
     def _call():
         response = client.messages.create(
             model=SONNET,

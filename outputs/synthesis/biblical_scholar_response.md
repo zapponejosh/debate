@@ -1,0 +1,5 @@
+**CALIBRATION RESPONSE — Biblical Scholar**
+
+The synthesis accurately represents my position on *ezer*, *authenteō*, Junia, and the 1 Corinthians 11 inconsistency.
+
+One tension the synthesis understates: I flagged that the creation-order appeal in 1 Timothy 2:13 is *real but scope-underdetermined* — meaning exegesis can establish Paul makes the appeal, but cannot alone determine whether the appeal functions as transcultural warrant or as culturally-embedded rhetorical support for a local instruction. The synthesis renders this as a tension between my position and the Social Analyst's. It is actually a tension *within my own discipline* that I cannot resolve internally. The hermeneutician's question is not merely a challenge to Alderwood — it is a challenge my discipline generates and cannot answer without external help. That distinction matters for how Round 4 proceeds.

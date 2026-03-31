@@ -189,7 +189,7 @@ def _is_retryable(exc: BaseException) -> bool:
     return False
 
 
-@retry(retry=retry_if_exception(_is_retryable), stop=stop_after_attempt(3), wait=wait_exponential(min=4, max=60))
+@retry(retry=retry_if_exception(_is_retryable), stop=stop_after_attempt(6), wait=wait_exponential(min=30, max=120))
 def call_api(
     client,
     model: str,

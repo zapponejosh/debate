@@ -1,0 +1,3 @@
+**CALIBRATION RESPONSE — Reception Historian**
+
+The synthesis accurately represents my contributions. One tension it missed that matters for my discipline: the synthesis treats the history of interpretation as supporting evidence for exegetical conclusions already reached by other disciplines. But the more important reception-historical finding is structural — the *consistency* of restriction across fifteen centuries is itself a datum that cuts both ways. It cannot validate the reading, but the near-universal character of that consensus across radically different cultural contexts is evidence that demands accounting, not just genealogical explanation. The synthesis frames reception history as confirming; it is also, honestly, complicating.

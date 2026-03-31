@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "R3_HM_RECHECK_001",
+    "verification": {
+      "bibliographic": {
+        "status": "UNVERIFIABLE",
+        "note": "The web search returned no results for this document title or Alderwood Community Church's teaching document on women in church leadership; it cannot be bibliographically confirmed via public web sources."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "The theological argument attributed to the document \u2014 that Paul's appeal to creation order (rather than cultural considerations) makes the prohibition transcultural \u2014 is a well-established complementarian position widely found in scholarly and church literature (e.g., Gospel Coalition, Bible.org, Knowing Scripture). Alderwood's confirmed doctrinal infrastructure (Elder Board Position Papers on second-tier topics) is consistent with a church that would produce such a document. However, the specific quoted phrase 'is a principle that transcends individual cultures' could not be verified in any publicly accessible Alderwood source."
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "The theological argument attributed to the document \u2014 that Paul's appeal to creation order (rather than cultural considerations) makes the prohibition transcultural \u2014 is a well-established complementarian position widely found in scholarly and church literature (e.g., Gospel Coalition, Bible.org, Knowing Scripture). Alderwood's confirmed doctrinal infrastructure (Elder Board Position Papers on second-tier topics) is consistent with a church that would produce such a document. However, the specific quoted phrase 'is a principle that transcends individual cultures' could not be verified in any publicly accessible Alderwood source.",
+        "corroborating_evidence": []
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "NEEDS_HUMAN_REVIEW",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=UNCERTAIN, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: Because this is an internal/local church document supplied as debate material rather than a verifiable published source, the specific quotation and framing cannot be checked against any independent record in my training data; accuracy depends entirely on the document as supplied. Pass 2 (bibliographic search): UNCONFIRMED. No source found. Pass 3 (deep): NEEDS_HUMAN_REVIEW. Alderwood Community Church is a real institution with a confirmed Elder Board position paper process, but the specific document titled 'What Alderwood Teaches about Women in Church Leadership' and its quoted language could not be found in any publicly accessible source. Because this document is described as the anchor text for the entire debate, a human reviewer must confirm its existence, exact wording, and whether the quote 'is a principle that transcends individual cultures' appears verbatim in the 1 Timothy 2:11-14 section before any advocate's argument relying on it can be validated.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R3_HM_RECHECK_001",
+        "pass": 1,
+        "bibliographic_plausibility": "UNCERTAIN",
+        "bibliographic_note": "This is cited as a debate-supplied anchor text from a local church document rather than a published academic work; I have no independent training knowledge of this specific Alderwood Community Church document and cannot verify its contents.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "The argument attributed \u2014 that Paul's appeal to creation order signals a trans-cultural principle \u2014 is a standard complementarian interpretive move on 1 Timothy 2:11-14, so the position itself is theologically coherent for a conservative evangelical church document.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "Because this is an internal/local church document supplied as debate material rather than a verifiable published source, the specific quotation and framing cannot be checked against any independent record in my training data; accuracy depends entirely on the document as supplied."
+      },
+      "pass2": {
+        "claim_id": "R3_HM_RECHECK_001",
+        "pass": 2,
+        "bibliographic_status": "UNCONFIRMED",
+        "source_found": null,
+        "note": "The web search returned no results for this document title or Alderwood Community Church's teaching document on women in church leadership; it cannot be bibliographically confirmed via public web sources."
+      },
+      "pass3": {
+        "claim_id": "R3_HM_RECHECK_001",
+        "pass": 3,
+        "bibliographic_status": "UNCONFIRMED",
+        "bibliographic_source": "Alderwood Community Church's website (alderwood.cc) confirms the existence of Position Papers developed by their Elder Board on 'second-tier topics relevant to the life and operations of Alderwood,' adopted in 2025. However, no publicly accessible document titled 'What Alderwood Teaches about Women in Church Leadership' was found, and no Appendix 1 or specific 1 Timothy 2:11-14 section with the quoted language could be located or verified online.",
+        "argument_status": "PLAUSIBLE",
+        "argument_evidence": "The theological argument attributed to the document \u2014 that Paul's appeal to creation order (rather than cultural considerations) makes the prohibition transcultural \u2014 is a well-established complementarian position widely found in scholarly and church literature (e.g., Gospel Coalition, Bible.org, Knowing Scripture). Alderwood's confirmed doctrinal infrastructure (Elder Board Position Papers on second-tier topics) is consistent with a church that would produce such a document. However, the specific quoted phrase 'is a principle that transcends individual cultures' could not be verified in any publicly accessible Alderwood source.",
+        "overall_verdict": "NEEDS_HUMAN_REVIEW",
+        "human_review_priority": "HIGH",
+        "summary": "Alderwood Community Church is a real institution with a confirmed Elder Board position paper process, but the specific document titled 'What Alderwood Teaches about Women in Church Leadership' and its quoted language could not be found in any publicly accessible source. Because this document is described as the anchor text for the entire debate, a human reviewer must confirm its existence, exact wording, and whether the quote 'is a principle that transcends individual cultures' appears verbatim in the 1 Timothy 2:11-14 section before any advocate's argument relying on it can be validated."
+      }
+    }
+  }
+]

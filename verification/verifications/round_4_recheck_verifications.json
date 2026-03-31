@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "R4_HM_RECHECK_001",
+    "verification": {
+      "bibliographic": {
+        "status": "UNVERIFIABLE",
+        "note": "The web search returned no results whatsoever for this title or document associated with Alderwood Community Church, providing no bibliographic confirmation of its existence as a publicly accessible source."
+      },
+      "topical": {
+        "status": "UNVERIFIABLE",
+        "note": "No secondary source, review, blog post, or publicly accessible text was found containing the specific quoted phrase 'is a principle that transcends individual cultures' attributed to Alderwood's document. The church's known doctrinal infrastructure (Position Papers, Essential Doctrine) is consistent with a complementarian or conservative evangelical posture that could plausibly produce such language about 1 Timothy 2, but this is inference only. No corroborating or contradicting source for the specific quotation was located."
+      },
+      "argument_direction": {
+        "status": "UNCLEAR",
+        "note": "No secondary source, review, blog post, or publicly accessible text was found containing the specific quoted phrase 'is a principle that transcends individual cultures' attributed to Alderwood's document. The church's known doctrinal infrastructure (Position Papers, Essential Doctrine) is consistent with a complementarian or conservative evangelical posture that could plausibly produce such language about 1 Timothy 2, but this is inference only. No corroborating or contradicting source for the specific quotation was located.",
+        "corroborating_evidence": []
+      },
+      "page_number": {
+        "status": "UNVERIFIABLE",
+        "note": "Page numbers are not verifiable through automated checks."
+      },
+      "consensus_check": {
+        "status": "NOT_APPLICABLE",
+        "note": ""
+      }
+    },
+    "overall_verdict": "NEEDS_HUMAN_REVIEW",
+    "human_review_needed": true,
+    "human_review_priority": "MEDIUM",
+    "summary": "Pass 1 (training): bibliographic=UNCERTAIN, argument=PLAUSIBLE, suspicion=MEDIUM. Suspicion: This citation cannot be verified from training knowledge since it is a private church document; the exact quotation and its presence in 'Appendix 1' are unverifiable, and the HIGH confidence claim rests entirely on a document only debate participants allegedly possess, making independent triage impossible. Pass 2 (bibliographic search): UNCONFIRMED. No source found. Pass 3 (deep): NEEDS_HUMAN_REVIEW. Alderwood Community Church is a real institution with a verifiable doctrinal framework, but the specific document cited ('What Alderwood Teaches about Women in Church Leadership,' Appendix 1) and the quoted phrase 'is a principle that transcends individual cultures' could not be found in any publicly accessible source. Because the source is described as a privately distributed anchor text, verification is structurally impossible without the original document, making human review of the physical anchor text essential before this citation can be accepted.",
+    "_passes": {
+      "pass1": {
+        "claim_id": "R4_HM_RECHECK_001",
+        "pass": 1,
+        "bibliographic_plausibility": "UNCERTAIN",
+        "bibliographic_note": "This is a church-produced internal document described as an 'anchor text' for this specific debate, not a published academic work; I have no training knowledge of this specific Alderwood Community Church document and cannot verify its existence or contents.",
+        "argument_direction": "PLAUSIBLE",
+        "argument_note": "The argument attributed \u2014 that Paul's appeal to creation order makes the prohibition transcultural \u2014 is a standard complementarian interpretive position commonly found in conservative evangelical church documents on 1 Timothy 2:11-14, so the content is theologically plausible for such a source.",
+        "suspicion_level": "MEDIUM",
+        "suspicion_reason": "This citation cannot be verified from training knowledge since it is a private church document; the exact quotation and its presence in 'Appendix 1' are unverifiable, and the HIGH confidence claim rests entirely on a document only debate participants allegedly possess, making independent triage impossible."
+      },
+      "pass2": {
+        "claim_id": "R4_HM_RECHECK_001",
+        "pass": 2,
+        "bibliographic_status": "UNCONFIRMED",
+        "source_found": null,
+        "note": "The web search returned no results whatsoever for this title or document associated with Alderwood Community Church, providing no bibliographic confirmation of its existence as a publicly accessible source."
+      },
+      "pass3": {
+        "claim_id": "R4_HM_RECHECK_001",
+        "pass": 3,
+        "bibliographic_status": "UNCONFIRMED",
+        "bibliographic_source": "Alderwood Community Church (alderwood.cc) is a real, verifiable church in Lynnwood, WA. Their website confirms they have developed Position Papers on second-tier doctrinal topics, released to the congregation in early 2026. However, no publicly accessible document titled 'What Alderwood Teaches about Women in Church Leadership' was found, nor any 'Appendix 1' or '1 Timothy 2:11-14 section' matching the cited source. The document is described as a private 'anchor text' distributed to debate participants, making independent bibliographic verification impossible.",
+        "argument_status": "UNCLEAR",
+        "argument_evidence": "No secondary source, review, blog post, or publicly accessible text was found containing the specific quoted phrase 'is a principle that transcends individual cultures' attributed to Alderwood's document. The church's known doctrinal infrastructure (Position Papers, Essential Doctrine) is consistent with a complementarian or conservative evangelical posture that could plausibly produce such language about 1 Timothy 2, but this is inference only. No corroborating or contradicting source for the specific quotation was located.",
+        "overall_verdict": "NEEDS_HUMAN_REVIEW",
+        "human_review_priority": "HIGH",
+        "summary": "Alderwood Community Church is a real institution with a verifiable doctrinal framework, but the specific document cited ('What Alderwood Teaches about Women in Church Leadership,' Appendix 1) and the quoted phrase 'is a principle that transcends individual cultures' could not be found in any publicly accessible source. Because the source is described as a privately distributed anchor text, verification is structurally impossible without the original document, making human review of the physical anchor text essential before this citation can be accepted."
+      }
+    }
+  }
+]

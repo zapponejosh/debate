@@ -155,22 +155,42 @@ AUDITOR VERDICT: [                              ]
       Source: [                              ]
       Confidence: ( ) Strong  ( ) Moderate  ( ) Weak
   ( ) PLAUSIBLE_BUT_UNCONFIRMED
-  ( ) LIKELY_FABRICATED
+  (x) LIKELY_FABRICATED
   ( ) CANNOT_DETERMINE
 
 AUDITOR NOTES:
-[                                              ]
+[The cited source — a Denny Burk response to Webb in JETS 2003 — does not
+exist. Burk's own publications page lists no such article. D.A. Carson
+identified the two most substantive JETS/journal critiques of Webb as
+Schreiner (SBJT 2002) and Grudem (JETS 47, 2004); Burk does not appear.
+Comprehensive bibliographies of responses to Webb's redemptive-movement
+hermeneutic across multiple academic sources list Grudem, Schreiner,
+Stallard, Reaoch, and others — no Burk article surfaces anywhere.
+
+The substantive argument attributed IS one Burk holds. On his blog
+(dennyburk.com, 2006 and 2016), Burk critiques Webb's method as
+contradicting sola Scriptura and replacing NT moral authority with a
+constructed "better ethic." However, these are blog posts, not
+peer-reviewed scholarship, and in them Burk explicitly defers to
+Grudem's JETS critique as the authoritative statement of the case. The
+specific "no principled textual stopping point" argument is most closely
+associated with Grudem (JETS 47, 2004, pp. 299-346) and Vanhoozer
+(in Four Views on Moving beyond the Bible to Theology).
+
+This appears to be a classic LLM conflation: Burk's known
+complementarian stance + his blog critiques of Webb + the existence of
+a real JETS critique by Grudem → fabricated "Burk, JETS, 2003."]
 
 IMPACT: How important is this claim to the argument?
   ( ) Load-bearing — argument depends on this
-  ( ) Supporting — one piece of evidence among several
+  (x) Supporting — one piece of evidence among several
   ( ) Illustrative — example only, argument stands without it
 
 ACTION:
   ( ) No action needed
   ( ) Flag for moderator to note in next round
   ( ) Requires correction in canonical record
-  ( ) Advocate should revise or remove
+  (x) Advocate should revise or remove
 ════════════════════════════════════════════════════════════
 ```
 
@@ -204,7 +224,7 @@ SEARCH SUGGESTIONS:
 ────────────────────────────────────────────────────────────
 AUDITOR VERDICT: [                              ]
 
-  ( ) CONFIRMED
+  (x) CONFIRMED
   ( ) CONFIRMED_INDIRECT
       Type of indirect evidence:
         ( ) Author's own writing elsewhere
@@ -220,7 +240,7 @@ AUDITOR VERDICT: [                              ]
   ( ) CANNOT_DETERMINE
 
 AUDITOR NOTES:
-[                                              ]
+[This document was provided in full and verified for the debate context.]
 
 IMPACT: How important is this claim to the argument?
   ( ) Load-bearing — argument depends on this
@@ -228,7 +248,7 @@ IMPACT: How important is this claim to the argument?
   ( ) Illustrative — example only, argument stands without it
 
 ACTION:
-  ( ) No action needed
+  (x) No action needed
   ( ) Flag for moderator to note in next round
   ( ) Requires correction in canonical record
   ( ) Advocate should revise or remove
@@ -281,22 +301,49 @@ AUDITOR VERDICT: [                              ]
       Source: [                              ]
       Confidence: ( ) Strong  ( ) Moderate  ( ) Weak
   ( ) PLAUSIBLE_BUT_UNCONFIRMED
-  ( ) LIKELY_FABRICATED
+  (x) LIKELY_FABRICATED
   ( ) CANNOT_DETERMINE
 
 AUDITOR NOTES:
-[                                              ]
+[Two distinct errors disqualify this citation:
+
+ERROR 1 — WRONG CO-AUTHOR (PRIMARY EVIDENCE): The book's authors are
+Bruce J. Malina and John J. Pilch, confirmed by the Fortress Press
+publisher page, Amazon, Google Books, and all retailer listings. Richard
+Rohrbaugh is NOT a co-author — he appears only as a blurb writer
+("Pauline theology will never look the same again" — Richard L.
+Rohrbaugh, Lewis and Clark College). Rohrbaugh co-authored earlier
+volumes in the series (Synoptic Gospels, Gospel of John) with Malina,
+which is likely the source of the LLM's confusion.
+
+ERROR 2 — WRONG BOOK FOR THE CONTENT (PRIMARY EVIDENCE): The Fortress
+Press TOC confirms this volume covers only the seven undisputed Pauline
+letters (1 Thessalonians, 1-2 Corinthians, Galatians, Romans,
+Philippians, Philemon). The household codes — the specific content
+claimed (oikos, paterfamilias, subordination of wives/children/slaves)
+— appear in the deutero-Pauline letters (Colossians 3:18-4:1, Ephesians
+5:22-6:9, Titus 2:1-10), which are covered in a separate companion
+volume: Malina and Pilch, Social-Science Commentary on the Deutero-
+Pauline Letters (Fortress, 2013). The 2006 volume cited here does not
+contain the material attributed to it.
+
+The substantive argument — that NT household codes engaged with Greco-
+Roman conventions within an honor/shame framework — is a well-
+established scholarly position consistent with the Malina series'
+approach. But the specific citation is wrong in both authorship and
+content scope. This appears to be an LLM conflation of multiple volumes
+in the Malina social-science commentary series.]
 
 IMPACT: How important is this claim to the argument?
   ( ) Load-bearing — argument depends on this
-  ( ) Supporting — one piece of evidence among several
+  (x) Supporting — one piece of evidence among several
   ( ) Illustrative — example only, argument stands without it
 
 ACTION:
   ( ) No action needed
   ( ) Flag for moderator to note in next round
   ( ) Requires correction in canonical record
-  ( ) Advocate should revise or remove
+  (x) Advocate should revise or remove
 ════════════════════════════════════════════════════════════
 ```
 
@@ -342,32 +389,56 @@ SEARCH SUGGESTIONS:
 AUDITOR VERDICT: [                              ]
 
   ( ) CONFIRMED
-  ( ) CONFIRMED_INDIRECT
+  (x) CONFIRMED_INDIRECT
       Type of indirect evidence:
         ( ) Author's own writing elsewhere
         ( ) Another scholar citing this work
-        ( ) Book review discussing this point
+        (x) Book review discussing this point
         ( ) Different work by same author, same argument
         ( ) General scholarly consensus consistent
-        ( ) Other: _______________
-      Source: [                              ]
-      Confidence: ( ) Strong  ( ) Moderate  ( ) Weak
+        (x) Other: Publisher description, Google Books index, author's
+            own statements in NCR confirming the same argument
+      Source: [Catholic Books Review (catholicbooksreview.org); publisher
+      description (OUP); Google Books index confirming "abbatissa,"
+      "episcopae," "ordination rites" as book terms; Macy's own
+      statements in National Catholic Reporter confirming identical
+      argument; endorsements from Alistair Minnis (Yale) and Jane
+      Tibbetts Schulenburg (Wisconsin)]
+      Confidence: (x) Strong  ( ) Moderate  ( ) Weak
   ( ) PLAUSIBLE_BUT_UNCONFIRMED
   ( ) LIKELY_FABRICATED
   ( ) CANNOT_DETERMINE
 
 AUDITOR NOTES:
-[                                              ]
+[The argument is strongly confirmed through convergent evidence. The
+book's own publisher description (PRIMARY) states that a radical change
+in the definition of ordination in the 11th-12th centuries removed women
+from ordained ministry. The Google Books index (PRIMARY) confirms
+"abbatissa," "episcopae," "ordination rites," and "Gregorian Reform" as
+major terms, directly matching the claim about abbesses' quasi-episcopal
+authority. The Catholic Books Review (SECONDARY — academic review)
+describes Macy's clericalization thesis in detail: monasticism was
+clericalized, women including abbesses were excluded, and canonists'
+preference for older Roman law over imperial law drove the change. Macy
+himself (AUTHOR'S OWN VOICE, different context) confirms in National
+Catholic Reporter that women served as deacons until the 12th century
+and that a "radical change in the definition of ordination" after the
+11th-century reform movement drove their exclusion.
+
+However, the publisher is WRONG: the book was published by Oxford
+University Press (ISBN 978-0195189704), not Crossroad as cited. This is
+confirmed by OUP's own page, Amazon, Barnes & Noble, Google Books, and
+all retailer listings. The citation must be corrected.]
 
 IMPACT: How important is this claim to the argument?
   ( ) Load-bearing — argument depends on this
-  ( ) Supporting — one piece of evidence among several
+  (x) Supporting — one piece of evidence among several
   ( ) Illustrative — example only, argument stands without it
 
 ACTION:
   ( ) No action needed
   ( ) Flag for moderator to note in next round
-  ( ) Requires correction in canonical record
+  (x) Requires correction in canonical record
   ( ) Advocate should revise or remove
 ════════════════════════════════════════════════════════════
 ```
