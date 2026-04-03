@@ -55,6 +55,27 @@ _inquiries: dict[str, dict] = {}
 _event_queues: dict[str, list[asyncio.Queue]] = {}
 
 
+def _load_persisted_inquiries():
+    """Reload inquiry metadata from disk on startup so restarts don't lose history."""
+    for meta_path in DATA_DIR.glob("*/meta.json"):
+        try:
+            meta = json.loads(meta_path.read_text())
+            inquiry_id = meta.get("id")
+            if not inquiry_id:
+                continue
+            # Any inquiry that was 'running' when the server died is now 'failed'
+            if meta.get("status") == "running":
+                meta["status"] = "failed"
+                meta["error"] = "Engine restarted while inquiry was running"
+                meta_path.write_text(json.dumps(meta, indent=2))
+            _inquiries[inquiry_id] = meta
+        except Exception:
+            pass
+
+
+_load_persisted_inquiries()
+
+
 class InquiryStatus(BaseModel):
     id: str
     title: str

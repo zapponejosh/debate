@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { PlanningMessage, InquiryConfig } from "@/types/inquiry";
 import { ConfigPreview } from "@/components/planning/ConfigPreview";
+import { normalizeConfig } from "@/lib/normalize-config";
 
 function PlanPageInner() {
   const router = useRouter();
@@ -122,7 +123,7 @@ function PlanPageInner() {
     const match = text.match(/```json\n([\s\S]*?)\n```/);
     if (!match) return null;
     try {
-      return JSON.parse(match[1]) as InquiryConfig;
+      return normalizeConfig(JSON.parse(match[1]));
     } catch {
       return null;
     }

@@ -2,21 +2,24 @@ import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { createInquiry, listInquiries } from "@/lib/engine-client";
-import type { InquiryConfig } from "@/types/inquiry";
+import { normalizeConfig } from "@/lib/normalize-config";
 
 interface CreateRequest {
-  config: InquiryConfig;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  config: any;
   session_id?: string;
   force?: boolean;
 }
 
 export async function POST(req: NextRequest) {
   const body: CreateRequest = await req.json();
-  const { config, session_id, force = false } = body;
+  const { session_id, force = false } = body;
 
-  if (!config) {
+  if (!body.config) {
     return NextResponse.json({ error: "config required" }, { status: 400 });
   }
+
+  const config = normalizeConfig(body.config);
 
   // Start the inquiry on the Python engine
   let engineResult: { id: string; status: string };

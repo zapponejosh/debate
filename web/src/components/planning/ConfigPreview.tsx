@@ -30,8 +30,8 @@ export function ConfigPreview({ config }: { config: InquiryConfig }) {
           Participants ({config.participants.length})
         </p>
         <ul className="space-y-2">
-          {config.participants.map((p) => (
-            <li key={p.id} className="flex items-start gap-2">
+          {config.participants.map((p, i) => (
+            <li key={p.id ?? i} className="flex items-start gap-2">
               <span className="mt-0.5 h-2 w-2 rounded-full bg-zinc-500 flex-shrink-0" />
               <div>
                 <span className="text-zinc-200">{p.display_name}</span>
@@ -48,7 +48,7 @@ export function ConfigPreview({ config }: { config: InquiryConfig }) {
         </p>
         <ol className="space-y-2">
           {config.rounds.map((r, i) => (
-            <li key={r.key} className="flex items-start gap-2">
+            <li key={r.key ?? i} className="flex items-start gap-2">
               <span className="text-zinc-600 text-xs mt-0.5 w-4 flex-shrink-0">
                 {i + 1}.
               </span>

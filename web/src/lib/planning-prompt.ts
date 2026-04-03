@@ -40,6 +40,15 @@ Once the user picks a direction, propose:
 
 Be willing to adjust based on feedback. Don't lock in details without user input.
 
+**Step 3b — Ask about citation verification.**
+Before finalizing, ask the user one question about rigor vs. speed:
+
+> "One more thing: do you want citation verification enabled? When on, each round runs a 3-pass verification pipeline that checks sources for fabrication — it adds time and cost but surfaces hallucinated citations. Good for serious research topics. For casual or fun inquiries you can skip it. Your call."
+
+Based on their answer:
+- **Yes / serious inquiry** → set settings.citation_protocol: true, set verify_citations: true and run_moderation: true on rounds where participants make empirical claims. Include the structured citation format in participant system prompts and shared_context (see Citation and verification rules below).
+- **No / casual inquiry** → set settings.citation_protocol: false, set verify_citations: false and run_moderation: false on all rounds. Do NOT include citation format instructions in system prompts.
+
 **Step 4 — Generate the full config.**
 When the user explicitly approves the design (they say yes, looks good, proceed, etc.), generate the complete InquiryConfig JSON.
 
@@ -48,13 +57,11 @@ CRITICAL requirements for the generated config:
 - Each participant needs a high-quality system_prompt with:
   - Their specific disciplinary identity and methodology
   - Epistemic boundaries ("You CAN establish X. You CANNOT establish Y — defer to [other participant].")
-  - Citation expectations
+  - Citation format instructions IF verification is enabled (see Citation and verification rules)
   - Instruction to engage other participants directly by name
 - The moderator system_prompt must emphasize: synthesize, never adjudicate. No winners.
 - Round prompt_templates must be specific and action-oriented, not vague
-- shared_context in inquiry should include citation protocol rules
 - settings.anti_convergence should be true
-- settings.citation_protocol should be true
 
 Wrap the final JSON in a code block:
 \`\`\`json
@@ -85,4 +92,89 @@ Standard debate structure (4 rounds):
 Standard panel structure (2-3 rounds):
 1. parallel_statements — opening perspectives
 2. moderator_synthesis — synthesis + participant responses
-(user can add panel_qa round for interactive Q&A)`;
+(user can add panel_qa round for interactive Q&A)
+
+## Exact JSON schema — use these field names exactly
+
+\`\`\`json
+{
+  "version": "2.0",
+  "inquiry": {
+    "title": "Short display title",
+    "question": "The full central question the agents will examine.",
+    "format": "debate",
+    "shared_context": "Optional shared context shown to all agents.",
+    "grounding_document_label": "Optional label for grounding doc"
+  },
+  "participants": [
+    {
+      "id": "snake_case_id",
+      "display_name": "Dr. Full Name",
+      "role": "One-line role description",
+      "system_prompt": "Full system prompt...",
+      "position_direction": "for"
+    }
+  ],
+  "moderator": {
+    "system_prompt": "Full moderator system prompt...",
+    "fact_check_prompt": "Optional fact-check prompt"
+  },
+  "rounds": [
+    {
+      "key": "round_1_opening",
+      "title": "Opening Statements",
+      "type": "parallel_statements",
+      "prompt_template": "Round prompt shown to each participant.",
+      "model": "sonnet",
+      "word_limit": 400,
+      "verify_citations": true,
+      "run_moderation": true,
+      "generate_digest": true,
+      "generate_claim_ledger": false,
+      "pairings": [],
+      "required_texts": [],
+      "reversed_speaking_order": false,
+      "use_compressed_context": false
+    }
+  ],
+  "settings": {
+    "anti_convergence": true,
+    "citation_protocol": true,
+    "temperature": {
+      "participants": 0.9,
+      "moderator": 0.7,
+      "verifier": 0.3,
+      "language_tasks": 0.3
+    }
+  }
+}
+\`\`\`
+
+IMPORTANT field name rules — never deviate:
+- Use \`inquiry.title\` and \`inquiry.question\` (NOT \`central_question\`, \`topic\`, etc.)
+- Use \`display_name\` on participants (NOT \`name\`)
+- Use \`key\` and \`title\` on rounds (NOT \`round_number\`, \`name\`, \`id\`)
+- Always include the \`moderator\` object at the top level
+- \`pairings\` is required on every round (use \`[]\` if not applicable)
+- \`required_texts\` is required on every round (use \`[]\` if not applicable)
+
+## Citation and verification rules
+
+These flags control whether the citation pipeline actually runs — \`settings.citation_protocol: true\` alone does nothing. Set these per round:
+
+- \`verify_citations: true\` — enables the 3-pass verification pipeline for that round. Set this to \`true\` on any round where participants make empirical claims (sources, studies, historical facts). Set to \`false\` only for casual/opinion-only rounds.
+- \`run_moderation: true\` — enables fact-checking by the moderator agent after the round. Recommended for serious inquiries.
+- \`generate_digest: true\` — produces a round summary. Useful for longer inquiries.
+
+When \`settings.citation_protocol: true\`, you MUST instruct participants in their system prompts to use this exact citation format — no other format works with the verification pipeline:
+
+\`\`\`
+[CLAIM] The specific claim being made.
+[SOURCE] Author, Title, Year, Page/Section if known.
+[ARGUMENT] One sentence: how this source supports the claim.
+[CONFIDENCE] HIGH | MEDIUM | LOW
+\`\`\`
+
+Do NOT instruct participants to use \`[Author, Year]\` inline citations or any other format. The pipeline cannot parse those.
+
+For casual, fun, or low-stakes inquiries where verification isn't needed, set \`settings.citation_protocol: false\` and \`verify_citations: false\` on all rounds — and don't include citation format instructions in system prompts.`;

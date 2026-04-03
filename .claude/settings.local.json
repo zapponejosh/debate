@@ -14,7 +14,28 @@
       "Bash(python3 -c \"import json; d=json.load\\(open\\(''/Users/joshzappone/Documents/PERSONAL/debate/system_prompts.json''\\)\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
       "Bash(.venv/bin/python -c \":*)",
       "Bash(python3:*)",
-      "Bash(grep -E \"^d|\\\\.md$|\\\\.py$|\\\\.json$|\\\\.yaml$\")"
+      "Bash(grep -E \"^d|\\\\.md$|\\\\.py$|\\\\.json$|\\\\.yaml$\")",
+      "Bash(find /Users/joshzappone/Documents/PERSONAL/debate -type d -name *result* -o -type d -name *output* -o -type d -name *report* -o -type d -name *debate* -o -type d -name *log*)",
+      "Bash(python -c \"import pydantic; print\\(pydantic.__version__\\)\")",
+      "Bash(python -c \"from scripts.inquiry_schema import InquiryConfig; print\\(''Schema OK''\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(python scripts/migrate_config.py)",
+      "Bash(python scripts/conductor.py --config configs/ai_regulation_debate.json --round round_1 --dry-run)",
+      "Bash(python scripts/conductor.py --config configs/ai_regulation_debate.json --round round_2 --dry-run)",
+      "Bash(python scripts/conductor.py --config configs/ai_regulation_debate.json --round round_2 --dry-run --force)",
+      "Bash(python scripts/conductor.py --round 1 --dry-run --advocate biblical_scholar)",
+      "Bash(pip list:*)",
+      "Bash(pip install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install:*)",
+      "Bash(claude mcp:*)",
+      "Bash(npx claude:*)",
+      "Read(//usr/local/bin/**)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "supabase",
+    "next-devtools"
+  ]
 }
