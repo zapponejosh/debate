@@ -128,8 +128,14 @@ def extract_citations(
 
 
 def _advocate_abbrev(advocate_id: str) -> str:
-    """Short abbreviation for claim IDs."""
-    abbrevs = {
+    """Short abbreviation for claim IDs.
+
+    Generates a 2-3 letter abbreviation from any advocate_id by taking the first
+    letter of each word (snake_case segments). Falls back to first two characters.
+    Legacy hardcoded abbreviations are preserved for backward compatibility with
+    existing claim IDs from the theology debate.
+    """
+    _LEGACY_ABBREVS = {
         "biblical_scholar": "BS",
         "reception_historian": "RH",
         "hermeneutician": "HM",
@@ -137,7 +143,13 @@ def _advocate_abbrev(advocate_id: str) -> str:
         "pastoral_theologian": "PT",
         "social_cultural_analyst": "SA",
     }
-    return abbrevs.get(advocate_id, advocate_id[:2].upper())
+    if advocate_id in _LEGACY_ABBREVS:
+        return _LEGACY_ABBREVS[advocate_id]
+    # Generate from snake_case: "legal_scholar" -> "LS", "economist" -> "EC"
+    parts = advocate_id.split("_")
+    if len(parts) >= 2:
+        return "".join(p[0].upper() for p in parts if p)
+    return advocate_id[:2].upper()
 
 
 def _get_surrounding_context(text: str, search_fragment: str, context_chars: int = 300) -> str:

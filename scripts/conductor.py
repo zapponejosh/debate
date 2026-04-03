@@ -1816,14 +1816,19 @@ def compile_canonical_record(output_dir: Path, config: dict):
 # ---------------------------------------------------------------------------
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Debate Conductor")
+    parser = argparse.ArgumentParser(description="Debate Conductor / Inquiry Engine")
+
+    # New config-driven mode
+    parser.add_argument("--config", type=str,
+                        help="Path to inquiry_config.json (new config-driven mode)")
+
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--round", type=str, choices=["predebate", "1", "2", "3", "synthesis", "4"],
-                       help="Run a specific round")
+    group.add_argument("--round", type=str,
+                       help="Run a specific round (legacy: predebate/1/2/3/synthesis/4, or any round key)")
     group.add_argument("--all", action="store_true", help="Run all rounds sequentially")
 
-    parser.add_argument("--advocate", type=str, choices=ADVOCATE_ORDER,
-                        help="Run only this advocate (for single-advocate testing)")
+    parser.add_argument("--advocate", "--participant", type=str, dest="advocate",
+                        help="Run only this participant (for single-participant testing)")
     parser.add_argument("--test", action="store_true",
                         help="Write outputs to outputs/tests/{timestamp}/ instead of outputs/")
     parser.add_argument("--dry-run", action="store_true",
@@ -1833,7 +1838,9 @@ def parse_args():
     parser.add_argument("--fast", action="store_true",
                         help="Cap output at 600 tokens per call (~25%% of normal). For architecture testing.")
     parser.add_argument("--skip-human-review", action="store_true",
-                        help="Skip the human audit pause. Automated verifier still runs; unreviewed claims are flagged to the moderator.")
+                        help="Skip the human audit pause. Automated verifier still runs.")
+    parser.add_argument("--output-dir", type=str,
+                        help="Override output directory (for config-driven mode)")
     return parser.parse_args()
 
 
@@ -1849,6 +1856,42 @@ def main():
         SKIP_HUMAN_REVIEW = True
         console.print("[yellow]Human audit pauses skipped — automated verdicts only[/yellow]")
 
+    # ── New config-driven mode ──────────────────────────────────────────────
+    if args.config:
+        from inquiry_schema import load_inquiry_config
+        import engine
+
+        inquiry_config = load_inquiry_config(args.config)
+        console.print(f"[bold]Inquiry:[/bold] {inquiry_config.inquiry.title}")
+        console.print(f"[dim]Participants: {', '.join(p.display_name for p in inquiry_config.participants)}[/dim]")
+        console.print(f"[dim]Rounds: {', '.join(r.title for r in inquiry_config.rounds)}[/dim]")
+
+        # Propagate flags to engine
+        engine.FAST_MODE = FAST_MODE
+        engine.SKIP_HUMAN_REVIEW = SKIP_HUMAN_REVIEW
+
+        # Resolve output dir
+        if args.output_dir:
+            out = Path(args.output_dir)
+        elif args.test:
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+            out = OUTPUT_DIR / "tests" / timestamp
+        else:
+            # Use a slug of the inquiry title
+            slug = re.sub(r'[^a-z0-9]+', '_', inquiry_config.inquiry.title.lower()).strip('_')[:50]
+            out = OUTPUT_DIR / slug
+
+        engine.run_inquiry(
+            config=inquiry_config,
+            output_dir=out,
+            force=args.force,
+            dry_run=args.dry_run,
+            round_filter=args.round if not args.all else None,
+            participant_filter=args.advocate,
+        )
+        return
+
+    # ── Legacy mode (original system_prompts.json) ──────────────────────────
     config = load_config()
     output_dir = resolve_output_dir(args.test)
     if not args.dry_run:
@@ -1870,6 +1913,9 @@ def main():
         rounds_to_run = [args.round]
 
     for round_key in rounds_to_run:
+        if round_key not in round_map:
+            console.print(f"[red]Unknown legacy round: {round_key}. Use --config for custom round keys.[/red]")
+            sys.exit(1)
         round_map[round_key]()
         if not args.dry_run and round_key != "synthesis":
             compile_canonical_record(output_dir, config)

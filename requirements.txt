@@ -1,0 +1,7 @@
+anthropic>=0.86.0
+python-dotenv
+pydantic>=2.0
+rich
+tenacity
+fastapi
+uvicorn

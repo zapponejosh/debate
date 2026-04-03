@@ -1,52 +1,46 @@
 """
 Context Packager
-Builds per-advocate input context for each round.
+Builds per-participant input context for each round.
 
-For Rounds 1–3: straightforward — shared context + canonical record.
-For Round 4:    compressed — own outputs in full + Sonnet-generated summaries
-                of the other 5 advocates + moderator synthesis.
+For early rounds: straightforward — shared context + canonical record.
+For late rounds with use_compressed_context: compressed — own outputs in full
+    + Sonnet-generated summaries of the other participants + moderator synthesis.
+
+Now config-driven: participant order and round structure derived from InquiryConfig
+or legacy dict config.
 """
 
 from pathlib import Path
 
-ADVOCATE_ORDER = [
-    "biblical_scholar",
-    "reception_historian",
-    "hermeneutician",
-    "systematic_theologian",
-    "pastoral_theologian",
-    "social_cultural_analyst",
-]
-
 SONNET = "claude-sonnet-4-6"
 
-SUMMARY_PROMPT = """You are preparing a context summary for a structured theological debate.
+SUMMARY_PROMPT = """You are preparing a context summary for a structured multi-perspective inquiry.
 
-Below are the outputs of one advocate across all debate rounds.
+Below are the outputs of one participant across all prior rounds.
 
 Produce a 200–300 word summary structured exactly as follows:
 
 **CORE CLAIMS (2–3 max):**
-List each claim with enough precision that another advocate could directly affirm, dispute, or respond to it. Use the advocate's own language where possible. Do not paraphrase into abstractions.
+List each claim with enough precision that another participant could directly affirm, dispute, or respond to it. Use the participant's own language where possible. Do not paraphrase into abstractions.
 
 **KEY DISAGREEMENT:**
-Name one specific disagreement with one named other advocate. State what the disagreement is about — not "they clash on hermeneutics" but "The Hermeneutician argues that the creation-order principle in 1 Tim 2:13 is applied inconsistently elsewhere; this advocate disputes that consistency is the relevant criterion."
+Name one specific disagreement with one named other participant. State what the disagreement is about — not "they clash on methodology" but a specific substantive point.
 
-**UNRESOLVED TENSION ENTERING ROUND 4:**
-One tension this advocate is carrying into Round 4 that has not been resolved. Name the specific question or claim.
+**UNRESOLVED TENSION:**
+One tension this participant is carrying that has not been resolved. Name the specific question or claim.
 
 **POSITION SHIFTS:**
 Any concessions or genuine shifts across rounds, or "None apparent."
 
-Do not editorialize. Report what the advocate argued.
+Do not editorialize. Report what the participant argued.
 Do not include retracted claims (see exclusion list if provided).
 
-Advocate: {ADVOCATE_DISPLAY_NAME}
-Disciplinary Lead: {DISCIPLINARY_LEAD}
+Participant: {PARTICIPANT_DISPLAY_NAME}
+Role: {PARTICIPANT_ROLE}
 
 ---
 
-{ADVOCATE_OUTPUTS}"""
+{PARTICIPANT_OUTPUTS}"""
 
 
 def _read_file(path: Path) -> str | None:
@@ -55,60 +49,125 @@ def _read_file(path: Path) -> str | None:
     return None
 
 
-def _collect_own_outputs(advocate_id: str, output_dir: Path) -> str:
-    """Collect all of an advocate's prior outputs across all rounds."""
+def _collect_own_outputs(participant_id: str, config, output_dir: Path) -> str:
+    """Collect all of a participant's prior outputs across all completed rounds."""
     parts = []
-    checks = [
-        ("Pre-Debate Position Paper", output_dir / "predebate" / f"{advocate_id}.md"),
-        ("Round 1 — Opening Statement", output_dir / "round_1" / f"{advocate_id}.md"),
-        ("Round 2 — Question", output_dir / "round_2" / f"{advocate_id}_question.md"),
-        ("Round 2 — Response", output_dir / "round_2" / f"{advocate_id}_response.md"),
-        ("Round 3 — Required Texts", output_dir / "round_3" / f"{advocate_id}.md"),
-    ]
-    for label, path in checks:
-        content = _read_file(path)
-        if content:
-            parts.append(f"### {label}\n\n{content.strip()}")
+
+    # Get round keys in order from config
+    if hasattr(config, "rounds"):
+        # New-style InquiryConfig
+        from inquiry_schema import RoundType
+        for round_cfg in config.rounds:
+            if round_cfg.use_compressed_context:
+                # Don't include outputs from rounds that use compression (those are the late rounds)
+                break
+            round_dir = output_dir / round_cfg.key
+
+            if round_cfg.type == RoundType.PAIRED_EXCHANGE:
+                # Check for both question and response files
+                for suffix, label_suffix in [("_question", "Question"), ("_response", "Response")]:
+                    path = round_dir / f"{participant_id}{suffix}.md"
+                    content = _read_file(path)
+                    if content:
+                        parts.append(f"### {round_cfg.title} — {label_suffix}\n\n{content.strip()}")
+            elif round_cfg.type == RoundType.MODERATOR_SYNTHESIS:
+                # Participant's synthesis response
+                path = round_dir / f"{participant_id}_response.md"
+                content = _read_file(path)
+                if content:
+                    parts.append(f"### {round_cfg.title} — Response\n\n{content.strip()}")
+            else:
+                path = round_dir / f"{participant_id}.md"
+                content = _read_file(path)
+                if content:
+                    parts.append(f"### {round_cfg.title}\n\n{content.strip()}")
+    else:
+        # Legacy config — hardcoded round structure
+        checks = [
+            ("Pre-Debate Position Paper", output_dir / "predebate" / f"{participant_id}.md"),
+            ("Round 1 — Opening Statement", output_dir / "round_1" / f"{participant_id}.md"),
+            ("Round 2 — Question", output_dir / "round_2" / f"{participant_id}_question.md"),
+            ("Round 2 — Response", output_dir / "round_2" / f"{participant_id}_response.md"),
+            ("Round 3 — Required Texts", output_dir / "round_3" / f"{participant_id}.md"),
+        ]
+        for label, path in checks:
+            content = _read_file(path)
+            if content:
+                parts.append(f"### {label}\n\n{content.strip()}")
 
     return "\n\n---\n\n".join(parts)
 
 
-def _generate_advocate_summary(client, advocate_id: str, output_dir: Path, config: dict,
-                                retracted_claims: set | None = None) -> str:
+def _get_participant_info(participant_id: str, config) -> tuple[str, str]:
+    """Get display_name and role/disciplinary_lead for a participant."""
+    if hasattr(config, "participant_map"):
+        # New-style InquiryConfig
+        p = config.participant_map.get(participant_id)
+        if p:
+            return p.display_name, p.role
+        return participant_id, ""
+    else:
+        # Legacy config
+        agent = config.get("agents", {}).get(participant_id, {})
+        return agent.get("display_name", participant_id), agent.get("disciplinary_lead", "")
+
+
+def _get_participant_ids(config) -> list[str]:
+    """Get ordered list of participant IDs from config."""
+    if hasattr(config, "participant_ids"):
+        return config.participant_ids
+    # Legacy
+    return [
+        "biblical_scholar", "reception_historian", "hermeneutician",
+        "systematic_theologian", "pastoral_theologian", "social_cultural_analyst",
+    ]
+
+
+def _get_temperature(config, key: str = "conductor_language_tasks") -> float:
+    """Get temperature setting from config."""
+    if hasattr(config, "settings"):
+        return config.settings.temperature.language_tasks
+    return config.get("notes", {}).get("temperature", {}).get(key, 0.3)
+
+
+def _generate_participant_summary(client, participant_id: str, output_dir: Path, config,
+                                   retracted_claims: set | None = None) -> str:
     """
-    Generate a 200–300 word summary of one advocate's outputs via a Sonnet call.
-    Used for Round 4 context compression.
+    Generate a 200–300 word summary of one participant's outputs via a Sonnet call.
+    Used for compressed context in late rounds.
     """
     from tenacity import retry, stop_after_attempt, wait_exponential
 
-    agent = config["agents"][advocate_id]
-    advocate_outputs = _collect_own_outputs(advocate_id, output_dir)
+    display_name, role = _get_participant_info(participant_id, config)
+    participant_outputs = _collect_own_outputs(participant_id, config, output_dir)
 
-    if not advocate_outputs:
-        return f"[No outputs found for {agent['display_name']}]"
+    if not participant_outputs:
+        return f"[No outputs found for {display_name}]"
 
     retraction_note = ""
     if retracted_claims:
         retraction_note = (
-            "\n\nIMPORTANT: The following claims were formally retracted by this advocate "
+            "\n\nIMPORTANT: The following claims were formally retracted by this participant "
             "and must NOT appear in your summary or be treated as part of their position: "
             + ", ".join(sorted(retracted_claims))
             + "\n"
         )
 
     prompt = SUMMARY_PROMPT.format(
-        ADVOCATE_DISPLAY_NAME=agent["display_name"],
-        DISCIPLINARY_LEAD=agent["disciplinary_lead"],
-        ADVOCATE_OUTPUTS=retraction_note + advocate_outputs,
+        PARTICIPANT_DISPLAY_NAME=display_name,
+        PARTICIPANT_ROLE=role,
+        PARTICIPANT_OUTPUTS=retraction_note + participant_outputs,
     )
+
+    temperature = _get_temperature(config)
 
     @retry(stop=stop_after_attempt(20), wait=wait_exponential(min=15, max=300))
     def _call():
         response = client.messages.create(
             model=SONNET,
             max_tokens=512,
-            temperature=config["notes"]["temperature"]["conductor_language_tasks"],
-            system="You are a neutral summarizer for a structured academic debate. Summarize clearly and faithfully.",
+            temperature=temperature,
+            system="You are a neutral summarizer for a structured multi-perspective inquiry. Summarize clearly and faithfully.",
             messages=[{"role": "user", "content": prompt}],
         )
         return response.content[0].text
@@ -117,85 +176,103 @@ def _generate_advocate_summary(client, advocate_id: str, output_dir: Path, confi
 
 
 def _collect_claim_ledger(output_dir: Path) -> str:
-    """Load the final claim ledger (after Round 3) if it exists."""
-    path = output_dir / "synthesis" / "claim_ledger.md"
-    if path.exists() and path.stat().st_size > 0:
-        return "# Claim Ledger — Contested Arguments Across Rounds 1–3\n\n" + path.read_text(encoding="utf-8").strip()
+    """Load the final claim ledger if it exists."""
+    # Try the canonical location first, then the R2 version
+    for filename in ["claim_ledger.md", "claim_ledger_r2.md"]:
+        path = output_dir / "synthesis" / filename
+        if path.exists() and path.stat().st_size > 0:
+            return "# Claim Ledger — Contested Arguments\n\n" + path.read_text(encoding="utf-8").strip()
     return ""
 
 
-def _collect_synthesis_section(output_dir: Path, config: dict) -> str:
-    """Build the synthesis section: moderator synthesis + all advocate responses."""
+def _collect_synthesis_section(output_dir: Path, config) -> str:
+    """Build the synthesis section: moderator synthesis + all participant responses."""
     parts = []
+    participant_ids = _get_participant_ids(config)
 
-    synthesis = _read_file(output_dir / "synthesis" / "moderator_synthesis.md")
+    # Find the synthesis round directory
+    synthesis_dir = None
+    if hasattr(config, "rounds"):
+        from inquiry_schema import RoundType
+        for round_cfg in config.rounds:
+            if round_cfg.type == RoundType.MODERATOR_SYNTHESIS:
+                synthesis_dir = output_dir / round_cfg.key
+                break
+    if synthesis_dir is None:
+        synthesis_dir = output_dir / "synthesis"
+
+    synthesis = _read_file(synthesis_dir / "moderator_synthesis.md")
     if synthesis:
         parts.append(f"## Moderator Synthesis\n\n{synthesis.strip()}")
 
-    for advocate_id in ADVOCATE_ORDER:
-        response = _read_file(output_dir / "synthesis" / f"{advocate_id}_response.md")
+    for pid in participant_ids:
+        response = _read_file(synthesis_dir / f"{pid}_response.md")
         if response:
-            display = config["agents"][advocate_id]["display_name"]
-            parts.append(f"## {display} — Synthesis Response\n\n{response.strip()}")
+            display_name, _ = _get_participant_info(pid, config)
+            parts.append(f"## {display_name} — Synthesis Response\n\n{response.strip()}")
 
     if not parts:
         return ""
     return "# Moderator Synthesis and Responses\n\n" + "\n\n---\n\n".join(parts)
 
 
-def build_r4_context(
-    advocate_id: str,
-    config: dict,
+def build_compressed_context(
+    participant_id: str,
+    config,
     output_dir: Path,
     client,
     retracted_claims: set | None = None,
 ) -> str:
     """
-    Build compressed context for Round 4.
+    Build compressed context for late rounds.
 
-    Returns a string to be injected as [COMPRESSED_CANONICAL_RECORD] in the Round 4 prompt.
+    Returns a string to be injected as context in the round prompt.
 
     Structure:
-      1. This advocate's own outputs (full text, all rounds)
-      2. Summaries of the other 5 advocates (200-300 words each)
+      1. This participant's own outputs (full text, all prior rounds)
+      2. Summaries of the other participants (200-300 words each)
       3. Moderator synthesis + synthesis responses
+      4. Claim ledger (if exists)
     """
     from rich.console import Console
     console = Console()
 
-    agent = config["agents"][advocate_id]
+    display_name, role = _get_participant_info(participant_id, config)
+    participant_ids = _get_participant_ids(config)
     sections = []
 
     # 1. Own outputs
-    own_outputs = _collect_own_outputs(advocate_id, output_dir)
+    own_outputs = _collect_own_outputs(participant_id, config, output_dir)
     if own_outputs:
         sections.append(
-            f"# Your Prior Outputs — {agent['display_name']}\n\n{own_outputs}"
+            f"# Your Prior Outputs — {display_name}\n\n{own_outputs}"
         )
 
-    # 2. Summaries of other advocates
+    # 2. Summaries of other participants
     other_summaries = []
-    for other_id in ADVOCATE_ORDER:
-        if other_id == advocate_id:
+    for other_id in participant_ids:
+        if other_id == participant_id:
             continue
-        other_agent = config["agents"][other_id]
-        console.print(f"  [dim]Summarizing {other_agent['display_name']}...[/dim]")
-        # Only pass retracted claims that belong to this advocate
+        other_display, other_role = _get_participant_info(other_id, config)
+        console.print(f"  [dim]Summarizing {other_display}...[/dim]")
+        # Only pass retracted claims that belong to this participant
         if retracted_claims:
             from citation_extractor import _advocate_abbrev
             abbrev = _advocate_abbrev(other_id).upper()
-            advocate_retracted = {cid for cid in retracted_claims if f"_{abbrev}_" in cid}
+            participant_retracted = {cid for cid in retracted_claims if f"_{abbrev}_" in cid}
         else:
-            advocate_retracted = None
-        summary = _generate_advocate_summary(client, other_id, output_dir, config,
-                                              retracted_claims=advocate_retracted or None)
+            participant_retracted = None
+        summary = _generate_participant_summary(
+            client, other_id, output_dir, config,
+            retracted_claims=participant_retracted or None,
+        )
         other_summaries.append(
-            f"### {other_agent['display_name']} ({other_agent['disciplinary_lead']})\n\n{summary}"
+            f"### {other_display} ({other_role})\n\n{summary}"
         )
 
     if other_summaries:
         sections.append(
-            "# Other Advocates — Position Summaries\n\n"
+            "# Other Participants — Position Summaries\n\n"
             + "\n\n---\n\n".join(other_summaries)
         )
 
@@ -210,3 +287,7 @@ def build_r4_context(
         sections.append(ledger)
 
     return "\n\n===\n\n".join(sections)
+
+
+# Backward-compatible alias
+build_r4_context = build_compressed_context

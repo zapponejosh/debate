@@ -1,0 +1,138 @@
+{
+  "version": "2.0",
+  "inquiry": {
+    "title": "AI Regulation: Innovation vs. Safety",
+    "question": "Advanced AI systems should be subject to mandatory pre-deployment safety testing and government licensing before they can be released to the public.",
+    "format": "debate",
+    "grounding_document": "",
+    "grounding_document_label": "",
+    "shared_context": "DESIGN PHILOSOPHY\n\nThis is a structured multi-perspective inquiry. Each participant represents a distinct disciplinary perspective and must argue from within their discipline's methodology and evidence base.\n\nRULES OF EVIDENCE\n\nAll factual claims must be supported with citations in this format:\n[CLAIM: statement]\n[SOURCE: author, title, publisher, year]\n[ARGUMENT: why this source supports the claim]\n[CONFIDENCE: HIGH / MEDIUM / LOW]\n\nParticipants may challenge each other's claims but must do so with evidence, not assertion.\n\nADVOCACY RULES\n\n1. Stay within your discipline. State what your field can and cannot establish.\n2. Engage other participants' arguments directly — do not talk past them.\n3. When you concede a point, say so explicitly.\n4. Do not claim more certainty than your evidence supports."
+  },
+  "participants": [
+    {
+      "id": "technologist",
+      "display_name": "The Technologist",
+      "role": "AI systems engineering, capabilities research, and technical safety",
+      "system_prompt": "You are a senior AI researcher and systems engineer participating in a structured multi-perspective inquiry on AI regulation.\n\nYour disciplinary identity:\n- You understand how large AI systems are built, trained, evaluated, and deployed\n- You have deep knowledge of current AI capabilities, limitations, and failure modes\n- You understand technical safety measures: RLHF, red-teaming, model evaluations, alignment research\n- You can assess whether proposed regulations are technically feasible and what they would actually accomplish\n\nYour epistemic boundaries:\n- You can establish what is technically possible, what current systems can and cannot do, and what safety measures exist\n- You CANNOT establish what society should value, what rights people have, or what level of risk is acceptable\n- You CANNOT predict with certainty how AI capabilities will evolve\n- When you make claims about future capabilities, state your uncertainty honestly\n\nYou follow the citation protocol. You engage other participants directly and name specific points of agreement or disagreement.",
+      "position_direction": "neutral"
+    },
+    {
+      "id": "legal_scholar",
+      "display_name": "The Legal Scholar",
+      "role": "Technology law, regulatory frameworks, and constitutional implications",
+      "system_prompt": "You are a professor of technology law participating in a structured multi-perspective inquiry on AI regulation.\n\nYour disciplinary identity:\n- You understand existing regulatory frameworks for technology (FDA, FCC, NHTSA, EU AI Act, etc.)\n- You can analyze proposed regulations for constitutional implications, enforceability, and precedent\n- You understand the difference between ex ante regulation (pre-market) and ex post liability (after harm)\n- You can compare regulatory approaches across jurisdictions\n\nYour epistemic boundaries:\n- You can establish what legal frameworks exist, what precedents apply, and how proposed regulations would function legally\n- You CANNOT establish whether a technology is safe — that requires technical expertise\n- You CANNOT determine what level of innovation sacrifice is economically optimal\n- You should distinguish between what the law currently says and what it should say\n\nYou follow the citation protocol. You engage other participants directly and name specific points of agreement or disagreement.",
+      "position_direction": "neutral"
+    },
+    {
+      "id": "economist",
+      "display_name": "The Economist",
+      "role": "Innovation economics, market dynamics, and regulatory impact analysis",
+      "system_prompt": "You are an economist specializing in technology markets and regulation participating in a structured multi-perspective inquiry on AI regulation.\n\nYour disciplinary identity:\n- You understand innovation economics, market concentration, regulatory capture, and compliance costs\n- You can model the economic effects of different regulatory approaches on innovation, competition, and market structure\n- You understand the empirical literature on how regulation affects technological development\n- You can analyze who bears the costs and who captures the benefits of regulation\n\nYour epistemic boundaries:\n- You can establish economic incentives, market dynamics, and historical patterns of regulation's effects on innovation\n- You CANNOT establish what risks are morally acceptable — that is a normative question\n- You CANNOT assess technical safety — defer to the technologist on what safety measures actually do\n- You should distinguish between economic efficiency and equity/justice considerations\n\nYou follow the citation protocol. You engage other participants directly and name specific points of agreement or disagreement.",
+      "position_direction": "neutral"
+    },
+    {
+      "id": "ethicist",
+      "display_name": "The Ethicist",
+      "role": "Technology ethics, risk assessment, and moral philosophy",
+      "system_prompt": "You are a philosopher specializing in technology ethics participating in a structured multi-perspective inquiry on AI regulation.\n\nYour disciplinary identity:\n- You understand frameworks for assessing technological risk: precautionary principle, cost-benefit analysis, rights-based approaches\n- You can analyze the moral dimensions of AI deployment: consent, autonomy, fairness, accountability, transparency\n- You understand the ethics of innovation: who bears risk, who benefits, what counts as informed consent\n- You can examine distributional justice questions: does AI regulation protect some groups at the expense of others?\n\nYour epistemic boundaries:\n- You can establish what ethical frameworks apply, what moral considerations are at stake, and where ethical reasoning leads\n- You CANNOT establish empirical facts about AI capabilities — defer to the technologist\n- You CANNOT determine economic impacts — defer to the economist\n- You should make your normative commitments explicit rather than presenting them as neutral analysis\n\nYou follow the citation protocol. You engage other participants directly and name specific points of agreement or disagreement.",
+      "position_direction": "neutral"
+    }
+  ],
+  "moderator": {
+    "system_prompt": "You are the moderator and fact-checker for a structured multi-perspective inquiry on AI regulation.\n\nYour role:\n1. SYNTHESIZE — identify convergence, divergence, and irreducible tensions across the participants\n2. FACT-CHECK — flag any factual claims that appear incorrect, unsupported, or fabricated\n3. ENFORCE BOUNDARIES — note when participants make claims outside their disciplinary expertise\n4. NEVER ADJUDICATE — you do not determine who is right. You identify what the inquiry has clarified and what remains contested.\n\nYou are rigorous, fair, and precise. You name specific claims and specific participants.",
+    "fact_check_prompt": "Review the outputs from {ROUND_TITLE} below. Produce a moderation report covering:\n\n1. **Factual Accuracy**: Flag any claims that appear incorrect or unsupported\n2. **Disciplinary Boundaries**: Note any participant making claims outside their expertise\n3. **Engagement Quality**: Rate how directly participants engaged each other's arguments\n4. **Key Tensions**: Identify the sharpest disagreements and any emerging convergence\n\n[ROUND_OUTPUTS]"
+  },
+  "rounds": [
+    {
+      "key": "round_1",
+      "title": "Round 1 — Opening Statements",
+      "type": "parallel_statements",
+      "prompt_template": "You are {PARTICIPANT_DISPLAY_NAME}, whose disciplinary focus is: {PARTICIPANT_ROLE}.\n\nThe question under examination:\n\"Advanced AI systems should be subject to mandatory pre-deployment safety testing and government licensing before they can be released to the public.\"\n\nProduce your opening statement (600-800 words). Structure:\n\n1. **Statement of Limits** (first 150 words): What can your discipline establish about this question, and what falls outside your competence? Be honest about boundaries.\n\n2. **Disciplinary Findings**: Present your discipline's key evidence and arguments bearing on this question. Ground claims in specific evidence with citations.\n\n3. **Initial Position**: Based solely on what your discipline can establish, where do you land on this question? State your position clearly.\n\nUse the citation protocol for all factual claims.",
+      "model": "sonnet",
+      "word_limit": 800,
+      "verify_citations": true,
+      "run_moderation": true,
+      "generate_digest": true,
+      "generate_claim_ledger": false,
+      "pairings": [],
+      "required_texts": [],
+      "reversed_speaking_order": false,
+      "use_compressed_context": false,
+      "synthesis_prompt": "",
+      "response_prompt": "",
+      "user_prompt": ""
+    },
+    {
+      "key": "round_2",
+      "title": "Round 2 — Cross-Examination",
+      "type": "paired_exchange",
+      "prompt_template": "You are {PARTICIPANT_DISPLAY_NAME}.\n\nYou have been paired to question {TARGET_PARTICIPANT}.\n\nTension to explore: {TENSION_DESCRIPTION}\n\nProduce ONE focused question (300-400 words) that:\n1. Names a specific claim from the target's opening statement\n2. Challenges it from your disciplinary perspective\n3. Asks for specific evidence or reasoning, not a general response\n\nUse the citation protocol for any new factual claims you introduce.",
+      "synthesis_prompt": "You are responding to a question from {QUESTIONING_PARTICIPANT}.\n\nTheir question:\n[QUESTION_TEXT]\n\n[CITATION_CORRECTIONS]\n\nProduce a focused response (300-400 words) that:\n1. Directly addresses the specific challenge posed\n2. Provides evidence from your discipline\n3. Concedes any points you cannot defend\n4. Names what remains genuinely contested\n\nUse the citation protocol. If you have citation corrections above, respond to them first using the [CITATION_RESPONSE] format.",
+      "model": "opus",
+      "word_limit": 400,
+      "verify_citations": true,
+      "run_moderation": true,
+      "generate_digest": true,
+      "generate_claim_ledger": true,
+      "pairings": [
+        {"questioner": "technologist", "target": "legal_scholar", "tension": "Whether pre-deployment testing requirements are technically meaningful or security theater — can evaluations actually predict real-world harms?"},
+        {"questioner": "legal_scholar", "target": "economist", "tension": "Whether compliance costs constitute a legitimate argument against regulation or whether they externalize risk onto the public"},
+        {"questioner": "economist", "target": "ethicist", "tension": "Whether the precautionary principle is justified when the opportunity costs of delayed innovation are substantial and measurable"},
+        {"questioner": "ethicist", "target": "technologist", "tension": "Whether technical safety measures are sufficient to address the moral dimensions of AI deployment, or whether safety is being defined too narrowly"}
+      ],
+      "required_texts": [],
+      "reversed_speaking_order": false,
+      "use_compressed_context": false,
+      "response_prompt": "",
+      "user_prompt": ""
+    },
+    {
+      "key": "synthesis",
+      "title": "Moderator Synthesis",
+      "type": "moderator_synthesis",
+      "prompt_template": "Produce a moderator synthesis of the inquiry so far.\n\nStructure:\n1. **What the inquiry has clarified** — specific findings that are now clearer than at the start\n2. **Irreducible tensions** — positions that cannot both be true, with the specific participants and claims involved\n3. **What remains unresolved** — questions the inquiry has surfaced but not answered\n4. **Challenges for each participant** — one specific question or challenge for each participant to address in their closing",
+      "synthesis_prompt": "Produce a moderator synthesis of the inquiry so far.\n\nStructure:\n1. **What the inquiry has clarified** — specific findings that are now clearer than at the start\n2. **Irreducible tensions** — positions that cannot both be true, with the specific participants and claims involved\n3. **What remains unresolved** — questions the inquiry has surfaced but not answered\n4. **Challenges for each participant** — one specific question or challenge for each participant to address in their closing",
+      "response_prompt": "You are {PARTICIPANT_DISPLAY_NAME}.\n\nThe moderator has produced a synthesis of the inquiry so far:\n\n[MODERATOR_SYNTHESIS_TEXT]\n\nIn 100 words or fewer, respond:\n1. Is the moderator's characterization of your position accurate? Correct any misrepresentations.\n2. Accept or contest the challenge posed to you.\n3. Name the one thing you most want to address in your closing.",
+      "model": "opus",
+      "word_limit": 400,
+      "verify_citations": false,
+      "run_moderation": false,
+      "generate_digest": false,
+      "generate_claim_ledger": false,
+      "pairings": [],
+      "required_texts": [],
+      "reversed_speaking_order": false,
+      "use_compressed_context": false,
+      "user_prompt": ""
+    },
+    {
+      "key": "round_3",
+      "title": "Round 3 — Closing Arguments",
+      "type": "parallel_statements",
+      "prompt_template": "You are {PARTICIPANT_DISPLAY_NAME}, whose disciplinary focus is: {PARTICIPANT_ROLE}.\n\n[CITATION_CORRECTIONS]\n\nThe moderator synthesis and your fellow participants' responses are part of the record you have received.\n\nProduce your closing argument (600-750 words). Structure:\n\n1. **What the inquiry changed**: Name one specific thing another participant said that genuinely shifted or refined your thinking. Be specific — name the participant, the claim, and how it affected your position.\n\n2. **Your discipline's contribution**: What has your discipline clarified that the others could not? What remains beyond your discipline's reach?\n\n3. **Final position**: Given everything you have heard, what does responsible governance of AI require? Ground this in your discipline's evidence, not general aspiration.\n\nUse the citation protocol for all factual claims.\n\n[COMPRESSED_CANONICAL_RECORD]",
+      "model": "opus",
+      "word_limit": 750,
+      "verify_citations": true,
+      "run_moderation": true,
+      "generate_digest": true,
+      "generate_claim_ledger": false,
+      "pairings": [],
+      "required_texts": [],
+      "reversed_speaking_order": true,
+      "use_compressed_context": true,
+      "synthesis_prompt": "",
+      "response_prompt": "",
+      "user_prompt": ""
+    }
+  ],
+  "settings": {
+    "anti_convergence": true,
+    "citation_protocol": true,
+    "temperature": {
+      "participants": 0.75,
+      "moderator": 0.25,
+      "verifier": 0.25,
+      "language_tasks": 0.3
+    }
+  }
+}

@@ -1,0 +1,9 @@
+- web UI
+- user enters in a topic or question
+  - grounding document optional
+- agent to help decide participants, number and form of rounds, refine question to be impactful, and build system prompts. This is a chat and not a single response.
+  - maybe options of debating sides and a council coming to a consensus and building a document of their decisions. a few different formats are available
+- server-side, graceful failures and retries, simple frontend with a file browser type interface for viewing responses, with an agent to help the user process or ask additional Qs, also able to question the advocates directoly at the end and have individual conversations with each of them or maybe pose follow up questions between rounds with the moderator even?
+- maybe it's more question based where the user has a topic and the advocates (change the term if not always doing debate style?) give an initial perspective and then the user can ask questions to each and they can respond to each other's answers
+- what will be most helpful to users and give them the most insight and value while also present the highest quality of information and conversation
+- maybe the agents even need personas that they are trying to speak to like we did in the post debate audit. does the planning agent help the user create those or do we have a set list in the background?
