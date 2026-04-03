@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { createClient } from "@/utils/supabase/server";
 import { getInquiry, listOutputFiles, resumeInquiry } from "@/lib/engine-client";
-import { supabase } from "@/lib/supabase";
 
 export async function GET(
   _req: NextRequest,
@@ -14,7 +15,7 @@ export async function GET(
     ]);
     return NextResponse.json({ ...meta, files });
   } catch {
-    // Fallback to Supabase
+    const supabase = createClient(await cookies());
     const { data, error } = await supabase
       .from("inquiries")
       .select("*")
@@ -35,6 +36,7 @@ export async function POST(
   const { id } = await params;
   try {
     const result = await resumeInquiry(id);
+    const supabase = createClient(await cookies());
     await supabase
       .from("inquiries")
       .update({ status: "running", error: null })

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { createClient } from "@/utils/supabase/server";
 import { createInquiry, listInquiries } from "@/lib/engine-client";
-import { supabase } from "@/lib/supabase";
 import type { InquiryConfig } from "@/types/inquiry";
 
 interface CreateRequest {
@@ -29,8 +30,9 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Persist to Supabase
+  const supabase = createClient(await cookies());
   const inquiryId = engineResult.id;
+
   const { error: dbError } = await supabase.from("inquiries").upsert({
     id: inquiryId,
     title: config.inquiry.title,
@@ -47,7 +49,6 @@ export async function POST(req: NextRequest) {
     // Non-fatal — engine is running, DB is just a mirror
   }
 
-  // Link the planning session to this inquiry if provided
   if (session_id) {
     await supabase
       .from("planning_sessions")
@@ -59,12 +60,11 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-  // Return from engine (source of truth for status)
   try {
     const inquiries = await listInquiries();
     return NextResponse.json(inquiries);
-  } catch (err) {
-    // Fallback to Supabase if engine is unreachable
+  } catch {
+    const supabase = createClient(await cookies());
     const { data, error } = await supabase
       .from("inquiries")
       .select("id, title, status, format, created_at")

@@ -1,7 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { PLANNING_SYSTEM_PROMPT } from "@/lib/planning-prompt";
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@/utils/supabase/server";
 import type { PlanningMessage } from "@/types/inquiry";
 
 const anthropic = new Anthropic({
@@ -23,6 +24,8 @@ export async function POST(req: NextRequest) {
   if (!messages || messages.length === 0) {
     return NextResponse.json({ error: "messages required" }, { status: 400 });
   }
+
+  const supabase = createClient(await cookies());
 
   // Create a new planning session in Supabase if this is the first message
   if (!session_id) {
