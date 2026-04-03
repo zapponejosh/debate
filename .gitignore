@@ -1,4 +1,8 @@
 .env
 scripts/__pycache__/
+__pycache__/
+*.pyc
+data/
 outputs/tests/*
 !outputs/tests/.gitkeep
+outputs/*/
